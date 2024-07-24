@@ -1,0 +1,24 @@
+﻿@model LanguageVM
+
+<main style="margin-top: 70px; margin-left:60px;">
+
+<h1>Edit Language</h1>
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Culture" class="control-label"></label>
+        <input asp-for="Culture" class="form-control" />
+        <span asp-validation-for="Culture" class="text-danger"></span>
+    </div>
+    <div class="form-group mt-5">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<a asp-action="Index">Back to List</a>
+</main>

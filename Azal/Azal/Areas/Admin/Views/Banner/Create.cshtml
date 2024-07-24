@@ -1,0 +1,20 @@
+﻿@model BannerCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1><main style="margin-top: 70px; margin-left:60px;">
+    <div class="container mt-5">
+        <form method="post" asp-action="Create" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="category">Image</label>
+                <span asp-validation-for="Image" class="text-danger"></span>
+                <input class="form-control form-bg-light" type="file" asp-for="Image" maxlength="100" >
+                
+               
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <a asp-action="Index" class="btn btn-light mr-2">Cancel</a>
+        </form>
+    </div>
+</main>

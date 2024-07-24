@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azal Airlines</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/air-datepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+</head>
+
+<body class="">
+
+
+    <main class=" h-screen w-full">
+
+        <header class="relative z-[10] h-[80vh]">
+            <img src="assets/img/main_bg.jpg" class=" absolute size-full object-cover z-[-1]" alt="">
+
+            <nav class="flex h-[112px] p-[32px] items-center justify-between">
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/img/logo.svg" class="z-10" alt="">
+                    </a>
+                </div>
+                <div class="flex items-center gap-[16px]">
+                    <button id="night"
+                            class="p-[12px] rounded-full bg-[#ffffff1a] size-[48px] inline-flex items-center justify-center transition-all duration-200 hover:bg-[#40b7de] ">
+                        <img class="light" src="assets/img/light.svg" alt="">
+                    </button>
+                    <button class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px]inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
+                        <span class="text-[14px]">Valyuta</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                    <button class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px] inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
+                        <img src="assets/img/globe.svg" class="size-[20px]" alt="">
+                        <span class="text-[14px]">Azərbaycan</span>
+                    </button>
+                    <button class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px] inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
+                        <img src="assets/img/user.svg" class="size-[20px]" alt="">
+                        <span class="text-[14px]">Şəxsi Kabinet</span>
+                    </button>
+                    <button class="p-[12px] rounded-[12px] bg-[#ffffff1a] size-[48px] flex flex-col justify-between transition-all duration-200 hover:bg-[#40b7de] ">
+                        <div class="w-[24px] h-[2px] bg-white"></div>
+                        <div class="w-[24px] h-[2px] bg-white"></div>
+                        <div class="w-[24px] h-[2px] bg-white"></div>
+                    </button>
+                </div>
+            </nav>
+            <div class="mx-auto w-[1160px] mt-[50px]">
+                <div class="tabs flex gap-[8px] overflow-x-auto">
+                    <button class=" active tab bg-[#10101033] text-white flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[12px_12px_0_0]">
+                        <span class=" font-semibold whitespace-nowrap">Aviabilet almaq</span>
+                    </button>
+                    <button class="tab bg-[#10101033] text-white flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[12px_12px_0_0]">
+                        <span class=" font-semibold whitespace-nowrap">Uçuşa qeydiyyat</span>
+                    </button>
+                    <button class="tab bg-[#10101033] text-white flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[12px_12px_0_0]">
+                        <span class=" font-semibold whitespace-nowrap">Rezervasiyanın idarə edilməsi</span>
+                    </button>
+                    <button class="tab bg-[#10101033] text-white flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[12px_12px_0_0]">
+                        <span class=" font-semibold whitespace-nowrap">Reysin statusu</span>
+                    </button>
+                </div>
+                <div class=" h-[128px] bg-white p-[24px] rounded-[0_12px_12px]">
+                    <div class="w-full h-[64px] flex relative">
+                        <div class="destinations flex-1 flex relative">
+                            <div class="w-[50%] relative">
+                                <div class="rounded-[12px_0_0_12px] flex h-[64px]">
+                                    <label class="labell pr-[22px] pl-[16px] w-full rounded-[12px_0_0_12px] border border-[#DBE0E4] flex justify-between bg-white relative">
+                                        <div class="flex w-full relative">
+                                            <input type="text" class="from text-[18px] leading-[28px] font-semibold overflow-hidden w-full text-[#2E3034] text-ellipsis whitespace-nowrap bg-transparent outline-none mt-[16px]" />
+                                            <div class="label leading-[24px] top-[calc(50%_-_12px)] absolute left-0 origin-top-left">
+                                                Haradan
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <div class="w-[330px] dropdown hidden absolute top-full left-0 bg-white border border-[#DBE0E4] rounded-[12px] max-h-[200px] overflow-auto z-10"></div>
+                                </div>
+                            </div>
+                            <button id="changeBtn" class="absolute top-2/4 left-2/4 z-[1] size-[32px] border border-[#DBE0E4] rounded-full inline-flex items-center justify-center -translate-y-2/4 -translate-x-2/4 bg-white">
+                                <img src="assets/img/change.svg" class="shrink-0 invert-0 size-[16px] relative z-10" alt="">
+                            </button>
+                            <div class="w-[50%] relative">
+                                <div class="flex h-[64px]">
+                                    <label class="labell pr-[22px] pl-[16px] w-full border border-[#DBE0E4] flex justify-between bg-white relative">
+                                        <div class="flex w-full relative">
+                                            <input type="text" class="from text-[18px] leading-[28px] font-semibold overflow-hidden w-full text-[#2E3034] text-ellipsis whitespace-nowrap bg-transparent outline-none mt-[16px]" />
+                                            <div class="label leading-[24px] top-[calc(50%_-_12px)] absolute left-0 origin-top-left">
+                                                Haraya
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <div class="w-[330px] dropdown hidden absolute top-full left-0 bg-white border border-[#DBE0E4] rounded-[12px] max-h-[200px] overflow-auto z-10"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[32%] h-[64px] flex justify-center bg-white border border-[#DBE0E4] relative">
+                            <button id="dateBtn" class="pointer flex items-center justify-between size-full px-[16px] ">
+                                <span class="leading-[24px] text-[#6E7583]">Reys tarixi</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="3 3 18 18" class="size-[20px] text-[#6E7583]">
+                                    <path d="M6.25 3C4.46403 3 3 4.46403 3 6.25V17.75C3 19.536 4.46403 21 6.25 21H17.75C19.536 21 21 19.536 21 17.75V6.25C21 4.46403 19.536 3 17.75 3H6.25ZM6.25 4.5H17.75C18.725 4.5 19.5 5.27497 19.5 6.25V7H4.5V6.25C4.5 5.27497 5.27497 4.5 6.25 4.5ZM4.5 8.5H19.5V17.75C19.5 18.725 18.725 19.5 17.75 19.5H6.25C5.27497 19.5 4.5 18.725 4.5 17.75V8.5ZM7.75 10.5C7.41848 10.5 7.10054 10.6317 6.86612 10.8661C6.6317 11.1005 6.5 11.4185 6.5 11.75C6.5 12.0815 6.6317 12.3995 6.86612 12.6339C7.10054 12.8683 7.41848 13 7.75 13C8.08152 13 8.39946 12.8683 8.63388 12.6339C8.8683 12.3995 9 12.0815 9 11.75C9 11.4185 8.8683 11.1005 8.63388 10.8661C8.39946 10.6317 8.08152 10.5 7.75 10.5ZM12 10.5C11.6685 10.5 11.3505 10.6317 11.1161 10.8661C10.8817 11.1005 10.75 11.4185 10.75 11.75C10.75 12.0815 10.8817 12.3995 11.1161 12.6339C11.3505 12.8683 11.6685 13 12 13C12.3315 13 12.6495 12.8683 12.8839 12.6339C13.1183 12.3995 13.25 12.0815 13.25 11.75C13.25 11.4185 13.1183 11.1005 12.8839 10.8661C12.6495 10.6317 12.3315 10.5 12 10.5ZM16.25 10.5C15.9185 10.5 15.6005 10.6317 15.3661 10.8661C15.1317 11.1005 15 11.4185 15 11.75C15 12.0815 15.1317 12.3995 15.3661 12.6339C15.6005 12.8683 15.9185 13 16.25 13C16.5815 13 16.8995 12.8683 17.1339 12.6339C17.3683 12.3995 17.5 12.0815 17.5 11.75C17.5 11.4185 17.3683 11.1005 17.1339 10.8661C16.8995 10.6317 16.5815 10.5 16.25 10.5ZM7.75 15C7.41848 15 7.10054 15.1317 6.86612 15.3661C6.6317 15.6005 6.5 15.9185 6.5 16.25C6.5 16.5815 6.6317 16.8995 6.86612 17.1339C7.10054 17.3683 7.41848 17.5 7.75 17.5C8.08152 17.5 8.39946 17.3683 8.63388 17.1339C8.8683 16.8995 9 16.5815 9 16.25C9 15.9185 8.8683 15.6005 8.63388 15.3661C8.39946 15.1317 8.08152 15 7.75 15ZM12 15C11.6685 15 11.3505 15.1317 11.1161 15.3661C10.8817 15.6005 10.75 15.9185 10.75 16.25C10.75 16.5815 10.8817 16.8995 11.1161 17.1339C11.3505 17.3683 11.6685 17.5 12 17.5C12.3315 17.5 12.6495 17.3683 12.8839 17.1339C13.1183 16.8995 13.25 16.5815 13.25 16.25C13.25 15.9185 13.1183 15.6005 12.8839 15.3661C12.6495 15.1317 12.3315 15 12 15Z" fill="currentColor"></path>
+                                </svg>
+                            </button>
+                            <div class="commuting pointer flex items-center justify-between size-full px-[16px] hidden">
+                                <button class="relative flex flex-1 flex-col h-full p-[10px] ">
+                                    <span class="text-[13px] leading-[20px] font-medium text-[#6E7583]">Gediş tarixi</span>
+                                    <span class="departure text-[18px] leading-[24px] font-medium"></span>
+                                </button>
+                                <div class="w-[1px] h-[50%] border-l"></div>
+                                <button class="relative flex flex-1 flex-col h-full p-[10px] ">
+                                    <span class="text-[13px] leading-[20px] font-medium text-[#6E7583]">Geri qayıdış</span>
+                                    <span class="landing text-[18px] leading-[24px] font-medium"></span>
+                                </button>
+                            </div>
+                            <div class="kalendar flex z-[0] rounded-[8px] absolute w-[736px] hidden bg-white shadow  top-[calc(100%_+_16px)] overflow-hidden">
+                                <div id="monthBtn" class="bg-[#F5F6F8] flex flex-col p-[20px] -[170px]">
+                                    <button id="btnJuly" class="text-[13px] leading-[20px] text-left whitespace-nowrap font-semibold text-[#2C8DC7] active">
+                                        <div class="line absolute w-[4px] h-[52px] bg-[#2C8DC7] left-0"></div>
+                                        İyul 2024
+                                    </button>
+                                    <!-- Avqust 2024 düyməsi -->
+                                    <button id="btnAugust" class="mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap font-semibold text-[#2C8DC7]">
+                                        Avqust 2024
+                                    </button>
+                                    <button id="btnSeptember" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        Sentyabr 2024
+                                    </button>
+                                    <button id="btnOctober" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        Oktyabr 2024
+                                    </button>
+                                    <button id="btnNovember" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        Noyabr 2024
+                                    </button>
+                                    <button id="btnDecember" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        Dekabr 2024
+                                    </button>
+                                    <button id="btnJanuary" id="btnAugust" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        Yanvar 2025
+                                    </button>
+                                    <button id="btnFebruary" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        Fevral 2025
+                                    </button>
+                                    <button id="btnMart" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        Mart 2025
+                                    </button>
+                                    <button id="btnApril" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        Aprel 2025
+                                    </button>
+                                    <button id="btnMay" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        May 2025
+                                    </button>
+                                    <button id="btnJune" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                        İyun 2025
+                                    </button>
+                                </div>
+                                <div class="flex flex-col w-full px-[16px] py-[20px]">
+                                    <button class="text-[#2E3034] border border-[#2C8DC7] w-full h-[45px] rounded-[12px] font-semibold bg-white">Yalnız bir istiqamətdə</button>
+                                    <div class="flex mt-[16px] gap-[16px]">
+                                        <div id="el1" class="pointer flex-1 w-full form-control"></div>
+                                        <div id="el2" class="pointer flex-1 w-full form-control"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <button class="relative flex flex-col w-[158px] h-[64px] px-[16px] py-[10px] text-left bg-white border border-[#DBE0E4]">
+                                <span class="text-[13px] leading-[20px] text-[#6E7583]">Sərnişinlər</span>
+                                <span class="text-[18px] font-semibold leading-[24px] text-[#2E3034]">1,Ekonom</span>
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="absolute top-[26px] right-[16px] rotate-180"><path d="M1 7L7 1L13 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            </button>
+                        </div>
+                        <button class="p-[16px] bg-[#01357E] rounded-[0_12px_12px_0]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="4 4 24.01 24.01" class="size-[24px] shrink-0 text-white"><path d="M13.6667 4C8.33976 4 4 8.33976 4 13.6667C4 18.9936 8.33976 23.3333 13.6667 23.3333C15.9709 23.3333 18.0891 22.5194 19.7526 21.1667L26.293 27.707C26.3851 27.803 26.4955 27.8796 26.6176 27.9324C26.7397 27.9852 26.8712 28.0131 27.0042 28.0144C27.1372 28.0158 27.2692 27.9906 27.3924 27.9403C27.5156 27.89 27.6275 27.8156 27.7216 27.7216C27.8156 27.6275 27.89 27.5156 27.9403 27.3924C27.9906 27.2692 28.0158 27.1372 28.0144 27.0042C28.0131 26.8712 27.9852 26.7397 27.9324 26.6176C27.8796 26.4955 27.803 26.3851 27.707 26.293L21.1667 19.7526C22.5194 18.0891 23.3333 15.9709 23.3333 13.6667C23.3333 8.33976 18.9936 4 13.6667 4ZM13.6667 6C17.9127 6 21.3333 9.42064 21.3333 13.6667C21.3333 15.7351 20.5175 17.6038 19.194 18.9805C19.1124 19.0404 19.0404 19.1124 18.9805 19.194C17.6038 20.5175 15.7351 21.3333 13.6667 21.3333C9.42063 21.3333 6 17.9127 6 13.6667C6 9.42064 9.42063 6 13.6667 6Z" fill="currentColor"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+            @RenderBody()
+        <footer class="bg-[#01357e]">
+            <div class="container w-[1160px] mx-auto">
+                <div class="footerHead border-y-2 border-[#ffffff1a] py-[38px] flex justify-center divide-x-2 divide-[#ffffff1a]">
+                    <a href="#"
+                       class="border-l-1 inline-flex justify-center items-center max-w-[278px] w-full h-[67px]">
+                        <div class="w-[190px] h-full">
+                            <img src="assets/img/refferans-1.svg" class="size-full" alt="">
+                        </div>
+                    </a>
+                    <a href="#"
+                       class="border-l-1 inline-flex justify-center items-center max-w-[278px] w-full h-[67px]">
+                        <div class="w-[190px] h-[36px]">
+                            <img src="assets/img/refferans-2.svg" class="size-full" alt="">
+                        </div>
+                    </a>
+                    <a href="#"
+                       class="border-l-1 inline-flex justify-center items-center max-w-[278px] w-full h-[67px]">
+                        <div class="w-[190px] h-[67px]">
+                            <img src="assets/img/refferans-3.svg" class="size-full" alt="">
+                        </div>
+                    </a>
+                    <a href="#"
+                       class="border-l-1 inline-flex justify-center items-center max-w-[278px] w-full h-[67px]">
+                        <div class="w-[190px] h-full">
+                            <img src="assets/img/refferans-4.svg" class="size-full" alt="">
+                        </div>
+                    </a>
+
+
+                </div>
+                <div class="footerMain mb-[88px] mt-[24px] flex justify-around">
+                    <div class="">
+                        <div class="text-[18px] text-white">
+                            <h2>Məlumat</h2>
+                        </div>
+                        <div class="mt-[24px] flex flex-col text-white text-[14px]">
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Ümumi məlumat</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Baqaj haqqında məlumat</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Tariflərin qaydaları</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">
+                                Uşaqlar və hamilə qadınlarla
+                                səyahət
+                            </a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Heyvanlarla səyahət</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Arzuolunmaz sərnişinlər</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Overbooking</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Təhlükəli əşyalar</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Daşınma qaydaları</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Qiymət siyasəti</a>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="text-[18px] text-white">
+                            <h2>AZAL Miles</h2>
+                        </div>
+                        <div class="mt-[24px] flex flex-col text-white text-[14px]">
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Proqram haqqında</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">
+                                Balların toplanması və
+                                istifadəsi
+                            </a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Üzv olmaq</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Profilə daxil olmaq</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Qaydalar və Şərtlər</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">F.A.Q</a>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="text-[18px] text-white">
+                            <h2>AZAL aviaşirkəti</h2>
+                        </div>
+                        <div class="mt-[24px] flex flex-col text-white text-[14px]">
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Haqqımızda</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">AZAL-ın Müşahidə Şurası</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Son xəbərlər</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Bizim donanma</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Karyera</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Məlumat mərkəzi</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Bizə yazın</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Mobil əlavə</a>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="text-[18px] text-white">
+                            <h2>Korporativ məlumat</h2>
+                        </div>
+                        <div class="mt-[24px] flex flex-col text-white text-[14px]">
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Qrup şəklində daşımalar</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Satış ofisləri</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Ofis və nümayəndəliklər</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Qəbul günləri</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Mətbuat xidməti</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Struktur bölmələri</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Maliyyə hesabatları</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">Agentlər üçün məlumat</a>
+                            <a class="leading-[24px] opacity-50 hover:underline" href="#">
+                                İnsan alverinə qarşı
+                                məlumat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerEnd flex justify-between items-center pb-[24px] border-b-2 border-[#ffffff1a]">
+                    <div class="flex items-center gap-[8px] ">
+                        <a href="#"
+                           class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                           class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                           class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#"
+                           class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                        <a href="#"
+                           class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#"
+                           class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                           class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <button>
+                            <img src="assets/img/googlePlay.svg" alt="">
+                        </button>
+                        <button>
+                            <img src="assets/img/appStore.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="copyright py-[24px] flex items-center justify-between">
+                    <div class="text-[13px]">
+                        <p class="text-[#ffffffb3]">© 2024 Azerbaijan Airlines - All rights reserved</p>
+                    </div>
+                    <div class="text-[13px]">
+                        <p class="text-[#ffffffb3]">Designed by Rashad Agayev</p>
+                    </div>
+                    <div class="text-[13px]">
+                        <a href="#" class="hover:text-white text-[#ffffffb3] transition-all">Help Center</a>
+                    </div>
+                    <div class="text-[13px]">
+                        <a href="#" class="hover:text-white text-[#ffffffb3] transition-all">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="assets/js/air-datepicker.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>
