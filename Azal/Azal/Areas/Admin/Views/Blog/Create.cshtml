@@ -25,9 +25,10 @@
                 <textarea asp-for="Description" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+           
             <div class="form-group">
                 <label asp-for="LanguageId" class="control-label"></label>
-                <select asp-for="LanguageId" class="form-control" asp-items="ViewBag.Languages"></select>
+                <select  asp-for="LanguageId" class="form-control" asp-items="ViewBag.Languages"></select>
                 <span asp-validation-for="LanguageId" class="text-danger"></span>
             </div>
            

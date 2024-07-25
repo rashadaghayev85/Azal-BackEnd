@@ -15,8 +15,10 @@ namespace Repository.Data
         public DbSet<Language> Languages { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogTranslate> BlogTranslates { get; set; }
+        public DbSet<Airport> Airports { get; set; }
+        public DbSet<AirportTranslate> AirportTranslates { get; set; }
 
-       
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Blog>()

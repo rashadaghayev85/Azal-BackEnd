@@ -24,6 +24,7 @@ namespace Service
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<ILanguageService, LanguageService>();
             services.AddScoped<IBlogTranslateService, BlogTranslateService>();
+            services.AddScoped<IAirportService, AirportService>();
 
 
 
