@@ -1,0 +1,60 @@
+﻿@model Service.ViewModels.Blogs.BlogDetailVM
+
+@{
+    ViewData["Title"] = "Blog Details";
+}
+<main style="margin-top: 70px; margin-left:60px;">
+<h2>Blog Details</h2>
+
+<div>
+    <h4>Blog</h4>
+    <hr />
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Language</th>
+                        <th>LangCode</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                  
+
+                            <tr style="background-color:#bbb">
+
+                                <td>
+
+                                    <img style="witdh:100px;height:200px;" src="~/assets/img/@Model.Image" />
+
+                                </td>
+
+                                <td>
+                                    @Model.BlogTranslate.Name
+                                </td>
+                                <td>@Model.BlogTranslate.Description</td>
+                                <td>
+                                    @Model.BlogTranslate.Language.Name
+                                </td>
+
+                                <td>
+                               @Model.BlogTranslate.Language.Culture
+                                   
+                                </td>
+                            </tr>
+                        
+                 
+
+
+                </tbody>
+            </table>
+
+            <div>
+                <a class="btn btn-primary" asp-action="Index">Back to List</a>
+            </div>
+        </div>
+</main>

@@ -2,6 +2,7 @@
 using Domain.Models;
 using Service.ViewModels.Banners;
 using Service.ViewModels.Blogs;
+using Service.ViewModels.BlogTranslates;
 using Service.ViewModels.Languages;
 using System;
 using System.Collections.Generic;
@@ -26,9 +27,14 @@ namespace Service.Helpers
             CreateMap<LanguageCreateVM, Language>();
             CreateMap<LanguageEditVM, Language>();
 
-            CreateMap<Blog, BlogVM>();
+            CreateMap<Blog, BlogVM>().ForMember(dest => dest.BlogTranslate, opt => opt.MapFrom(src => src.BlogTranslates));
+            CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.BlogTranslate, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault()));
             CreateMap<BlogCreateVM, Blog>();
-            CreateMap<BlogEditVM, Blog>();
+            CreateMap<Blog, BlogEditVM>().ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault().Name))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault().Description))
+                .ForMember(dest=>dest.Culture,opt=>opt.MapFrom(src=>src.BlogTranslates.FirstOrDefault().Language.Culture));
+            CreateMap<BlogTranslate, BlogTranslateVM>();
+
 
 
         }

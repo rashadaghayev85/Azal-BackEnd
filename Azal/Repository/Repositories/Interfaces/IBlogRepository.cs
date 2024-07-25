@@ -9,11 +9,12 @@ namespace Repository.Repositories.Interfaces
 {
     public interface IBlogRepository
     {
-        Task<Blog> GetByIdAsync(int blogId);
+        Task<Blog> GetByIdAsync(int id);
         Task<IEnumerable<Blog>> GetAllAsync();
         Task CreateAsync(Blog blog);
         Task EditAsync(Blog blog);
-        Task DeleteAsync(int blogId);
+        Task EditSaveAsync();
+        Task DeleteAsync(Blog blog);
         
     }
 }

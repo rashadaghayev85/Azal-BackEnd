@@ -1,18 +1,10 @@
 ﻿using AutoMapper;
 using Domain.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
-using Repository.Repositories;
 using Repository.Repositories.Interfaces;
 using Service.Services.Interfaces;
 using Service.ViewModels.Blogs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Service.Services
 {
@@ -44,12 +36,13 @@ namespace Service.Services
             {
                 BlogTranslates = new List<BlogTranslate>
                 {
-                    new BlogTranslate
+                      new BlogTranslate
                     {
-                        Title = model.Name,
+                        Name = model.Name,
                         Description = model.Description,
-                        Language = language
+                        Language=language
                     }
+
                 }
             };
             blog.Image = model.Image.FileName;
@@ -61,23 +54,32 @@ namespace Service.Services
 
         }
 
-        public async Task DeleteAsync(int blogId)
+        public async Task DeleteAsync(int id)
         {
-            await _blogRepo.DeleteAsync(blogId);
+            var blog = await GetByIdAsync(id);
+            if (blog != null)
+            {
+                await _blogRepo.DeleteAsync(blog);
+            }
         }
 
-        public async Task EditAsync(int blogId, string newName, string newDescription, string culture)
+        public async Task EditAsync(int id,BlogEditVM model)
         {
-            var blog = await _blogRepo.GetByIdAsync(blogId);
+            var blog = await _blogRepo.GetByIdAsync(id);
             if (blog == null) return;
 
-            var blogTranslation = blog.BlogTranslates.SingleOrDefault(bt => bt.Language.Culture == culture);
+            var blogTranslation = blog.BlogTranslates.SingleOrDefault(bt => bt.Language.Culture == model.Culture);
             if (blogTranslation != null)
             {
-                blogTranslation.Title = newName;
-                blogTranslation.Description = newDescription;
+                blogTranslation.Name = model.Name;
+                blogTranslation.Description = model.Description;
                 await _blogRepo.EditAsync(blog);
             }
+        }
+
+        public async Task EditSaveAsync()
+        {
+           await _blogRepo.EditSaveAsync();
         }
 
         public async Task<IEnumerable<BlogVM>> GetAllAsync()
@@ -87,10 +89,13 @@ namespace Service.Services
             //return await _blogRepo.GetAllAsync();
         }
 
-        public async Task<Blog> GetByIdAsync(int blogId, string culture)
+        public async Task<Blog> GetByIdAsync(int blogId)
         {
-            var blog =await _blogRepo.GetByIdAsync(blogId);
-            return blog?.BlogTranslates.Any(bt => bt.Language.Culture == culture) == true ? blog : null;
+            var blog = await _blogRepo.GetByIdAsync(blogId);
+            
+            return _mapper.Map<Blog>(blog);
+
+           
         }
     }
 }

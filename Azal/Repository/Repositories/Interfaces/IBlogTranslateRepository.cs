@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories.Interfaces
 {
-    public interface IBlogTranslateRepository
+    public interface IBlogTranslateRepository : IBaseRepository<BlogTranslate>
     {
-        Task<BlogTranslateRepository> GetByIdAsync(int id);
-        Task<IEnumerable<BlogTranslateRepository>> GetAllAsync();
+        
     }
 }

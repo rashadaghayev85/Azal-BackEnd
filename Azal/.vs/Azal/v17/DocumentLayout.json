@@ -1,68 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\",
+  "WorkspaceRootPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\pb101\\code\\azal\\azal\\areas\\admin\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\service\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\repository\\repositories\\blogtranslaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\blogtranslaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\service\\services\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{084ECAB7-C1B3-40AD-99F3-97C533A666CF}|Domain\\Domain.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\domain\\models\\blogtranslate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{084ECAB7-C1B3-40AD-99F3-97C533A666CF}|Domain\\Domain.csproj|solutionrelative:domain\\models\\blogtranslate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\service\\viewmodels\\blogs\\blogvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\blogs\\blogvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\azal\\areas\\admin\\views\\blog\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\blog\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\repository\\repositories\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\repository\\repositories\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\repository\\repositories\\interfaces\\iblogtranslaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\iblogtranslaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\azal\\areas\\admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/RASHAD8088_SQLEXPRESS/AZALDb/True/SqlTable/dbo.BlogTranslates.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/RASHAD8088_SQLEXPRESS/AZALDb/True/SqlTable/dbo.Blogs.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\service\\viewmodels\\blogs\\blogcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\blogs\\blogcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\blog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\blog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\service\\services\\interfaces\\ilanguageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\ilanguageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\viewmodels\\blogs\\blogeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\blogs\\blogeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\repository\\repositories\\interfaces\\ilanguagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\ilanguagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\services\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\viewmodels\\blogs\\blogdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\blogs\\blogdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\repository\\repositories\\interfaces\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/RASHAD8088_SQLEXPRESS/AZALDb/True/SqlTable/dbo.Blogs.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -72,196 +49,133 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BlogVM.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\ViewModels\\Blogs\\BlogVM.cs",
-              "RelativeDocumentMoniker": "Service\\ViewModels\\Blogs\\BlogVM.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\ViewModels\\Blogs\\BlogVM.cs",
-              "RelativeToolTip": "Service\\ViewModels\\Blogs\\BlogVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:59:52.028Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Azal\\Areas\\Admin\\Views\\Blog\\Index.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Blog\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Azal\\Areas\\Admin\\Views\\Blog\\Index.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Blog\\Index.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAswCgAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T07:59:29.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BlogTranslateRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Repository\\Repositories\\BlogTranslateRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\BlogTranslateRepository.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Repository\\Repositories\\BlogTranslateRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\BlogTranslateRepository.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAWwBgAAAAJAAAA",
+              "Title": "BlogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\BlogRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\BlogRepository.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\BlogRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\BlogRepository.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAEwBoAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:55:40.178Z",
+              "WhenOpened": "2024-07-25T09:27:37.404Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IBlogTranslateRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Repository\\Repositories\\Interfaces\\IBlogTranslateRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IBlogTranslateRepository.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Repository\\Repositories\\Interfaces\\IBlogTranslateRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IBlogTranslateRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Title": "IBlogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\Interfaces\\IBlogRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IBlogRepository.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\Interfaces\\IBlogRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IBlogRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:54:45.063Z"
+              "WhenOpened": "2024-07-25T09:27:18.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BlogDetailVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Blogs\\BlogDetailVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Blogs\\BlogDetailVM.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Blogs\\BlogDetailVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Blogs\\BlogDetailVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T08:38:11.837Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IBlogService.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\Services\\Interfaces\\IBlogService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IBlogService.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\Services\\Interfaces\\IBlogService.cs",
-              "RelativeToolTip": "Service\\Services\\Interfaces\\IBlogService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Helpers\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Service\\Helpers\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Helpers\\MappingProfile.cs",
+              "RelativeToolTip": "Service\\Helpers\\MappingProfile.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T20:50:20.302Z"
+              "WhenOpened": "2024-07-25T07:46:12.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBlogService.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Services\\Interfaces\\IBlogService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IBlogService.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Services\\Interfaces\\IBlogService.cs",
+              "RelativeToolTip": "Service\\Services\\Interfaces\\IBlogService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAcwBIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T07:44:08.841Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "BlogService.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\Services\\BlogService.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Services\\BlogService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\BlogService.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\Services\\BlogService.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Services\\BlogService.cs",
               "RelativeToolTip": "Service\\Services\\BlogService.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAWwEwAAAAlAAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAAAawD0AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T20:50:59.788Z",
+              "WhenOpened": "2024-07-25T07:43:48.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
+              "ViewState": "AQIAAM0AAAAAAAAAAADwv9oAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T07:41:26.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BlogEditVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Blogs\\BlogEditVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Blogs\\BlogEditVM.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Blogs\\BlogEditVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Blogs\\BlogEditVM.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAUwA4AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T07:36:56.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BlogTranslate.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Domain\\Models\\BlogTranslate.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\BlogTranslate.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Domain\\Models\\BlogTranslate.cs",
-              "RelativeToolTip": "Domain\\Models\\BlogTranslate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T08:00:45.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "dbo.BlogTranslates [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/RASHAD8088_SQLEXPRESS/AZALDb/True/SqlTable/dbo.BlogTranslates.sql",
-              "ToolTip": "dbo.BlogTranslates [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-24T07:53:01.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BlogRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Repository\\Repositories\\BlogRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\BlogRepository.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Repository\\Repositories\\BlogRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\BlogRepository.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAgwDAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:35:18.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Azal\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Azal\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Blog\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAA0AAAA",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAABAAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T07:38:33.747Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\Helpers\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Service\\Helpers\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\Helpers\\MappingProfile.cs",
-              "RelativeToolTip": "Service\\Helpers\\MappingProfile.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAwBwAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:51:19.833Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ILanguageRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Repository\\Repositories\\Interfaces\\ILanguageRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\ILanguageRepository.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Repository\\Repositories\\Interfaces\\ILanguageRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\ILanguageRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:39:50.924Z"
+              "WhenOpened": "2024-07-25T07:36:47.654Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "BlogController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:34:04.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "dbo.Blogs [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/RASHAD8088_SQLEXPRESS/AZALDb/True/SqlTable/dbo.Blogs.sql",
               "ToolTip": "dbo.Blogs [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2024-07-22T20:40:27.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ILanguageService.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\Services\\Interfaces\\ILanguageService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\ILanguageService.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\Services\\Interfaces\\ILanguageService.cs",
-              "RelativeToolTip": "Service\\Services\\Interfaces\\ILanguageService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:40:07.464Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BlogCreateVM.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\ViewModels\\Blogs\\BlogCreateVM.cs",
-              "RelativeDocumentMoniker": "Service\\ViewModels\\Blogs\\BlogCreateVM.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Service\\ViewModels\\Blogs\\BlogCreateVM.cs",
-              "RelativeToolTip": "Service\\ViewModels\\Blogs\\BlogCreateVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T20:40:49.819Z"
             }
           ]
         }

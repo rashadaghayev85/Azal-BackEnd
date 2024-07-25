@@ -11,11 +11,13 @@ namespace Service.Services.Interfaces
 {
     public interface IBlogService
     {
-        Task<Blog> GetByIdAsync(int blogId, string culture);
+        Task<Blog> GetByIdAsync(int blogId);
         Task<IEnumerable<BlogVM>> GetAllAsync();
         //Task CreateAsync(string name, string description, string culture);
         Task CreateAsync(BlogCreateVM model);
-        Task EditAsync(int blogId, string newName, string newDescription, string culture);
-        Task DeleteAsync(int blogId);
+        Task EditAsync(int id, BlogEditVM model);
+        Task EditSaveAsync();
+        Task DeleteAsync(int id);
+        
     }
 }

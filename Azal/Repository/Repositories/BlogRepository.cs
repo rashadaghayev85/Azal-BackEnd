@@ -22,14 +22,12 @@ namespace Repository.Repositories
             _context.SaveChanges();
         }
 
-        public async Task DeleteAsync(int blogId)
+        public async Task DeleteAsync(Blog blog)
         {
-            var blog = GetByIdAsync(blogId);
-            if (blog != null)
-            {
+           
                 _context.Remove(blog);
                 await _context.SaveChangesAsync();
-            }
+            
 
            
         }
@@ -40,6 +38,11 @@ namespace Repository.Repositories
             await _context.SaveChangesAsync();
         }
 
+        public async Task EditSaveAsync()
+        {
+            _context.SaveChangesAsync();
+        }
+
         public async Task<IEnumerable<Blog>> GetAllAsync()
         {
             return _context.Blogs
@@ -48,12 +51,12 @@ namespace Repository.Repositories
                .ToList();
         }
 
-        public async Task<Blog> GetByIdAsync(int blogId)
+        public async Task<Blog> GetByIdAsync(int id)
         {
             return  _context.Blogs
                 .Include(b => b.BlogTranslates)
                 .ThenInclude(bt => bt.Language)
-                .SingleOrDefault(b => b.Id == blogId);
+                .SingleOrDefault(b => b.Id == id);
         }
     }
 }

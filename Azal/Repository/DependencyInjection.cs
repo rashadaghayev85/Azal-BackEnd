@@ -19,6 +19,7 @@ namespace Repository
             services.AddScoped<IBannerRepository, BannerRepository>();
             services.AddScoped<IBlogRepository, BlogRepository>();
             services.AddScoped<ILanguageRepository, LanguageRepository>();
+            services.AddScoped<IBlogTranslateRepository, BlogTranslateRepository>();
 
 
 

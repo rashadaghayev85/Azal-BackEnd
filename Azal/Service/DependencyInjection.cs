@@ -23,6 +23,7 @@ namespace Service
             services.AddScoped<IBannerService, BannerService>();
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<ILanguageService, LanguageService>();
+            services.AddScoped<IBlogTranslateService, BlogTranslateService>();
 
 
 

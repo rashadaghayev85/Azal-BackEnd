@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wy+chVd6bE/gp5C6+3ieFrAPKg0wN6BlV9EbzRHDA3zqk/vISwRmgEpzv1sLAUpQCSWavTilxk4sS9rTZF8cUA==",
+  "dgSpecHash": "E71JOdvMhQtIgcNPkHcnxLo+5N7xPOetwwY1V96YF58CedMzDmQqKqfJAPwJJDrx65eZBLzAGwS0Iu7HOycC0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\PB101\\code\\Azal\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rashad\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Rashad\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

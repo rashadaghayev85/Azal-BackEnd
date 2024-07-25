@@ -16,14 +16,6 @@ namespace Repository.Repositories
 
         }
 
-        public async Task<IEnumerable<BlogTranslateRepository>>GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<BlogTranslateRepository> IBlogTranslateRepository.GetByIdAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
