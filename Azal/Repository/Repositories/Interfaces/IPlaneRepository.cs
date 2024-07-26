@@ -11,5 +11,7 @@ namespace Repository.Repositories.Interfaces
     public interface IPlaneRepository : IBaseRepository<Plane>
     {
         Task<SelectList> GetAllSelectedAsync();
+        Task<Plane> GetByIdWithIncludeAsync(int id);
+        Task<IEnumerable<Plane>> GetAllWithIncludeAsync();
     }
 }

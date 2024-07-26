@@ -23,5 +23,18 @@ namespace Repository.Repositories
             var planes = await _context.Planes.Where(m => !m.SoftDelete).ToListAsync();
             return new SelectList(planes, "Id", "Model");
         }
+        public async Task<IEnumerable<Plane>> GetAllWithIncludeAsync()
+        {
+            return _context.Planes
+               .Include(b => b.Flights)
+               .ToList();
+        }
+
+        public async Task<Plane> GetByIdWithIncludeAsync(int id)
+        {
+            return _context.Planes
+                .Include(b => b.Flights)
+                .SingleOrDefault(b => b.Id == id);
+        }
     }
 }

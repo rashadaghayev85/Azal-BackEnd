@@ -35,7 +35,7 @@ namespace Repository.Repositories
         public async Task<SelectList> GetAllSelectedAsync()
         {
             var airports = await _context.AirportTranslates.Where(m => !m.SoftDelete && m.Language.Culture=="en").ToListAsync();
-            return new SelectList(airports, "Id", "Location");
+            return new SelectList(airports, "AirportId", "Location");
         }
     }
 }

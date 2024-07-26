@@ -3,23 +3,83 @@
   "WorkspaceRootPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\repository\\repositories\\airportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\airportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\azal\\areas\\admin\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\controllers\\planecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\planecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\viewmodels\\flights\\flightcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\flights\\flightcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\viewmodels\\planes\\planevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\planes\\planevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\plane\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\plane\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\flight\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\flight\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\repository\\repositories\\airportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\airportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\plane\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\plane\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\services\\interfaces\\iplaneservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\services\\interfaces\\iplaneservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\services\\planeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\services\\planeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\viewmodels\\planes\\planecreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\planes\\planecreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\viewmodels\\planes\\planedetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\planes\\planedetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\viewmodels\\planes\\planeeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\planes\\planeeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\repository\\repositories\\planerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\planerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\repository\\repositories\\interfaces\\iplanerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\iplanerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\service\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\repository\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\repository\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E15DBE6-8CAA-4EA7-AFB2-1B00B58E5CB1}|Repository\\Repository.csproj|solutionrelative:repository\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -33,37 +93,245 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AirportRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\AirportRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\AirportRepository.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\AirportRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\AirportRepository.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAA/wCUAAAA7AAAA",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Plane\\Create.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Plane\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Plane\\Create.cshtml",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Plane\\Create.cshtml",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-26T21:29:20.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Helpers\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Service\\Helpers\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Helpers\\MappingProfile.cs",
+              "RelativeToolTip": "Service\\Helpers\\MappingProfile.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAuwDEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T12:20:39.294Z",
+              "WhenOpened": "2024-07-26T21:27:25.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PlaneController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\PlaneController.cs",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\PlaneController.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\PlaneController.cs",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\PlaneController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAuwCMAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:22:10.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEEAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-26T12:15:02.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FlightCreateVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Flights\\FlightCreateVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Flights\\FlightCreateVM.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Flights\\FlightCreateVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Flights\\FlightCreateVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:12:45.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlaneVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Planes\\PlaneVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Planes\\PlaneVM.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Planes\\PlaneVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Planes\\PlaneVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:15:53.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FlightController.cs",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\FlightController.cs",
               "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\FlightController.cs",
               "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\FlightController.cs",
               "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\FlightController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCwAAAA7AAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwDUAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-26T12:19:22.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "AirportRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\AirportRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\AirportRepository.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\AirportRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\AirportRepository.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA/wCcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T12:20:39.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC8AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-26T21:26:55.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-26T21:25:35.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Plane\\Index.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Plane\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Plane\\Index.cshtml",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Plane\\Index.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAABUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-26T21:25:57.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PlaneService.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Services\\PlaneService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\PlaneService.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Services\\PlaneService.cs",
+              "RelativeToolTip": "Service\\Services\\PlaneService.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAADgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:18:58.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PlaneCreateVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Planes\\PlaneCreateVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Planes\\PlaneCreateVM.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Planes\\PlaneCreateVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Planes\\PlaneCreateVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:17:32.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PlaneEditVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Planes\\PlaneEditVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Planes\\PlaneEditVM.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Planes\\PlaneEditVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Planes\\PlaneEditVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:17:16.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PlaneDetailVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Planes\\PlaneDetailVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Planes\\PlaneDetailVM.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Planes\\PlaneDetailVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Planes\\PlaneDetailVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:17:01.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IPlaneService.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Services\\Interfaces\\IPlaneService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Interfaces\\IPlaneService.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Services\\Interfaces\\IPlaneService.cs",
+              "RelativeToolTip": "Service\\Services\\Interfaces\\IPlaneService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:15:23.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PlaneRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\PlaneRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\PlaneRepository.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\PlaneRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\PlaneRepository.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAqwB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:14:06.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IPlaneRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\Interfaces\\IPlaneRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IPlaneRepository.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Repositories\\Interfaces\\IPlaneRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IPlaneRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T21:13:44.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Service\\DependencyInjection.cs",
@@ -71,12 +339,11 @@
               "RelativeToolTip": "Service\\DependencyInjection.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T12:18:06.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-26T12:18:06.358Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 19,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Repository\\DependencyInjection.cs",
@@ -84,31 +351,16 @@
               "RelativeToolTip": "Repository\\DependencyInjection.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAzwBgAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T12:17:52.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-26T12:17:52.227Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 20,
               "Title": "dbo.Flights [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/RASHAD8088_SQLEXPRESS/AZALDb/True/SqlTable/dbo.Flights.sql",
               "ToolTip": "dbo.Flights [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-26T12:15:54.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAADMAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-26T12:15:02.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-26T12:15:54.788Z"
             }
           ]
         }

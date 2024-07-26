@@ -6,6 +6,7 @@ using Service.ViewModels.Blogs;
 using Service.ViewModels.BlogTranslates;
 using Service.ViewModels.Flights;
 using Service.ViewModels.Languages;
+using Service.ViewModels.Planes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,9 +46,19 @@ namespace Service.Helpers
 
             CreateMap<Flight, FlightVM>();
             CreateMap<Flight, FlightDetailVM>();
-            CreateMap<FlightCreateVM, Flight>();
-            CreateMap<Flight, FlightEditVM>();  
-                
+            CreateMap<FlightCreateVM, Flight>().ForMember(dest => dest.DepartureAirportId, opt => opt.MapFrom(src => src.DepartureAirport))
+            .ForMember(dest => dest.ArrivalAirportId, opt => opt.MapFrom(src => src.ArrivalAirport))
+            .ForMember(dest => dest.PlaneId, opt => opt.MapFrom(src => src.Plane))
+            .ForMember(dest => dest.DepartureAirport, opt => opt.Ignore())
+            .ForMember(dest => dest.ArrivalAirport, opt => opt.Ignore())
+            .ForMember(dest => dest.Plane, opt => opt.Ignore());
+            CreateMap<Flight, FlightEditVM>();
+            
+            CreateMap<Plane, PlaneVM>();
+            CreateMap<Plane, PlaneDetailVM>();
+            CreateMap<PlaneCreateVM, Plane>();
+            CreateMap<Plane, PlaneEditVM>();
+
         }
     }
 }
