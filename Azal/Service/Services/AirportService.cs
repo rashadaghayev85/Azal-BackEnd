@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
 using Repository.Repositories.Interfaces;
@@ -35,13 +36,15 @@ namespace Service.Services
         }
         public async Task CreateAsync(AirportCreateVM model)
         {
-            var language = await _context.Languages.SingleOrDefaultAsync(l => l.Id == model.LanguageId);
+            var language = await _context.Languages.SingleOrDefaultAsync(l => l.Id == model.Language);
             if (language == null) return;
 
             var airport = new Airport
             {
+              
                 AirportTranslates = new List<AirportTranslate>
                 {
+                   
                       new AirportTranslate
                     {
                         
@@ -51,7 +54,7 @@ namespace Service.Services
 
                 }
             };
-          
+             airport.AirportCode = model.AirportCode;
 
             await _airportRepo.CreateAsync(_mapper.Map<Airport>(airport));
         }
@@ -86,15 +89,19 @@ namespace Service.Services
 
         public async Task<IEnumerable<AirportVM>> GetAllAsync()
         {
-            var data = await _airportRepo.GetAllAsync();
+            var data = await _airportRepo.GetAllWithIncludeAsync();
             return _mapper.Map<IEnumerable<AirportVM>>(data);
         }
 
         public async Task<Airport> GetByIdAsync(int id)
         {
-            var airport = await _airportRepo.GetByIdAsync(id);
+            var airport = await _airportRepo.GetByIdWithIncludeAsync(id);
 
             return _mapper.Map<Airport>(airport);
+        }
+        public async Task<SelectList> GetAllSelectedAsync()
+        {
+            return await _airportRepo.GetAllSelectedAsync();
         }
     }
 }

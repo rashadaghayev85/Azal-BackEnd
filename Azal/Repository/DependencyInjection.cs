@@ -21,6 +21,8 @@ namespace Repository
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddScoped<IBlogTranslateRepository, BlogTranslateRepository>();
             services.AddScoped<IAirportRepository, AirportRepository>();
+            services.AddScoped<IFLightRepository, FlightRepository>();
+            services.AddScoped<IPlaneRepository, PlaneRepository>();
 
 
 

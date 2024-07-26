@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace Repository.Repositories.Interfaces
     {
         Task<Airport> GetByIdWithIncludeAsync(int id);
         Task<IEnumerable<Airport>> GetAllWithIncludeAsync();
+        Task<SelectList> GetAllSelectedAsync();
     }
 }

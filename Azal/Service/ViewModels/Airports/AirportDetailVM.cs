@@ -9,7 +9,7 @@ namespace Service.ViewModels.Airports
 {
     public class AirportDetailVM
     {
-        public string Name { get; set; }
+        public string AirportCode { get; set; }
 
         public AirportTranslate AirportTranslate { get; set; }
     }

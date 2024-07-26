@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Service.ViewModels.Airports;
 using Service.ViewModels.Blogs;
 using System;
@@ -18,5 +19,6 @@ namespace Service.Services.Interfaces
         Task EditAsync(int id, AirportEditVM model);
         Task EditSaveAsync();
         Task DeleteAsync(int id);
+        Task<SelectList> GetAllSelectedAsync();
     }
 }

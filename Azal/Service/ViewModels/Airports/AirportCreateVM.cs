@@ -10,9 +10,9 @@ namespace Service.ViewModels.Airports
     public class AirportCreateVM
     {
        
-        public string Name { get; set; }
+        public string AirportCode { get; set; }
         public string Location { get; set; }
 
-        public int LanguageId { get; set; }
+        public int Language { get; set; }
     }
 }

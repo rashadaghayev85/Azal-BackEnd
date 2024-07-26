@@ -44,7 +44,7 @@ namespace Azal.Areas.Admin.Controllers
             var data = _mapper.Map<AirportDetailVM>(airport);
             return View(data);
         }
-
+        [HttpGet]
         public async Task<IActionResult> Create()
         {
             ViewBag.languages = await _languageService.GetAllSelectedAsync();
@@ -106,15 +106,18 @@ namespace Azal.Areas.Admin.Controllers
 
 
 
-               
 
 
 
 
 
-            
+            if (request.AirportCode is not null)
+            {
+                airport.AirportCode = request.AirportCode;
+            }
 
-                if (request.Location is not null)
+
+            if (request.Location is not null)
                 {
                     airport.AirportTranslates.FirstOrDefault().Location = request.Location;
                 }

@@ -17,7 +17,10 @@ namespace Repository.Data
         public DbSet<BlogTranslate> BlogTranslates { get; set; }
         public DbSet<Airport> Airports { get; set; }
         public DbSet<AirportTranslate> AirportTranslates { get; set; }
-
+        public DbSet<Flight> Flights { get; set; }
+        public DbSet<Passenger> Passengers { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Plane> Planes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,6 +35,18 @@ namespace Repository.Data
                 .HasForeignKey(bt => bt.LanguageId);
 
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Airport>()
+           .HasMany(a => a.ArrivingFlights)
+           .WithOne(f => f.ArrivalAirport)
+           .HasForeignKey(f => f.ArrivalAirportId)
+           .OnDelete(DeleteBehavior.Restrict); // veya .OnDelete(DeleteBehavior.NoAction)
+
+            modelBuilder.Entity<Airport>()
+                .HasMany(a => a.DepartingFlights)
+                .WithOne(f => f.DepartureAirport)
+                .HasForeignKey(f => f.DepartureAirportId)
+                .OnDelete(DeleteBehavior.Restrict); // veya .OnDelete(DeleteBehavior.NoAction)
         }
     }
 }

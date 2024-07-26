@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Domain.Models;
+using Service.ViewModels.Airports;
 using Service.ViewModels.Banners;
 using Service.ViewModels.Blogs;
 using Service.ViewModels.BlogTranslates;
+using Service.ViewModels.Flights;
 using Service.ViewModels.Languages;
 using System;
 using System.Collections.Generic;
@@ -35,8 +37,17 @@ namespace Service.Helpers
                 .ForMember(dest=>dest.Culture,opt=>opt.MapFrom(src=>src.BlogTranslates.FirstOrDefault().Language.Culture));
             CreateMap<BlogTranslate, BlogTranslateVM>();
 
+            CreateMap<Airport, AirportVM>().ForMember(dest => dest.AirportTranslates, opt => opt.MapFrom(src => src.AirportTranslates));
+            CreateMap<Airport, AirportDetailVM>().ForMember(dest => dest.AirportTranslate, opt => opt.MapFrom(src => src.AirportTranslates.FirstOrDefault()));
+            CreateMap<AirportCreateVM, Airport>();
+            CreateMap<Airport, AirportEditVM>().ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.AirportTranslates.FirstOrDefault().Location))
+                .ForMember(dest => dest.Culture, opt => opt.MapFrom(src => src.AirportTranslates.FirstOrDefault().Language.Culture));
 
-
+            CreateMap<Flight, FlightVM>();
+            CreateMap<Flight, FlightDetailVM>();
+            CreateMap<FlightCreateVM, Flight>();
+            CreateMap<Flight, FlightEditVM>();  
+                
         }
     }
 }

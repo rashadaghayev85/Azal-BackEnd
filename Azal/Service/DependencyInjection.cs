@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Repository.Repositories.Interfaces;
+using Repository.Repositories;
 using Service.Helpers;
 using Service.Services;
 using Service.Services.Interfaces;
@@ -25,8 +27,8 @@ namespace Service
             services.AddScoped<ILanguageService, LanguageService>();
             services.AddScoped<IBlogTranslateService, BlogTranslateService>();
             services.AddScoped<IAirportService, AirportService>();
-
-
+            services.AddScoped<IFlightService, FlightService>();
+            services.AddScoped<IPlaneService, PlaneService>();
 
 
             return services;

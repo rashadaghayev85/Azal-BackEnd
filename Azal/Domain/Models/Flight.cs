@@ -1,6 +1,7 @@
 ﻿using Domain.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,13 +12,14 @@ namespace Domain.Models
     {
         
         public string FlightNumber { get; set; }
+        public int TicketCount { get; set; }
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime { get; set; }
 
-        // Foreign Keys
+        [ForeignKey("DepartureAirportId")]
         public int DepartureAirportId { get; set; }
         public Airport DepartureAirport { get; set; }
-
+        [ForeignKey("ArrivalAirportId")]
         public int ArrivalAirportId { get; set; }
         public Airport ArrivalAirport { get; set; }
 
