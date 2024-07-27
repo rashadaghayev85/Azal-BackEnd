@@ -18,6 +18,11 @@ namespace Repository.Repositories
 
         }
 
+        public async Task EditSaveAsync()
+        {
+           await _context.SaveChangesAsync();
+        }
+
         public async Task<SelectList> GetAllSelectedAsync()
         {
             var planes = await _context.Planes.Where(m => !m.SoftDelete).ToListAsync();

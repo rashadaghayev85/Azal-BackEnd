@@ -1,0 +1,52 @@
+﻿@model PlaneDetailVM
+
+@{
+    ViewData["Title"] = "Blog Details";
+}
+<main style="margin-top: 70px; margin-left:60px;">
+    <h2>Blog Details</h2>
+
+    <div>
+        <h4>Blog</h4>
+        <hr />
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>Flight Number</th>
+                        <th>Create Date</th>
+                        <th>Capacity</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+
+
+                    <tr style="background-color:#bbb">
+
+                      
+
+                        <td>
+                            @Model.Model
+                        </td>
+                        <td>@Model.CreatedDate.ToString("dd/MMMM/yyyy")</td>
+                        <td>
+                            @Model.Capacity
+                        </td>
+
+                       
+                    </tr>
+
+
+
+
+                </tbody>
+            </table>
+
+            <div>
+                <a class="btn btn-primary" asp-action="Index">Back to List</a>
+            </div>
+        </div>
+</main>

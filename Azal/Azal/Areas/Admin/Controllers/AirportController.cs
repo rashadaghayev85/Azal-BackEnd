@@ -136,31 +136,7 @@ namespace Azal.Areas.Admin.Controllers
 
 
 
-                //var category = await _blogService.GetByIdAsync((int)id);
-
-                //if (category is null) return NotFound();
-
-
-
-
-
-
-
-
-
-                //if (request.Name is not null)
-                //{
-                //    category.BlogTranslates.FirstOrDefault().Name = request.Name;
-                //}
-                //if (request.Description is not null)
-                //{
-                //    category.BlogTranslates.FirstOrDefault().Description = request.Description;
-                //}
-                //await _blogService.EditSaveAsync();
-                //return RedirectToAction(nameof(Index));
-            
-            //await _blogService.EditAsync(id, request);
-            //return RedirectToAction(nameof(Index));
+                
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

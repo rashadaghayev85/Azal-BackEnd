@@ -14,6 +14,8 @@ namespace Service.ViewModels.Flights
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime { get; set; }
         public string PlaneModel { get; set; }
-        
+        public int ArrivalAirport { get; set; }
+        public int DepartureAirport { get; set; }
+
     }
 }

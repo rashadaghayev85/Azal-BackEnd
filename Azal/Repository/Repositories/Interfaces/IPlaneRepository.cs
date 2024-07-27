@@ -13,5 +13,7 @@ namespace Repository.Repositories.Interfaces
         Task<SelectList> GetAllSelectedAsync();
         Task<Plane> GetByIdWithIncludeAsync(int id);
         Task<IEnumerable<Plane>> GetAllWithIncludeAsync();
+        Task EditSaveAsync();
+
     }
 }

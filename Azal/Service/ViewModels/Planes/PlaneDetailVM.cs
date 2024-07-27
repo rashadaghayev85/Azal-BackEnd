@@ -10,5 +10,6 @@ namespace Service.ViewModels.Planes
     {
         public string Model { get; set; }
         public int Capacity { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

@@ -23,6 +23,7 @@ namespace Repository
             services.AddScoped<IAirportRepository, AirportRepository>();
             services.AddScoped<IFLightRepository, FlightRepository>();
             services.AddScoped<IPlaneRepository, PlaneRepository>();
+            services.AddScoped<ITicketRepository, TicketRepository>();
 
 
 

@@ -19,5 +19,6 @@ namespace Service.Services.Interfaces
         Task CreateAsync(PlaneCreateVM model);
         Task EditAsync(int id, PlaneEditVM model);
         Task DeleteAsync(int id);
+        Task EditSaveAsync();
     }
 }

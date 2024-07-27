@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
 using Repository.Repositories.Interfaces;
@@ -32,6 +33,11 @@ namespace Repository.Repositories
                 .Include(bt => bt.ArrivalAirport)
                 .Include(bt => bt.DepartureAirport)
                 .SingleOrDefault(b => b.Id == id);
+        }
+        public async Task<SelectList> GetAllSelectedAsync()
+        {
+            var flights = await _context.Flights.Where(m => !m.SoftDelete).ToListAsync();
+            return new SelectList(flights, "Id", "FlightNumber");
         }
     }
 }

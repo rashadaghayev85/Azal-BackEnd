@@ -12,5 +12,6 @@ namespace Service.ViewModels.Flights
         public int TicketCount { get; set; }
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

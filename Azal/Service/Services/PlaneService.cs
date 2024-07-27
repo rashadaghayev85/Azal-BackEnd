@@ -54,7 +54,10 @@ namespace Service.Services
             await _planeRepo.EditAsync(editData);
         }
 
-        
+        public async Task EditSaveAsync()
+        {
+             await _planeRepo.EditSaveAsync();    
+        }
 
         public async Task<IEnumerable<PlaneVM>> GetAllAsync()
         {

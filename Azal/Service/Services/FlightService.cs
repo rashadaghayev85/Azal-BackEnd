@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Repository.Data;
 using Repository.Repositories.Interfaces;
 using Service.Services.Interfaces;
@@ -78,6 +79,10 @@ namespace Service.Services
             var flight = await _flightRepo.GetByIdWithIncludeAsync(id);
 
             return _mapper.Map<Flight>(flight);
+        }
+        public async Task<SelectList> GetAllSelectedAsync()
+        {
+            return await _flightRepo.GetAllSelectedAsync();
         }
     }
 }

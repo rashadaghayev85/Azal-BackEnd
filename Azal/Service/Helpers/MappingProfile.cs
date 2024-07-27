@@ -7,6 +7,7 @@ using Service.ViewModels.BlogTranslates;
 using Service.ViewModels.Flights;
 using Service.ViewModels.Languages;
 using Service.ViewModels.Planes;
+using Service.ViewModels.Tickets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,12 +53,22 @@ namespace Service.Helpers
             .ForMember(dest => dest.DepartureAirport, opt => opt.Ignore())
             .ForMember(dest => dest.ArrivalAirport, opt => opt.Ignore())
             .ForMember(dest => dest.Plane, opt => opt.Ignore());
-            CreateMap<Flight, FlightEditVM>();
-            
+           // CreateMap<Flight, FlightEditVM>();
+            CreateMap<FlightEditVM, Flight>().ForMember(dest => dest.DepartureAirportId, opt => opt.MapFrom(src => src.DepartureAirport))
+            .ForMember(dest => dest.ArrivalAirportId, opt => opt.MapFrom(src => src.ArrivalAirport))
+            .ForMember(dest => dest.PlaneId, opt => opt.MapFrom(src => src.Plane))
+            .ForMember(dest => dest.DepartureAirport, opt => opt.Ignore())
+            .ForMember(dest => dest.ArrivalAirport, opt => opt.Ignore())
+            .ForMember(dest => dest.Plane, opt => opt.Ignore()).ReverseMap();
+
             CreateMap<Plane, PlaneVM>();
             CreateMap<Plane, PlaneDetailVM>();
             CreateMap<PlaneCreateVM, Plane>();
             CreateMap<Plane, PlaneEditVM>();
+
+            CreateMap<Ticket, TicketVM>();
+            CreateMap<TicketCreateVM, Ticket>().ForMember(dest => dest.FlightId, opt => opt.MapFrom(src => src.Flight))
+                                               .ForMember(dest => dest.Flight, opt => opt.Ignore());
 
         }
     }
