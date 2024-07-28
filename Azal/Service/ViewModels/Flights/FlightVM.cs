@@ -16,6 +16,7 @@ namespace Service.ViewModels.Flights
         public string PlaneModel { get; set; }
         public int ArrivalAirport { get; set; }
         public int DepartureAirport { get; set; }
-
+        public int Price_azn { get; set; }
+        public int Price_usd { get; set; }
     }
 }

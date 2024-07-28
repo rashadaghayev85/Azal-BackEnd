@@ -18,7 +18,7 @@ namespace Repository.Data
         public DbSet<Airport> Airports { get; set; }
         public DbSet<AirportTranslate> AirportTranslates { get; set; }
         public DbSet<Flight> Flights { get; set; }
-        public DbSet<Passenger> Passengers { get; set; }
+      //  public DbSet<Passenger> Passengers { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Plane> Planes { get; set; }
 

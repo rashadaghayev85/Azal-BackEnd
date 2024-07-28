@@ -6,7 +6,7 @@
 
 
     <div class="container mt-5">
-        <h2 class="text-center">Planes</h2>
+        <h2 class="text-center">Tickets</h2>
         <a asp-action="Create" class="btn btn-success">
             <i class="fa-solid fa-plus"></i>
         </a>
@@ -16,8 +16,10 @@
                 <thead>
                     <tr>
 
+
                         <th>Departure Airport</th>
                         <th>Arrival Airport</th>
+                        <th>Flight Number</th>
                         <th>Price(AZN)</th>
                         <th>Price(USD)</th>
 
@@ -36,17 +38,21 @@
 
 
                             <td>
-                                @item.Flight.DepartureAirport
+                                @item.Flight.DepartureAirport.AirportTranslates.SingleOrDefault().Location
                             </td>
                             <td>
-                                @item.Flight.ArrivalAirport
+                                @item.Flight.ArrivalAirport.AirportTranslates.SingleOrDefault().Location
                             </td>
                             <td>
-                                @item.Price_az
+                                @item.Flight.FlightNumber
 
                             </td>
                             <td>
-                                @item.Price_usd
+                                @item.Flight.Price_azn
+
+                            </td>
+                            <td>
+                                @item.Flight.Price_usd
 
                             </td>
 

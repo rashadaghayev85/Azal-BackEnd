@@ -45,6 +45,9 @@ namespace Azal.Areas.Admin.Controllers
         {
             ViewBag.flights = await _flightService.GetAllSelectedAsync();
             await _ticketService.CreateAsync(request);
+          
+
+
             return RedirectToAction(nameof(Index));
         }
     }

@@ -134,6 +134,14 @@ namespace Azal.Areas.Admin.Controllers
             {
                 flight.TicketCount = request.TicketCount;
             }
+            if (request.Price_azn != 0)
+            {
+                flight.Price_azn = request.Price_azn;
+            }
+            if (request.Price_usd != 0)
+            {
+                flight.Price_usd = request.Price_usd;
+            }
 
 
             await _flightService.EditSaveAsync();

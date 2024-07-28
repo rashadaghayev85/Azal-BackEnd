@@ -39,5 +39,10 @@ namespace Repository.Repositories
             var flights = await _context.Flights.Where(m => !m.SoftDelete).ToListAsync();
             return new SelectList(flights, "Id", "FlightNumber");
         }
+
+        public async Task EditSaveAsync()
+        {
+            await _context.SaveChangesAsync();  
+        }
     }
 }

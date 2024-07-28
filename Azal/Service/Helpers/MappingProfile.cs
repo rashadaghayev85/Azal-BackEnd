@@ -45,7 +45,8 @@ namespace Service.Helpers
             CreateMap<Airport, AirportEditVM>().ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.AirportTranslates.FirstOrDefault().Location))
                 .ForMember(dest => dest.Culture, opt => opt.MapFrom(src => src.AirportTranslates.FirstOrDefault().Language.Culture));
 
-            CreateMap<Flight, FlightVM>();
+            CreateMap<Flight, FlightVM>().ForMember(dest => dest.DepartureAirport, opt => opt.MapFrom(src => src.DepartureAirport.Id))
+            .ForMember(dest => dest.ArrivalAirport, opt => opt.MapFrom(src => src.ArrivalAirport.Id));
             CreateMap<Flight, FlightDetailVM>();
             CreateMap<FlightCreateVM, Flight>().ForMember(dest => dest.DepartureAirportId, opt => opt.MapFrom(src => src.DepartureAirport))
             .ForMember(dest => dest.ArrivalAirportId, opt => opt.MapFrom(src => src.ArrivalAirport))
@@ -55,10 +56,13 @@ namespace Service.Helpers
             .ForMember(dest => dest.Plane, opt => opt.Ignore());
            // CreateMap<Flight, FlightEditVM>();
             CreateMap<FlightEditVM, Flight>().ForMember(dest => dest.DepartureAirportId, opt => opt.MapFrom(src => src.DepartureAirport))
+                .ForMember(dest => dest.Price_azn, opt => opt.MapFrom(src => src.Price_azn))
+                .ForMember(dest => dest.Price_usd, opt => opt.MapFrom(src => src.Price_usd))
             .ForMember(dest => dest.ArrivalAirportId, opt => opt.MapFrom(src => src.ArrivalAirport))
             .ForMember(dest => dest.PlaneId, opt => opt.MapFrom(src => src.Plane))
             .ForMember(dest => dest.DepartureAirport, opt => opt.Ignore())
             .ForMember(dest => dest.ArrivalAirport, opt => opt.Ignore())
+ 
             .ForMember(dest => dest.Plane, opt => opt.Ignore()).ReverseMap();
 
             CreateMap<Plane, PlaneVM>();
@@ -66,7 +70,9 @@ namespace Service.Helpers
             CreateMap<PlaneCreateVM, Plane>();
             CreateMap<Plane, PlaneEditVM>();
 
-            CreateMap<Ticket, TicketVM>();
+            CreateMap<Ticket, TicketVM>().ForMember(dest => dest.ArrivalAirport, opt => opt.MapFrom(src => src.Flight.ArrivalAirport.AirportTranslates.SingleOrDefault().Location))
+                                         .ForMember(dest => dest.DepartureAirport, opt => opt.MapFrom(src => src.Flight.DepartureAirport.AirportTranslates.SingleOrDefault().Location));
+                                         
             CreateMap<TicketCreateVM, Ticket>().ForMember(dest => dest.FlightId, opt => opt.MapFrom(src => src.Flight))
                                                .ForMember(dest => dest.Flight, opt => opt.Ignore());
 

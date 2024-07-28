@@ -20,8 +20,8 @@
                         <th>Flight Number</th>
                         <th>Ticket Count</th>
                         <th>Plane Model</th>
-
-
+                        <th>Price(AZN)</th>
+                        <th>Price(USD)</th>
 
                         <th>Operations</th>
                     </tr>
@@ -45,9 +45,13 @@
                                 <td>
                                     @item.PlaneModel
                                 </td>
-
-
-                                <td>
+                                 <td>
+                                    @item.Price_azn
+                                 </td>
+                                 <td>
+                                @item.Price_usd
+                                </td>
+                                  <td>
 
                                 <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-primary text-white small">
                                     <i class="fa-solid fa-info"></i>

@@ -13,5 +13,7 @@ namespace Service.ViewModels.Flights
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime { get; set; }
         public DateTime CreatedDate { get; set; }
+        public int Price_azn { get; set; }
+        public int Price_usd { get; set; }
     }
 }

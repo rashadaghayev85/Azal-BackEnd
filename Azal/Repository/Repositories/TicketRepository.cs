@@ -21,13 +21,24 @@ namespace Repository.Repositories
         {
             return _context.Tickets
               .Include(b => b.Flight)
+                .ThenInclude(m=>m.ArrivalAirport)
+                  .ThenInclude(a => a.AirportTranslates)
+                .Include(b => b.Flight)
+                   .ThenInclude(m => m.DepartureAirport)
+                     .ThenInclude(a=>a.AirportTranslates)
               .ToList();
         }
 
         public async Task<Ticket> GetByIdWithIncludeAsync(int id)
         {
             return _context.Tickets
+               .Include(b => b.Flight)
+                .ThenInclude(m => m.ArrivalAirport)
+                  .ThenInclude(a => a.AirportTranslates)
                 .Include(b => b.Flight)
+                   .ThenInclude(m => m.DepartureAirport)
+                     .ThenInclude(a => a.AirportTranslates)
+
                 .SingleOrDefault(b => b.Id == id);
         }
     }
