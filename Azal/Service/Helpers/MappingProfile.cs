@@ -7,6 +7,7 @@ using Service.ViewModels.BlogTranslates;
 using Service.ViewModels.Flights;
 using Service.ViewModels.Languages;
 using Service.ViewModels.Planes;
+using Service.ViewModels.SpecialOffers;
 using Service.ViewModels.Tickets;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace Service.Helpers
            
 
             CreateMap<Banner, BannerVM>();
-            CreateMap<BannerCreateVM, Banner>();
+            CreateMap<BannerCreateVM, Banner>().ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Image.FileName)); ;
             CreateMap<BannerEditVM, Banner>();
 
             CreateMap<Language, LanguageVM>();
@@ -76,6 +77,13 @@ namespace Service.Helpers
             CreateMap<TicketCreateVM, Ticket>().ForMember(dest => dest.FlightId, opt => opt.MapFrom(src => src.Flight))
                                                .ForMember(dest => dest.Flight, opt => opt.Ignore());
 
+            CreateMap<SpecialOffer, SpecialOfferVM>().ForMember(dest => dest.SpecialOffersTransLates, opt => opt.MapFrom(src => src.SpecialOffersTransLates));
+            CreateMap<SpecialOffer, SpecialOfferDetailVM>().ForMember(dest => dest.SpecialOffersTransLate, opt => opt.MapFrom(src => src.SpecialOffersTransLates.FirstOrDefault()));
+            CreateMap<SpecialOfferCreateVM, SpecialOffer>();
+            CreateMap<SpecialOffer, SpecialOfferEditVM>().ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.SpecialOffersTransLates.FirstOrDefault().Name))
+                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.SpecialOffersTransLates.FirstOrDefault().Title))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.SpecialOffersTransLates.FirstOrDefault().Description))
+                .ForMember(dest => dest.Culture, opt => opt.MapFrom(src => src.SpecialOffersTransLates.FirstOrDefault().Language.Culture));
         }
     }
 }

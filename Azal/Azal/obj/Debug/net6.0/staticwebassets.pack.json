@@ -2377,12 +2377,56 @@
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
-      "PackagePath": "staticwebassets\\assets\\img\\1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\02d4a3d3-5e38-4f97-858a-a2ac9c10fe56-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\02d4a3d3-5e38-4f97-858a-a2ac9c10fe56-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\031383af-03a9-4285-834b-26f31f4e759f-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\031383af-03a9-4285-834b-26f31f4e759f-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\05db9b0e-759b-4325-b26e-1dd9aab945ab-2400x1350_eng_41a507e839.cdd18a0e (1).jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\05db9b0e-759b-4325-b26e-1dd9aab945ab-2400x1350_eng_41a507e839.cdd18a0e (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\0778d775-bd8c-4671-8f35-0ca230bb7886-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\0778d775-bd8c-4671-8f35-0ca230bb7886-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\0b9a4d0a-0f77-4e68-8756-4edee1347af1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\0b9a4d0a-0f77-4e68-8756-4edee1347af1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
     },
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\1c17b341-2309-49ad-988f-004a7759193e-qidalanma_3_d30d72de34.9ffad3ae.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\1c17b341-2309-49ad-988f-004a7759193e-qidalanma_3_d30d72de34.9ffad3ae.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\2400x1350_eng_41a507e839.cdd18a0e (1).jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\2400x1350_eng_41a507e839.cdd18a0e (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\27657398-cd08-4ba9-94c5-83a5927a0d0b-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\27657398-cd08-4ba9-94c5-83a5927a0d0b-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\2ae47293-e36a-482d-8b94-a62f64e63ac6-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\2ae47293-e36a-482d-8b94-a62f64e63ac6-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\2dd0a411-e633-45d7-98b4-92d82e0d521c-AZ_ada4a0eacb.81977812.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\2dd0a411-e633-45d7-98b4-92d82e0d521c-AZ_ada4a0eacb.81977812.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\2dffd9ff-537b-4c59-b476-a6581199f22b-05db9b0e-759b-4325-b26e-1dd9aab945ab-2400x1350_eng_41a507e839.cdd18a0e (1).jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\2dffd9ff-537b-4c59-b476-a6581199f22b-05db9b0e-759b-4325-b26e-1dd9aab945ab-2400x1350_eng_41a507e839.cdd18a0e (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\3f65a845-9990-4aad-b889-6b6318a42887-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\3f65a845-9990-4aad-b889-6b6318a42887-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\47daaf4d-1bbc-48fb-a287-7e83bdaae3af-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\47daaf4d-1bbc-48fb-a287-7e83bdaae3af-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg"
     },
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\50263fbf-3596-4d1d-9f91-b6966aece4c0-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
@@ -2393,8 +2437,28 @@
       "PackagePath": "staticwebassets\\assets\\img\\5f0cee3f-c93b-47d0-afba-5558dbf86f73-business_class_p_2_33c4d907d3.fd011fad.jpg"
     },
     {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\6473721f-89e1-47b3-b716-10b9fa60bb3f-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\6473721f-89e1-47b3-b716-10b9fa60bb3f-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\6b8d184d-da15-4108-a21a-ec532b2006ec-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\6b8d184d-da15-4108-a21a-ec532b2006ec-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg"
+    },
+    {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\7b73eb83-fbc2-4dc0-9f51-709964857e15-business_class_p_2_33c4d907d3.fd011fad.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\7b73eb83-fbc2-4dc0-9f51-709964857e15-business_class_p_2_33c4d907d3.fd011fad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\7bad86bd-2c45-4b0e-b83f-d6291d282a84-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\7bad86bd-2c45-4b0e-b83f-d6291d282a84-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\7c2684b4-ace4-49f5-bc76-2a66053da637-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\7c2684b4-ace4-49f5-bc76-2a66053da637-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\82c202af-b533-4484-884e-e0a43657d002-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\82c202af-b533-4484-884e-e0a43657d002-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
     },
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\9934eba9-9a12-45c1-b3e9-1a32bdfb9243-business_class_p_2_33c4d907d3.fd011fad.jpg",
@@ -2433,12 +2497,20 @@
       "PackagePath": "staticwebassets\\assets\\img\\a052debe-7dbf-4cc7-9f45-09c38c8c8a6c-business_class_p_2_33c4d907d3.fd011fad.jpg"
     },
     {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\a945d588-1abd-4482-a663-626ecdbf697c-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\a945d588-1abd-4482-a663-626ecdbf697c-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\appStore.svg",
       "PackagePath": "staticwebassets\\assets\\img\\appStore.svg"
     },
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\arrive.svg",
       "PackagePath": "staticwebassets\\assets\\img\\arrive.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\bfbeb205-2ec5-499e-823e-6083f384bf81-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bfbeb205-2ec5-499e-823e-6083f384bf81-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg"
     },
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\business_class_p_2_33c4d907d3.fd011fad.jpg",
@@ -2453,12 +2525,24 @@
       "PackagePath": "staticwebassets\\assets\\img\\change.svg"
     },
     {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\d8a6a417-722e-425a-9176-a2a525fd12b9-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\d8a6a417-722e-425a-9176-a2a525fd12b9-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\date.svg",
       "PackagePath": "staticwebassets\\assets\\img\\date.svg"
     },
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\dd56301a-55bb-47a8-b655-7fa6eedde69a-qidalanma_3_d30d72de34.9ffad3ae.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\dd56301a-55bb-47a8-b655-7fa6eedde69a-qidalanma_3_d30d72de34.9ffad3ae.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\e2cea49b-5717-4393-8f58-5817e8c5a58b-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\e2cea49b-5717-4393-8f58-5817e8c5a58b-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\e412e2a1-2eda-41af-8a3d-91746eab4359-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\e412e2a1-2eda-41af-8a3d-91746eab4359-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg"
     },
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\e7c02b53-3679-4e27-ae15-801a46c314ee-business_class_p_2_33c4d907d3.fd011fad.jpg",

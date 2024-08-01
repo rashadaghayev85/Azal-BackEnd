@@ -38,6 +38,11 @@ namespace Repository.Repositories
             await _context.SaveChangesAsync();
         }
 
+        public async Task EditSaveAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
         public IQueryable<T> FindBy(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includes)
         {
             var query = _entities.Where(predicate);

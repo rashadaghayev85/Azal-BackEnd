@@ -27,8 +27,17 @@ namespace Service.Services
         public async Task CreateAsync(BannerCreateVM model)
         {
             if (model == null) throw new ArgumentNullException();
-
+            
             await _bannerRepo.CreateAsync(_mapper.Map<Banner>(model));
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var banner = await GetByIdAsync(id);
+            if (banner != null)
+            {
+                await _bannerRepo.DeleteAsync(banner);
+            }
         }
 
         public async Task EditAsync(int id, BannerEditVM model)
@@ -54,9 +63,9 @@ namespace Service.Services
             return _mapper.Map<IEnumerable<BannerVM>>(data);
         }
 
-        public async Task<BannerVM> GetByIdAsync(int? id)
+        public async Task<Banner> GetByIdAsync(int? id)
         {
-            return _mapper.Map<BannerVM>(await _bannerRepo.GetByIdAsync((int)id));
+            return _mapper.Map<Banner>(await _bannerRepo.GetByIdAsync((int)id));
         }
     }
 }

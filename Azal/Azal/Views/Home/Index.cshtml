@@ -21,24 +21,42 @@
                 </a>
             </div>
             <div class="flex items-center gap-[16px]">
+
+                @foreach (var item in Model.SpecialOffers)
+                {
+                    @foreach (var itm in item.SpecialOffersTransLates)
+                    {
+                        
                 <div class="flex justify-between">
                     <div class=" ">
-                        <img src="~/assets/img/AZ_ada4a0eacb.81977812.jpg"
+                        <img src="~/assets/img/@item.Image"
                              class="size-full object-contain rounded-[8px] w-[350px] " alt="">
                     </div>
                     <div class="pt-[32px] pl-[24px] max-w-[200px] ">
                         <h3 class="h2 inline-block h-[60px]  overflow-hidden text-[20px]">
-                            UCard
-                            sahiblərinə rahat və sərfəli səyahət fürsəti!
+                           @itm.Name
+                            
+                            @* UCard
+                            sahiblərinə rahat və sərfəli səyahət fürsəti! *@
                         </h3>
                         <p class=" line-clamp-2 text-ellipsis text-[14px] text-[#6e7583] mb-[24px]">
-                            İndi
-                            AZAL-dan bilet aldıqda ödəməni 6 ayadək faizsiz taksitlə edə bilərsiniz.
+                                    @itm.Title 
+                                   @*  AZ_ada4a0eacb.81977812.jpg *@
+
+                            @*  İndi
+                            AZAL-dan bilet aldıqda ödəməni 6 ayadək faizsiz taksitlə edə bilərsiniz. *@
                         </p>
                         <a href="#" class="text-[#40b7de] font-semibold hover:underline">Daha ətraflı</a>
                     </div>
                 </div>
-                <div class="flex justify-between">
+                    }
+                    
+                }
+               
+                
+                
+                
+               @*  <div class="flex justify-between">
                     <div class=" ">
                         <img src="~/assets/img/Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg"
                              class="size-full object-contain rounded-[8px] w-[350px] " alt="">
@@ -56,7 +74,9 @@
                         </p>
                         <a href="#" class="text-[#40b7de] font-semibold hover:underline">Daha ətraflı</a>
                     </div>
-                </div>
+                </div> *@
+
+
             </div>
         </div>
         <div class="usefulLink mb-[84px]">

@@ -12,21 +12,24 @@ namespace Azal.Controllers
     public class HomeController : Controller
     {
         private readonly IBannerService _bannerService;
-
-        public HomeController(IBannerService bannerService)
+        private readonly ISpecialOffersService _specialOffersService;
+        public HomeController(IBannerService bannerService,
+                              ISpecialOffersService specialOffersService)
         {
             _bannerService = bannerService;
+            _specialOffersService = specialOffersService;
         }
         
 
         public async Task<IActionResult> Index()
         {
             var banner = await _bannerService.GetAllAsync();
-
+            var specialOffer= await _specialOffersService.GetAllAsync();
             HomeVM model = new()
             {
-                Banners = banner
-               
+                Banners = banner,
+                SpecialOffers = specialOffer.Where(m=>m.IsActive==true),
+              
 
             };
 

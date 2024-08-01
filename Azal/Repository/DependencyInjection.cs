@@ -24,6 +24,8 @@ namespace Repository
             services.AddScoped<IFLightRepository, FlightRepository>();
             services.AddScoped<IPlaneRepository, PlaneRepository>();
             services.AddScoped<ITicketRepository, TicketRepository>();
+            services.AddScoped<ISpecialOffersRepository, SpecialOffersRepository>();
+            services.AddScoped<IPopularDirectionRepository, PopularDirectionRepository>();
 
 
 

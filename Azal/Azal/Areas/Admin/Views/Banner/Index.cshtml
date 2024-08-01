@@ -25,11 +25,12 @@
                 <tbody>
                    
                         @foreach (var item in Model)
-                        {
+                    {
+                       
                             <tr style="background-color:#bbb">
 
                                 <td>
-
+                               
                                     <img style="witdh:100px;height:200px;" src="~/assets/img/@item.Image" />
 
                                 </td>
@@ -45,7 +46,7 @@
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
                                     <form class="d-inline" method="post" asp-action="Delete" asp-route-id="@item.Id">
-
+                                    <input type="hidden" name="fileName" value="@ViewBag.FileName" />
                                         <button type="submit" class="btn btn-danger text-white small">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </button>

@@ -267,6 +267,73 @@ namespace Repository.Migrations
                     b.ToTable("Planes");
                 });
 
+            modelBuilder.Entity("Domain.Models.SpecialOffer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SpecialOffers");
+                });
+
+            modelBuilder.Entity("Domain.Models.SpecialOffersTransLate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("SpecialOfferId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("SpecialOfferId");
+
+                    b.ToTable("SpecialOffersTransLates");
+                });
+
             modelBuilder.Entity("Domain.Models.Ticket", b =>
                 {
                     b.Property<int>("Id")
@@ -397,6 +464,25 @@ namespace Repository.Migrations
                     b.Navigation("Plane");
                 });
 
+            modelBuilder.Entity("Domain.Models.SpecialOffersTransLate", b =>
+                {
+                    b.HasOne("Domain.Models.Language", "Language")
+                        .WithMany()
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Models.SpecialOffer", "SpecialOffer")
+                        .WithMany("SpecialOffersTransLates")
+                        .HasForeignKey("SpecialOfferId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Language");
+
+                    b.Navigation("SpecialOffer");
+                });
+
             modelBuilder.Entity("Domain.Models.Ticket", b =>
                 {
                     b.HasOne("Domain.Models.Flight", "Flight")
@@ -430,6 +516,11 @@ namespace Repository.Migrations
             modelBuilder.Entity("Domain.Models.Plane", b =>
                 {
                     b.Navigation("Flights");
+                });
+
+            modelBuilder.Entity("Domain.Models.SpecialOffer", b =>
+                {
+                    b.Navigation("SpecialOffersTransLates");
                 });
 #pragma warning restore 612, 618
         }

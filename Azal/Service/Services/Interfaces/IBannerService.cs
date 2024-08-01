@@ -1,4 +1,5 @@
-﻿using Service.ViewModels.Banners;
+﻿using Domain.Models;
+using Service.ViewModels.Banners;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,9 @@ namespace Service.Services.Interfaces
     {
         Task<IEnumerable<BannerVM>> GetAllAsync();
         Task CreateAsync(BannerCreateVM model);
-        Task<BannerVM> GetByIdAsync(int? id);
+        Task<Banner> GetByIdAsync(int? id);
         Task EditAsync(int id,BannerEditVM model);
         Task EditAsync();
+        Task DeleteAsync(int id);
     }
 }

@@ -1,0 +1,103 @@
+﻿@model IEnumerable<SpecialOfferVM>
+@{
+    ViewData["Title"] = "View";
+}
+<main style="margin-top: 70px; margin-left:60px;">
+
+
+    <div class="container mt-5">
+        <h2 class="text-center">Special Offer</h2>
+        <a asp-action="Create" class="btn btn-success">
+            <i class="fa-solid fa-plus"></i>
+        </a>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Title</th>
+                        <th>Language</th>
+
+
+
+                        <th>Operations</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        @foreach (var itm in item.SpecialOffersTransLates)
+                        {
+
+                            <tr style="background-color:#bbb">
+
+                                <td>
+
+                                    <img style="witdh:100px;height:200px;" src="~/assets/img/@item.Image" />
+
+                                </td>
+                              <td>
+                                @itm.Name
+                              </td>
+                                <td>
+                                    @itm.Title
+                                </td>
+                                <td>
+                                    @itm.Language.Name
+                                </td>
+
+
+                                <td>
+
+                                    <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-primary text-white small">
+                                        <i class="fa-solid fa-info"></i>
+                                    </a>
+
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning text-white small">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    @if (item.IsActive==false)
+                                    {
+                                        <form class="d-inline" method="post" asp-action="IsActive" asp-route-id="@item.Id">
+
+                                            <button type="submit" class="btn btn-success text-white small">
+                                                <i class="fa-solid fa-check"></i>
+                                            </button>
+                                        </form>
+
+                                       
+                                    }
+                                    @if (item.IsActive == true)
+                                    {
+                                        <form class="d-inline" method="post" asp-action="IsActive" asp-route-id="@item.Id">
+
+                                            <button type="submit" class="btn btn-success text-white small">
+                                                <i class="fa-solid fa-circle-minus"></i>
+                                            </button>
+                                        </form>
+
+
+                                    }
+                                   
+                                    <form class="d-inline" method="post" asp-action="Delete" asp-route-id="@item.Id">
+
+                                        <button type="submit" class="btn btn-danger text-white small">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                         } 
+                    }
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>

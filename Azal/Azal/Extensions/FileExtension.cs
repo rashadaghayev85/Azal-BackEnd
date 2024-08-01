@@ -21,7 +21,8 @@ namespace Service.Helpers.Extensions
         }
         public static void DeleteFileFromLocal(this string path)
         {
-            if (!File.Exists(path))
+            var file = File.Exists(path);
+            if (!file)
             {
                 File.Delete(path);
             }

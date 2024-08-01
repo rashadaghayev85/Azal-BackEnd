@@ -3,6 +3,7 @@ using Service.Services.Interfaces;
 using Service.ViewModels.Banners;
 using Service.Helpers.Extensions;
 using Domain.Models;
+using Service.Services;
 
 namespace Azal.Areas.Admin.Controllers
 {
@@ -20,7 +21,8 @@ namespace Azal.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            return View(await _bannerService.GetAllAsync());
+            var data = await _bannerService.GetAllAsync();
+            return View(data);
         }
         [HttpGet]
         public IActionResult Create()
@@ -65,7 +67,7 @@ namespace Azal.Areas.Admin.Controllers
         public async Task<IActionResult> Detail(int? id)
         {
 
-            BannerVM banner = await _bannerService.GetByIdAsync((int)id);
+            Banner banner = await _bannerService.GetByIdAsync((int)id);
             var data = banner;
             return View(banner);
         }
@@ -122,6 +124,20 @@ namespace Azal.Areas.Admin.Controllers
             }
 
             await _bannerService.EditAsync();
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id,string filename)
+        {
+            var data=await _bannerService.GetByIdAsync(id);
+
+            string path = filename;
+
+            path.DeleteFileFromLocal();
+
+           
+            await _bannerService.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }

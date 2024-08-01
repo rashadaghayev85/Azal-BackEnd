@@ -16,8 +16,8 @@ namespace Repository.Repositories.Interfaces
             Task DeleteAsync(T entity);
             Task<IEnumerable<T>> GetAllAsync();
             Task<T> GetByIdAsync(int id);
-
-            IQueryable<T> FindBy(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includes);
+            Task EditSaveAsync();
+          IQueryable<T> FindBy(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includes);
 
 
         }

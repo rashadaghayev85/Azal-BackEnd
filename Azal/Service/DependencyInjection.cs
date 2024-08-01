@@ -30,6 +30,7 @@ namespace Service
             services.AddScoped<IFlightService, FlightService>();
             services.AddScoped<IPlaneService, PlaneService>();
             services.AddScoped<ITicketService, TicketService>();
+            services.AddScoped<ISpecialOffersService, SpecialOfferService>();
 
             return services;
 

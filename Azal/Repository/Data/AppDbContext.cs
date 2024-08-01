@@ -17,6 +17,10 @@ namespace Repository.Data
         public DbSet<BlogTranslate> BlogTranslates { get; set; }
         public DbSet<Airport> Airports { get; set; }
         public DbSet<AirportTranslate> AirportTranslates { get; set; }
+        public DbSet<SpecialOffer> SpecialOffers { get; set; }
+        public DbSet<SpecialOffersTransLate> SpecialOffersTransLates { get; set; }
+        public DbSet<PopularDirection> PopularDirections { get; set; }
+        public DbSet<PopularDirectionTranslate> PopularDirectionTranslates { get; set; }
         public DbSet<Flight> Flights { get; set; }
       //  public DbSet<Passenger> Passengers { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
