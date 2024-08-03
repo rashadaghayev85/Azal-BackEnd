@@ -10,5 +10,6 @@ namespace Service.ViewModels.Banners
     {
         public int Id { get; set; }
         public string Image { get; set; }
+        public bool IsActive { get; set; }
     }
 }

@@ -1,0 +1,48 @@
+﻿@model List<Setting>
+<main style="margin-top: 70px; margin-left:60px;">
+    <div class="container mt-5">
+        <h2 class="text-center">Settings</h2>
+
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>Setting Name</th>
+                        <th>Value</th>
+
+                        <th>Operations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                        @foreach (var item in Model)
+                        {
+                   
+                        <tr style="background-color:#bbb">
+
+                            <td>
+
+                                @item.Key
+
+                            </td>
+                            <td> @item.Value</td>
+
+                            <td>
+                              
+
+                                <a asp-action="Edit" asp-route-key="@item.Key" class="btn btn-warning text-white small">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                              
+                            </td>
+                        </tr>
+                    
+                        }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</main>

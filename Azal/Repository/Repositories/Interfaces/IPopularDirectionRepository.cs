@@ -11,6 +11,8 @@ namespace Repository.Repositories.Interfaces
     {
         Task<PopularDirection> GetByIdWithIncludeAsync(int id);
         Task<IEnumerable<PopularDirection>> GetAllWithIncludeAsync();
-        
+      
+
+
     }
 }

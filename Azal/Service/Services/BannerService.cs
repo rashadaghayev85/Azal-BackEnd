@@ -51,9 +51,9 @@ namespace Service.Services
             await _bannerRepo.EditAsync(editData);
         }
 
-        public async Task EditAsync()
+        public async Task EditSaveAsync()
         {
-            await _bannerRepo.EditAsync();
+            await _bannerRepo.EditSaveAsync();
         }
 
         public async Task<IEnumerable<BannerVM>> GetAllAsync()

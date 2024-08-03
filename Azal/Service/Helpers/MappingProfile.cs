@@ -7,6 +7,7 @@ using Service.ViewModels.BlogTranslates;
 using Service.ViewModels.Flights;
 using Service.ViewModels.Languages;
 using Service.ViewModels.Planes;
+using Service.ViewModels.PopularDirections;
 using Service.ViewModels.SpecialOffers;
 using Service.ViewModels.Tickets;
 using System;
@@ -84,6 +85,19 @@ namespace Service.Helpers
                 .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.SpecialOffersTransLates.FirstOrDefault().Title))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.SpecialOffersTransLates.FirstOrDefault().Description))
                 .ForMember(dest => dest.Culture, opt => opt.MapFrom(src => src.SpecialOffersTransLates.FirstOrDefault().Language.Culture));
+
+
+
+            CreateMap<PopularDirection, PopularDirectionVM>().ForMember(dest => dest.PopularDirectionTranslates, opt => opt.MapFrom(src => src.PopularDirectionTranslates));
+            CreateMap<PopularDirection, PopularDirectionDetailVM>().ForMember(dest => dest.PopularDirectionTranslate, opt => opt.MapFrom(src => src.PopularDirectionTranslates.FirstOrDefault()));
+            CreateMap<PopularDirectionCreateVM, PopularDirection>();
+            CreateMap<PopularDirection, PopularDirectionEditVM>().ForMember(dest => dest.City, opt => opt.MapFrom(src => src.PopularDirectionTranslates.FirstOrDefault().City))
+                .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.PopularDirectionTranslates.FirstOrDefault().Country))
+               
+                .ForMember(dest => dest.Culture, opt => opt.MapFrom(src => src.PopularDirectionTranslates.FirstOrDefault().Language.Culture));
+
+            
+
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Repository.Data
       //  public DbSet<Passenger> Passengers { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Plane> Planes { get; set; }
-
+        public DbSet<Setting> Settings { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Blog>()

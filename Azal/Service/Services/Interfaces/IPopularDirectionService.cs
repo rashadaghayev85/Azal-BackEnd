@@ -13,6 +13,8 @@ namespace Service.Services.Interfaces
     {
         Task<PopularDirection> GetByIdAsync(int blogId);
         Task<IEnumerable<PopularDirectionVM>> GetAllAsync();
+
+       
         Task CreateAsync(PopularDirectionCreateVM model);
         Task EditAsync(int id, PopularDirectionEditVM model);
         Task EditSaveAsync();

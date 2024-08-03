@@ -16,7 +16,7 @@ namespace Repository.Repositories
 
         }
 
-        public async Task EditAsync()
+        public async Task EditSaveAsync()
         {
             await _context.SaveChangesAsync();
         }

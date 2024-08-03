@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Service.Helpers.Extensions;
 using Service.Services;
 using Service.Services.Interfaces;
+using Service.ViewModels.Planes;
 using Service.ViewModels.PopularDirections;
 using Service.ViewModels.SpecialOffers;
 
@@ -32,6 +33,20 @@ namespace Azal.Areas.Admin.Controllers
         {
             var popularDirections = await _popularDirectionService.GetAllAsync();
             return View(popularDirections);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+            var popularDirection = await _popularDirectionService.GetByIdAsync((int)id);
+            if (popularDirection == null)
+            {
+                return NotFound();
+            }
+            var data = _mapper.Map<PopularDirectionDetailVM>(popularDirection);
+            return View(data);
+
+
+
         }
         [HttpGet]
         public async Task<IActionResult> Create()

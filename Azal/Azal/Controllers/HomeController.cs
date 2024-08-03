@@ -13,11 +13,17 @@ namespace Azal.Controllers
     {
         private readonly IBannerService _bannerService;
         private readonly ISpecialOffersService _specialOffersService;
+        private readonly IPopularDirectionService _popularDirectionService;
+        private readonly IBlogService _blogService;
         public HomeController(IBannerService bannerService,
-                              ISpecialOffersService specialOffersService)
+                              ISpecialOffersService specialOffersService,
+                              IPopularDirectionService popularDirectionService,
+                              IBlogService blogService)
         {
             _bannerService = bannerService;
             _specialOffersService = specialOffersService;
+            _popularDirectionService = popularDirectionService;
+            _blogService = blogService;
         }
         
 
@@ -25,11 +31,14 @@ namespace Azal.Controllers
         {
             var banner = await _bannerService.GetAllAsync();
             var specialOffer= await _specialOffersService.GetAllAsync();
+            var popularDirection= await _popularDirectionService.GetAllAsync();
+            var blogs=await _blogService.GetAllAsync();   
             HomeVM model = new()
             {
-                Banners = banner,
+                Banners = banner.Where(m=>m.IsActive == true),
                 SpecialOffers = specialOffer.Where(m=>m.IsActive==true),
-              
+                PopularDirections = popularDirection,
+                Blogs = blogs,
 
             };
 

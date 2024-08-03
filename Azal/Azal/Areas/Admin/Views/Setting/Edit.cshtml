@@ -1,0 +1,38 @@
+﻿@model Setting
+@{
+    ViewData["Title"] = "Edit";
+}
+<main style="margin-top: 70px; margin-left:60px;width:1200px">
+    <h2>Settings</h2>
+
+    <h4>Setting</h4>
+    <hr />
+    Old Image
+    <div>
+        <img style="witdh:100px;height:200px;" src="~/assets/img/@Model.Value" />
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Edit" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+               
+                <div class="form-group">
+                    <label asp-for="Value" class="control-label"></label>
+                    <input type="file" asp-for="Value" class="form-control" />
+                    <span asp-validation-for="Value" class="text-danger"></span>
+                </div>
+              
+
+
+
+
+                <div class="form-group mt-5">
+                    <input type="submit" value="Save" class="btn btn-primary mx-5" />
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</main>

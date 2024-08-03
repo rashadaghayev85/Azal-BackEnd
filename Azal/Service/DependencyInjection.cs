@@ -31,7 +31,8 @@ namespace Service
             services.AddScoped<IPlaneService, PlaneService>();
             services.AddScoped<ITicketService, TicketService>();
             services.AddScoped<ISpecialOffersService, SpecialOfferService>();
-
+            services.AddScoped<IPopularDirectionService, PopularDirectionService>();
+            services.AddScoped<ISettingService, SettingService>();
             return services;
 
         }

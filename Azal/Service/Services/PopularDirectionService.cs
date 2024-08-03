@@ -92,9 +92,17 @@ namespace Service.Services
             return _mapper.Map<IEnumerable<PopularDirectionVM>>(data);
         }
 
+        public async Task<IEnumerable<PopularDirectionVM>> GetAllENAsync()
+        {
+            var data = await _popularDirectionRepo.GetAllWithIncludeAsync();
+           
+
+            return _mapper.Map<IEnumerable<PopularDirectionVM>>(data);
+        }
+
         public async Task<PopularDirection> GetByIdAsync(int blogId)
         {
-            var data = await _popularDirectionRepo.GetByIdAsync(blogId);
+            var data = await _popularDirectionRepo.GetByIdWithIncludeAsync(blogId);
 
             return _mapper.Map<PopularDirection>(data);
         }

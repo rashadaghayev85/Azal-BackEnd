@@ -13,6 +13,6 @@ namespace Service.ViewModels.PopularDirections
         public string Image { get; set; }
         public int Price_azn { get; set; }
         public int Price_usd { get; set; }
-        public List<SpecialOffersTransLate> SpecialOffersTransLates { get; set; }
+        public List<PopularDirectionTranslate> PopularDirectionTranslates { get; set; }
     }
 }

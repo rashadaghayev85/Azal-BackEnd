@@ -93,6 +93,9 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
 
@@ -265,6 +268,99 @@ namespace Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Planes");
+                });
+
+            modelBuilder.Entity("Domain.Models.PopularDirection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price_azn")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Price_usd")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PopularDirections");
+                });
+
+            modelBuilder.Entity("Domain.Models.PopularDirectionTranslate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PopularDirectionId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("PopularDirectionId");
+
+                    b.ToTable("PopularDirectionTranslates");
+                });
+
+            modelBuilder.Entity("Domain.Models.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("Domain.Models.SpecialOffer", b =>
@@ -464,6 +560,25 @@ namespace Repository.Migrations
                     b.Navigation("Plane");
                 });
 
+            modelBuilder.Entity("Domain.Models.PopularDirectionTranslate", b =>
+                {
+                    b.HasOne("Domain.Models.Language", "Language")
+                        .WithMany()
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Models.PopularDirection", "PopularDirection")
+                        .WithMany("PopularDirectionTranslates")
+                        .HasForeignKey("PopularDirectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Language");
+
+                    b.Navigation("PopularDirection");
+                });
+
             modelBuilder.Entity("Domain.Models.SpecialOffersTransLate", b =>
                 {
                     b.HasOne("Domain.Models.Language", "Language")
@@ -516,6 +631,11 @@ namespace Repository.Migrations
             modelBuilder.Entity("Domain.Models.Plane", b =>
                 {
                     b.Navigation("Flights");
+                });
+
+            modelBuilder.Entity("Domain.Models.PopularDirection", b =>
+                {
+                    b.Navigation("PopularDirectionTranslates");
                 });
 
             modelBuilder.Entity("Domain.Models.SpecialOffer", b =>

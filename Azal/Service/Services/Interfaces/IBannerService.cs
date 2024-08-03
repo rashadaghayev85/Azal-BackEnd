@@ -14,7 +14,7 @@ namespace Service.Services.Interfaces
         Task CreateAsync(BannerCreateVM model);
         Task<Banner> GetByIdAsync(int? id);
         Task EditAsync(int id,BannerEditVM model);
-        Task EditAsync();
+        Task EditSaveAsync();
         Task DeleteAsync(int id);
     }
 }

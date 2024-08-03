@@ -26,7 +26,7 @@ namespace Repository
             services.AddScoped<ITicketRepository, TicketRepository>();
             services.AddScoped<ISpecialOffersRepository, SpecialOffersRepository>();
             services.AddScoped<IPopularDirectionRepository, PopularDirectionRepository>();
-
+            services.AddScoped<ISettingsRepository, SettingsRepository>();
 
 
             return services;
