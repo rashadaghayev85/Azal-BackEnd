@@ -8,6 +8,7 @@ using Service.ViewModels.Flights;
 using Service.ViewModels.Languages;
 using Service.ViewModels.Planes;
 using Service.ViewModels.PopularDirections;
+using Service.ViewModels.Settings;
 using Service.ViewModels.SpecialOffers;
 using Service.ViewModels.Tickets;
 using System;
@@ -26,7 +27,7 @@ namespace Service.Helpers
            
 
             CreateMap<Banner, BannerVM>();
-            CreateMap<BannerCreateVM, Banner>().ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Image.FileName)); ;
+            CreateMap<BannerCreateVM, Banner>().ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.ImageName)); ;
             CreateMap<BannerEditVM, Banner>();
 
             CreateMap<Language, LanguageVM>();
@@ -96,7 +97,7 @@ namespace Service.Helpers
                
                 .ForMember(dest => dest.Culture, opt => opt.MapFrom(src => src.PopularDirectionTranslates.FirstOrDefault().Language.Culture));
 
-            
+            CreateMap<Setting, SettingEditVM>();
 
         }
     }

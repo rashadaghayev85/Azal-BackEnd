@@ -9600,6 +9600,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\0fdaf27e-9342-4315-924f-6b2b1dc7f839-1160x150_8px_radius_d4e1a23146.4a3e3dad.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\1160x150_aze_c928c8d232.a8c94e05.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Azal</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Azal</BasePath>
+      <RelativePath>assets/img/1160x150_aze_c928c8d232.a8c94e05.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\1160x150_aze_c928c8d232.a8c94e05.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\1c17b341-2309-49ad-988f-004a7759193e-qidalanma_3_d30d72de34.9ffad3ae.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Azal</SourceId>
@@ -9856,6 +9872,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\6b8d184d-da15-4108-a21a-ec532b2006ec-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\72a3a9fe-104c-4b9b-9f3f-d4b67076cb2f-logo.svg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Azal</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Azal</BasePath>
+      <RelativePath>assets/img/72a3a9fe-104c-4b9b-9f3f-d4b67076cb2f-logo.svg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\72a3a9fe-104c-4b9b-9f3f-d4b67076cb2f-logo.svg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\7b73eb83-fbc2-4dc0-9f51-709964857e15-business_class_p_2_33c4d907d3.fd011fad.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Azal</SourceId>
@@ -9935,6 +9967,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\82c202af-b533-4484-884e-e0a43657d002-1160x150_8px_radius_d4e1a23146.4a3e3dad.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\89c36386-4f2c-4d15-b5ca-98634e0ff407-1160x150_aze_c928c8d232.a8c94e05.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Azal</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Azal</BasePath>
+      <RelativePath>assets/img/89c36386-4f2c-4d15-b5ca-98634e0ff407-1160x150_aze_c928c8d232.a8c94e05.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\89c36386-4f2c-4d15-b5ca-98634e0ff407-1160x150_aze_c928c8d232.a8c94e05.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\8ef3e8fb-915b-4b99-82fe-83c81a25b977-1160x150_8px_radius_d4e1a23146.4a3e3dad.png))">
       <SourceType>Package</SourceType>
@@ -10079,6 +10127,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\AZ_ada4a0eacb.81977812.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\b22b0ac9-1a34-4201-a804-158d0274e8cb-1160x150_8px_radius_d4e1a23146.4a3e3dad.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Azal</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Azal</BasePath>
+      <RelativePath>assets/img/b22b0ac9-1a34-4201-a804-158d0274e8cb-1160x150_8px_radius_d4e1a23146.4a3e3dad.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\b22b0ac9-1a34-4201-a804-158d0274e8cb-1160x150_8px_radius_d4e1a23146.4a3e3dad.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\bc4cfb9c-735a-482a-a3c0-a97cc2a42e72-1160x150_8px_radius_d4e1a23146.4a3e3dad.png))">
       <SourceType>Package</SourceType>

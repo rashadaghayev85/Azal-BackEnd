@@ -12,5 +12,6 @@ namespace Service.ViewModels.Banners
     {
         [Required(ErrorMessage = "This input can't be empty")]
         public IFormFile Image { get; set; }
+        public string ImageName { get; set; }
     }
 }

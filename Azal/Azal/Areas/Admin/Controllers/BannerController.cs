@@ -83,7 +83,7 @@ namespace Azal.Areas.Admin.Controllers
 
             string path = Path.Combine(_env.WebRootPath, "assets", "img", fileName);
             await request.Image.SaveFileToLocalAsync(path);
-
+            request.ImageName = fileName;
             await _bannerService.CreateAsync(request);
             return RedirectToAction(nameof(Index));
         }

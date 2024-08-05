@@ -1,7 +1,11 @@
-﻿using Domain.Models;
+﻿using AutoMapper;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Service.Helpers.Extensions;
 using Service.Services.Interfaces;
+using Service.ViewModels.PopularDirections;
+using Service.ViewModels.Settings;
 
 namespace Azal.Areas.Admin.Controllers
 {
@@ -9,9 +13,16 @@ namespace Azal.Areas.Admin.Controllers
     public class SettingController : Controller
     {
         private readonly ISettingService _settingService;
-        public SettingController(ISettingService settingService)
+        private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _env;
+        public SettingController(ISettingService settingService, 
+                                 IWebHostEnvironment env,
+                                 IMapper mapper)
         {
             _settingService = settingService;
+            _env = env;
+            _mapper = mapper;   
+
         }
         public async Task<IActionResult> Index()
         {
@@ -28,36 +39,55 @@ namespace Azal.Areas.Admin.Controllers
             {
                 Value = Setting.Value,
             };
-            return View(model);
+
+            var data = _mapper.Map<SettingEditVM>(model);
+            return View(data);
+           // return View(model);
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, Setting updatedSetting)
+        public async Task<IActionResult> Edit(int? id, SettingEditVM updatedSetting)
         {
 
             if (id == null) return BadRequest();
             Setting dbSetting = await _settingService.GetByIdAsync((int)id);
             if (dbSetting is null) return NotFound();
 
-            if (dbSetting.Value.Contains(".png") || dbSetting.Value.Contains(".jpg") || dbSetting.Value.Contains(".jpeg"))
+            if (dbSetting.Value.Contains(".svg")||dbSetting.Value.Contains(".png") || dbSetting.Value.Contains(".jpg") || dbSetting.Value.Contains(".jpeg"))
             {
-                //if (updatedSetting.LogoPhoto is not null)
-                //{
+                if (updatedSetting.Image is not null)
+                {
+                    //string path = Path.Combine(_env.WebRootPath, "assets", "img", fileName);
+                    //await request.Image.SaveFileToLocalAsync(path);
 
 
-                //    string oldPath = FileHelper.GetFilePath(_env.WebRootPath, "logogallery", dbSetting.Value);
-                //    FileHelper.DeleteFile(oldPath);
-                //    dbSetting.Value = updatedSetting.LogoPhoto.CreateFile(_env, "logogallery");
-                //}
-                //else
-                //{
-                //    Setting newSetting = new()
-                //    {
-                //        Value = dbSetting.Value
-                //    };
-                //}
+                    //string newfileName = Guid.NewGuid().ToString() + "-" + request.NewImage.FileName;
+                    //string newPath = _env.GenerateFilePath("assets/img", newfileName);
+
+                    string oldPath = _env.GenerateFilePath("assets/img", dbSetting.Value);
+                    oldPath.DeleteFileFromLocal();
+
+                    //string oldPath = FileHelper.GetFilePath(_env.WebRootPath, "logogallery", dbSetting.Value);
+                    //FileHelper.DeleteFile(oldPath);
+                   
+                    string newfileName = Guid.NewGuid().ToString() + "-" + updatedSetting.Image.FileName;
+                    string newPath = _env.GenerateFilePath("assets/img", newfileName);
+                    
+                    await updatedSetting.Image.SaveFileToLocalAsync(newPath);
+
+
+                    dbSetting.Value =newfileName;
+                        //updatedSetting.Image.CreateFile(_env, "logogallery");
+                }
+                else
+                {
+                    Setting newSetting = new()
+                    {
+                        Value = dbSetting.Value
+                    };
+                }
             }
             else
             {

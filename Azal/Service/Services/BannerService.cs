@@ -27,7 +27,7 @@ namespace Service.Services
         public async Task CreateAsync(BannerCreateVM model)
         {
             if (model == null) throw new ArgumentNullException();
-            
+           
             await _bannerRepo.CreateAsync(_mapper.Map<Banner>(model));
         }
 
