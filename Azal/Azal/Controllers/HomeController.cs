@@ -3,6 +3,7 @@ using  Domain.Models;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Repositories.Interfaces;
+using Service.Services;
 using Service.Services.Interfaces;
 using Service.ViewModels;
 using System.Diagnostics;
@@ -18,12 +19,14 @@ namespace Azal.Controllers
         public HomeController(IBannerService bannerService,
                               ISpecialOffersService specialOffersService,
                               IPopularDirectionService popularDirectionService,
-                              IBlogService blogService)
+                              IBlogService blogService
+                              )
         {
             _bannerService = bannerService;
             _specialOffersService = specialOffersService;
             _popularDirectionService = popularDirectionService;
             _blogService = blogService;
+            
         }
         
 
@@ -54,7 +57,7 @@ namespace Azal.Controllers
             return Redirect(Request.Headers["Referer"].ToString());
         }
 
-
+      
 
     }
 }

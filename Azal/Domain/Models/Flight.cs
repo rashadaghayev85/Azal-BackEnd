@@ -28,6 +28,8 @@ namespace Domain.Models
         public int Price_azn { get; set; }
         public int Price_usd { get; set; }
 
+        public int PassengerCount { get; set; }
+
         // Relation
         public ICollection<Ticket> Tickets { get; set; }
     }

@@ -6,6 +6,7 @@ using Repository.Data;
 using Serilog;
 using Service;
 using SharpDX.DXGI;
+using Stripe;
 using System.Globalization;
 using System.Reflection;
 
@@ -43,6 +44,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 app.UseAuthorization();
 
 app.MapControllerRoute(

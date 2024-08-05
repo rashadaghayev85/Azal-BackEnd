@@ -191,6 +191,9 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PassengerCount")
+                        .HasColumnType("int");
+
                     b.Property<int>("PlaneId")
                         .HasColumnType("int");
 

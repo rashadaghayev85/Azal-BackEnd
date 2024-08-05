@@ -80,6 +80,10 @@
             "SharpDX.DXGI": {
               "target": "Package",
               "version": "[4.2.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[45.6.0, )"
             }
           },
           "imports": [
@@ -192,6 +196,10 @@
             "Serilog": {
               "target": "Package",
               "version": "[4.0.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[45.6.0, )"
             }
           },
           "imports": [

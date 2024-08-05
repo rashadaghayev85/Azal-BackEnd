@@ -1,0 +1,31 @@
+﻿@model IEnumerable<FlightVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br/>
+
+<table class="table table-responsive table-light table-bordered"style="witdh:100%">
+    <tr>
+        <th>FlightNumber</th>
+        <th>Plane</th>
+        <th>Departure time</th>
+        <th>Arrival time</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FlightNumber</td>
+            <td>@item.PlaneModel</td>
+            <td>@item.DepartureTime</td>
+            <td>@item.ArrivalTime</td>
+            <td>@item.Price_azn</td>
+        </tr>
+    }
+</table>
+<br/>
+<p>
+    <a asp-action="CheckOut" asp-controller="payment">CheckOut</a>
+</p>
