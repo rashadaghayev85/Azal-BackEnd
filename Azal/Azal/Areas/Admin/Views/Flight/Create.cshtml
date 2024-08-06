@@ -44,12 +44,14 @@
 
             <div class="form-group mt-5">
                 <label asp-for="Plane" class="control-label"></label>
-                <select asp-for="Plane" class="form-control" asp-items="ViewBag.Planes"></select>
+                <select asp-for="Plane" class="form-control"  asp-items="ViewBag.Planes"></select>
                 <span asp-validation-for="Plane" class="text-danger"></span>
             </div>
             <div class="form-group mt-5">
                 <label asp-for="ArrivalAirport" class="control-label"></label>
-                <select asp-for="ArrivalAirport" class="form-control" asp-items="ViewBag.airports"></select>
+                <select asp-for="ArrivalAirport" class="form-control" asp-items="ViewBag.airports">
+                    <option value="null">-- Choose option --</option>
+                </select>
                 <span asp-validation-for="ArrivalAirport" class="text-danger"></span>
             </div>
 

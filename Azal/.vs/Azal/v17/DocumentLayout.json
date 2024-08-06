@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\flight\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\flight\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\views\\payment\\orderconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\views\\payment\\orderconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\controllers\\airportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\airportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Migrations\\20240805203219_UpdateFlightTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\Migrations\\20240805203219_UpdateFlightTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\specialoffer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\specialoffer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\controllers\\specialoffercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\specialoffercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\banner\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\banner\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\controllers\\bannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\bannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\helpers\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\helpers\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +54,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderConfirmation.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Payment\\OrderConfirmation.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Views\\Payment\\OrderConfirmation.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Payment\\OrderConfirmation.cshtml",
-              "RelativeToolTip": "Azal\\Views\\Payment\\OrderConfirmation.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T21:13:39.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "Azal\\Controllers\\PaymentController.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "Azal\\Controllers\\PaymentController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAkwDEAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T20:34:06.138Z",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Flight\\Create.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADMAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:24:34.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20240805203219_UpdateFlightTable.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Migrations\\20240805203219_UpdateFlightTable.cs",
-              "RelativeDocumentMoniker": "Repository\\Migrations\\20240805203219_UpdateFlightTable.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Repository\\Migrations\\20240805203219_UpdateFlightTable.cs",
-              "RelativeToolTip": "Repository\\Migrations\\20240805203219_UpdateFlightTable.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "FlightController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\FlightController.cs",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\FlightController.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\FlightController.cs",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\FlightController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwDQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T20:32:19.143Z",
+              "WhenOpened": "2024-08-06T12:23:47.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Payment\\Index.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Views\\Payment\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Payment\\Index.cshtml",
-              "RelativeToolTip": "Azal\\Views\\Payment\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Title": "AirportController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\AirportController.cs",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\AirportController.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\AirportController.cs",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\AirportController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwD0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T12:19:38.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\BlogController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwDUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T12:18:23.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\SpecialOffer\\Create.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\SpecialOffer\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\SpecialOffer\\Create.cshtml",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\SpecialOffer\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T20:24:38.984Z",
+              "WhenOpened": "2024-08-06T12:17:35.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SpecialOfferController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\SpecialOfferController.cs",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\SpecialOfferController.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\SpecialOfferController.cs",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\SpecialOfferController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwDAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T12:15:43.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Banner\\Create.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Banner\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Banner\\Create.cshtml",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Banner\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:15:15.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BannerController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\BannerController.cs",
+              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\BannerController.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\BannerController.cs",
+              "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\BannerController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAqwCYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T12:14:15.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Helpers\\Enums\\Roles.cs",
+              "RelativeDocumentMoniker": "Service\\Helpers\\Enums\\Roles.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Helpers\\Enums\\Roles.cs",
+              "RelativeToolTip": "Service\\Helpers\\Enums\\Roles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T07:09:53.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Program.cs",
+              "RelativeDocumentMoniker": "Azal\\Program.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Program.cs",
+              "RelativeToolTip": "Azal\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAcwBwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T07:08:50.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Azal\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Azal\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T07:05:21.026Z",
               "EditorCaption": ""
             }
           ]

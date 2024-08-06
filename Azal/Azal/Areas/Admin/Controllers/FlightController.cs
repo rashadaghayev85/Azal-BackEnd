@@ -54,7 +54,10 @@ namespace Azal.Areas.Admin.Controllers
             ViewBag.planes = await _planeService.GetAllSelectedAsync();
             ViewBag.airports = await _airportService.GetAllSelectedAsync();
 
-
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             await _flightService.CreateAsync(request);
             return RedirectToAction(nameof(Index));
         }

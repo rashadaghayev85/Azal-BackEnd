@@ -49,6 +49,14 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.7.1.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.32, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.32, )"
@@ -168,6 +176,14 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.7.1.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.32, )"
             },
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",

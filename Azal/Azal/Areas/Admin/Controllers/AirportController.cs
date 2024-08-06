@@ -56,8 +56,11 @@ namespace Azal.Areas.Admin.Controllers
         public async Task<IActionResult> Create(AirportCreateVM request)
         {
              ViewBag.languages = await _languageService.GetAllSelectedAsync();
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
 
-           
 
             await _airportService.CreateAsync(request);
             return RedirectToAction(nameof(Index));

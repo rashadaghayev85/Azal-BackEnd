@@ -35,34 +35,12 @@ namespace Azal.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(BannerCreateVM request)
         {
-           // if (!ModelState.IsValid)
-           // {
-           //     return View();
-           // }
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
 
-           // if (!request.Image.CheckFileType("image/"))
-           // {
-           //     ModelState.AddModelError("Image", "Input can accept only image format");
-           //     return View();
-           // }
-           // if (!request.Image.CheckFileSize(200))
-           // {
-           //     ModelState.AddModelError("Image", "Image size must be max 200 KB ");
-           //     return View();
-           // }
-           // string fileName = Guid.NewGuid().ToString() + "-" + request.Image.FileName;
-
-           // // return Content(fileName);
-
-           // string path = Path.Combine(_env.WebRootPath, "assets", "img", fileName);
-
-           // await request.Image.SaveFileToLocalAsync(path);
-
-
-          
-           //await _bannerService.CreateAsync(request);
-                
-           // return RedirectToAction(nameof(Index));
+           
 
 
 
