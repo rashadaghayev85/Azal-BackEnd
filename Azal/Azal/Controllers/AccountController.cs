@@ -9,6 +9,7 @@ using Service.ViewModels.Accounts;
 using System.Net.Mail;
 using MailKit.Net.Smtp;
 using SmtpClient = MailKit.Net.Smtp.SmtpClient;
+using Service.Services;
 
 namespace Azal.Controllers
 {
@@ -17,12 +18,14 @@ namespace Azal.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly EmailService _emailService;
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
-                                 RoleManager<IdentityRole> roleManager)
+                                 RoleManager<IdentityRole> roleManager,
+                                 EmailService emailService)
         {
             _userManager = userManager;
-
+            _emailService = emailService;
             _signInManager = signInManager;
             _userManager = userManager;
 
@@ -153,6 +156,36 @@ namespace Azal.Controllers
                 }
             }
             return Ok();
+        }
+
+
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordVM model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError("", "Bu email üçün istifadəçi tapılmadı.");
+                return View();
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, token = token }, protocol: HttpContext.Request.Scheme);
+
+            await _emailService.SendEmailAsync(model.Email, "Şifrəni Sıfırla", $"Zəhmət olmasa şifrənizi sıfırlamaq üçün <a href='{callbackUrl}'>buraya</a> klikləyin.");
+
+            ViewBag.Message = "Şifrə sıfırlama linki email ünvanınıza göndərildi.";
+            return View();
         }
     }
 }
