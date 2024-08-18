@@ -10,9 +10,10 @@ namespace Service.ViewModels.Accounts
     public class RegisterVM
     {
         [Required]
-        public string FullName { get; set; }
+        public string Name { get; set; }
         [Required]
-        public string UserName { get; set; }
+        public string Surname { get; set; }
+        public string? FatherName { get; set; }
         [Required]
         [EmailAddress(ErrorMessage = "Email is invalid")]
         public string Email { get; set; }
@@ -24,5 +25,26 @@ namespace Service.ViewModels.Accounts
         [DataType(DataType.Password)]
         [Compare(nameof(Password))]
         public string ConfirmPassword { get; set; }
+
+
+
+
+        [Required]
+        public DateTime BirthDay { get; set; }
+        [Required]
+        public string Gender { get; set; }
+        [Required]
+        public string PhoneNumber { get; set; }
+        [Required]
+        public string CountryCode { get; set; }
+        [Required]
+        public string Country { get; set; }
+        public string Address { get; set; }
+        [Required]
+        public string DocumentExpiryDate { get; set; }
+        [Required]
+        public string DocumentType { get; set; }
+        [Required]
+        public string DocumentNumber { get; set; }
     }
 }

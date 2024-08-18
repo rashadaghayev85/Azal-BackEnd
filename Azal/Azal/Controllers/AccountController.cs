@@ -45,9 +45,18 @@ namespace Azal.Controllers
             }
             AppUser user = new()
             {
-                FullName = request.FullName,
+                Name = request.Name,
                 Email = request.Email,
-                UserName = request.UserName,
+                Surname = request.Surname,
+                FatherName=request.FatherName,
+                DocumentExpiryDate = request.DocumentExpiryDate,
+                DocumentNumber = request.DocumentNumber,
+                DocumentType= request.DocumentType,
+                BirthDay=request.BirthDay,
+                Gender=request.Gender,
+                CountryCode=request.CountryCode,
+                Country=request.Country,
+                Address=request.Address,    
             };
             var result = await _userManager.CreateAsync(user, request.Password);
 

@@ -1,5 +1,6 @@
 ﻿using Domain.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Service.ViewModels;
 using Service.ViewModels.Airports;
 using Service.ViewModels.Flights;
 using System;
@@ -20,5 +21,6 @@ namespace Service.Services.Interfaces
         Task EditSaveAsync();
         Task DeleteAsync(int id);
         Task<SelectList> GetAllSelectedAsync();
+      
     }
 }

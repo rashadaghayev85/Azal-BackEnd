@@ -36,7 +36,7 @@ namespace Service.Helpers
 
             CreateMap<Blog, BlogVM>().ForMember(dest => dest.BlogTranslate, opt => opt.MapFrom(src => src.BlogTranslates));
             CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.BlogTranslate, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault()));
-            CreateMap<BlogCreateVM, Blog>();
+            CreateMap<BlogCreateVM, Blog>() ;
             CreateMap<Blog, BlogEditVM>().ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault().Name))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault().Description))
                 .ForMember(dest=>dest.Culture,opt=>opt.MapFrom(src=>src.BlogTranslates.FirstOrDefault().Language.Culture));
@@ -50,7 +50,8 @@ namespace Service.Helpers
 
             CreateMap<Flight, FlightVM>().ForMember(dest => dest.DepartureAirport, opt => opt.MapFrom(src => src.DepartureAirport.Id))
             .ForMember(dest => dest.ArrivalAirport, opt => opt.MapFrom(src => src.ArrivalAirport.Id));
-            CreateMap<Flight, FlightDetailVM>();
+            CreateMap<Flight, FlightDetailVM>().ForMember(dest => dest.DepartureAirport, opt => opt.MapFrom(src => src.DepartureAirport.AirportCode))
+                .ForMember(dest => dest.ArrivalAirport, opt => opt.MapFrom(src => src.ArrivalAirport.AirportCode));
             CreateMap<FlightCreateVM, Flight>().ForMember(dest => dest.DepartureAirportId, opt => opt.MapFrom(src => src.DepartureAirport))
             .ForMember(dest => dest.ArrivalAirportId, opt => opt.MapFrom(src => src.ArrivalAirport))
             .ForMember(dest => dest.PlaneId, opt => opt.MapFrom(src => src.Plane))

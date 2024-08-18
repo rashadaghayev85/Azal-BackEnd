@@ -4,10 +4,10 @@
     ViewData["Title"] = "Blog Details";
 }
 <main style="margin-top: 70px; margin-left:60px;">
-    <h2>Blog Details</h2>
+    <h2>Flight Details</h2>
 
     <div>
-        <h4>Blog</h4>
+        <h4>Flight</h4>
         <hr />
         <div class="table-responsive">
             <table class="table">
@@ -16,6 +16,8 @@
 
                         <th>Model</th>
                         <th>Create Date</th>
+                        <th>Departure Airport</th>
+                        <th>Arrival Airport</th>
                         <th>Ticket Count</th>
                         <th>DepartureTime</th>
                         <th>ArrivalTime</th>
@@ -34,6 +36,12 @@
                             @Model.FlightNumber
                         </td>
                         <td>@Model.CreatedDate.ToString("dd/MMMM/yyyy")</td>
+                        <td>
+                            @Model.DepartureAirport
+                        </td>
+                        <td>
+                            @Model.ArrivalAirport
+                        </td>
                         <td>
                             @Model.TicketCount
                         </td>

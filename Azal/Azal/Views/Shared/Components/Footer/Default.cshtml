@@ -1,5 +1,177 @@
 ﻿@model FooterVMVC
-<footer class="bg-[#01357e]">
+ <footer class="bg-[#01357e]">
+    <div class="container w-[1160px] mx-auto">
+        <div class="footerHead border-y-2 border-[#ffffff1a] py-[38px] flex justify-center divide-x-2 divide-[#ffffff1a]">
+            <a href="#"
+               class="border-l-1 inline-flex justify-center items-center max-w-[278px] w-full h-[67px]">
+                <div class="w-[190px] h-full">
+                    <img src="assets/img/refferans-1.svg" class="size-full" alt="">
+                </div>
+            </a>
+            <a href="#"
+               class="border-l-1 inline-flex justify-center items-center max-w-[278px] w-full h-[67px]">
+                <div class="w-[190px] h-[36px]">
+                    <img src="assets/img/refferans-2.svg" class="size-full" alt="">
+                </div>
+            </a>
+            <a href="#"
+               class="border-l-1 inline-flex justify-center items-center max-w-[278px] w-full h-[67px]">
+                <div class="w-[190px] h-[67px]">
+                    <img src="assets/img/refferans-3.svg" class="size-full" alt="">
+                </div>
+            </a>
+            <a href="#"
+               class="border-l-1 inline-flex justify-center items-center max-w-[278px] w-full h-[67px]">
+                <div class="w-[190px] h-full">
+                    <img src="assets/img/refferans-4.svg" class="size-full" alt="">
+                </div>
+            </a>
+
+
+        </div>
+        <div class="footerMain mb-[88px] mt-[24px] flex justify-around">
+            <div class="">
+                <div class="text-[18px] text-white">
+                    <h2>Məlumat</h2>
+                </div>
+                <div class="mt-[24px] flex flex-col text-white text-[14px]">
+                    <a class="leading-[24px] opacity-50 hover:underline" asp-controller="generalinformation" asp-action="index">Ümumi məlumat</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" asp-controller="baggage" asp-action="index">Baqaj haqqında məlumat</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" asp-controller="Farerules" asp-action="index">Tariflərin qaydaları</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" asp-controller="TravellingWithChildrenAndPregnant" asp-action="index">
+                        Uşaqlar və hamilə qadınlarla
+                        səyahət
+                    </a>
+                    <a class="leading-[24px] opacity-50 hover:underline" asp-controller="TravellingWithPets" asp-action="index">Heyvanlarla səyahət</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Arzuolunmaz sərnişinlər</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Overbooking</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Təhlükəli əşyalar</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Daşınma qaydaları</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Qiymət siyasəti</a>
+                </div>
+            </div>
+            <div class="">
+                <div class="text-[18px] text-white">
+                    <h2>AZAL Miles</h2>
+                </div>
+                <div class="mt-[24px] flex flex-col text-white text-[14px]">
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Proqram haqqında</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">
+                        Balların toplanması və
+                        istifadəsi
+                    </a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Üzv olmaq</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Profilə daxil olmaq</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Qaydalar və Şərtlər</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">F.A.Q</a>
+                </div>
+            </div>
+            <div class="">
+                <div class="text-[18px] text-white">
+                    <h2>AZAL aviaşirkəti</h2>
+                </div>
+                <div class="mt-[24px] flex flex-col text-white text-[14px]">
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Haqqımızda</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">AZAL-ın Müşahidə Şurası</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Son xəbərlər</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Bizim donanma</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Karyera</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Məlumat mərkəzi</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Bizə yazın</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Mobil əlavə</a>
+                </div>
+            </div>
+            <div class="">
+                <div class="text-[18px] text-white">
+                    <h2>Korporativ məlumat</h2>
+                </div>
+                <div class="mt-[24px] flex flex-col text-white text-[14px]">
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Qrup şəklində daşımalar</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Satış ofisləri</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Ofis və nümayəndəliklər</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Qəbul günləri</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Mətbuat xidməti</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Struktur bölmələri</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Maliyyə hesabatları</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">Agentlər üçün məlumat</a>
+                    <a class="leading-[24px] opacity-50 hover:underline" href="#">
+                        İnsan alverinə qarşı
+                        məlumat
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footerEnd flex justify-between items-center pb-[24px] border-b-2 border-[#ffffff1a]">
+            <div class="flex items-center gap-[8px] ">
+                <a href="@Model.Settings.FirstOrDefault(m=>m.Key=="facebook").Value"
+                   class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="@Model.Settings.FirstOrDefault(m=>m.Key=="twitter").Value"
+                   class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="@Model.Settings.FirstOrDefault(m=>m.Key=="linkedin").Value"
+                   class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="@Model.Settings.FirstOrDefault(m=>m.Key=="paper").Value"
+                   class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+                <a href="@Model.Settings.FirstOrDefault(m=>m.Key=="youtube").Value"
+                   class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="@Model.Settings.FirstOrDefault(m=>m.Key=="instagram").Value"
+                   class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="@Model.Settings.FirstOrDefault(m=>m.Key=="tiktok").Value"
+                   class="socialBtn size-[40px] bg-white rounded-full text-[#01357e] inline-flex items-center justify-center">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            <div>
+                <button>
+                    <img src="assets/img/googlePlay.svg" alt="">
+                </button>
+                <button>
+                    <img src="assets/img/appStore.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="copyright py-[24px] flex items-center justify-between">
+            <div class="text-[13px]">
+                <p class="text-[#ffffffb3]">© 2024 Azerbaijan Airlines - All rights reserved</p>
+            </div>
+            <div class="text-[13px]">
+                <p class="text-[#ffffffb3]">Designed by Rashad Agayev</p>
+            </div>
+            <div class="text-[13px]">
+                <a href="#" class="hover:text-white text-[#ffffffb3] transition-all">Help Center</a>
+            </div>
+            <div class="text-[13px]">
+                <a href="#" class="hover:text-white text-[#ffffffb3] transition-all">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* <footer class="bg-[#01357e]">
     <div class="container w-[1160px] mx-auto">
         <div class="footerHead border-y-2 border-[#ffffff1a] py-[38px] flex justify-center divide-x-2 divide-[#ffffff1a]">
             <a href="#"
@@ -156,4 +328,4 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> *@

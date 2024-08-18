@@ -5,29 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azal Airlines</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/air-datepicker.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/air-datepicker.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    
+
 </head>
 
 <body class="">
-
+    <img src="assets/img/main_bg.jpg" class=" absolute size-full object-cover z-[-1]" alt="">
 
     <main class=" h-screen w-full">
 
         @await Component.InvokeAsync("Header");
-            @RenderBody()
+        @RenderBody()
         @await Component.InvokeAsync("Footer");
     </main>
 
-    <script src="assets/js/air-datepicker.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script>
+    <script src="~/assets/js/air-datepicker.js"></script>
+    <script src="~/assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.4/axios.min.js">
 
 
     </script>

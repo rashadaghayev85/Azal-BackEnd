@@ -33,6 +33,11 @@ namespace Service
             services.AddScoped<ISpecialOffersService, SpecialOfferService>();
             services.AddScoped<IPopularDirectionService, PopularDirectionService>();
             services.AddScoped<ISettingService, SettingService>();
+            services.AddScoped<EmailService, EmailService>();
+
+            
+
+           
             return services;
 
         }

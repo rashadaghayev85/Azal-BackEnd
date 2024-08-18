@@ -59,7 +59,10 @@ namespace Azal.Areas.Admin.Controllers
         public async Task<IActionResult> Create(PopularDirectionCreateVM request)
         {
             ViewBag.languages = await _languageService.GetAllSelectedAsync();
-
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             if (!request.Image.CheckFileType("image/"))
             {
                 ModelState.AddModelError("Image", "Input can accept only image format");

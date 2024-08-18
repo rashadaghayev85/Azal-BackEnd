@@ -2373,6 +2373,18 @@
       "PackagePath": "staticwebassets\\assets\\css\\air-datepicker.css"
     },
     {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\components.css",
+      "PackagePath": "staticwebassets\\assets\\css\\components.css"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\login.css",
+      "PackagePath": "staticwebassets\\assets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\register.css",
+      "PackagePath": "staticwebassets\\assets\\css\\register.css"
+    },
+    {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
@@ -2513,6 +2525,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\996282bc-9673-4b97-a75b-1636376d3128-business_class_p_2_33c4d907d3.fd011fad.jpg"
     },
     {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\AZALAzerbaijanAirlines.png",
+      "PackagePath": "staticwebassets\\assets\\img\\AZALAzerbaijanAirlines.png"
+    },
+    {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\AZ_ada4a0eacb.81977812.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\AZ_ada4a0eacb.81977812.jpg"
     },
@@ -2563,6 +2579,10 @@
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\bc4cfb9c-735a-482a-a3c0-a97cc2a42e72-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
       "PackagePath": "staticwebassets\\assets\\img\\bc4cfb9c-735a-482a-a3c0-a97cc2a42e72-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\bc4f418f-11b9-4739-9b81-b752624d65f1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "PackagePath": "staticwebassets\\assets\\img\\bc4f418f-11b9-4739-9b81-b752624d65f1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
     },
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\bfbeb205-2ec5-499e-823e-6083f384bf81-Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg",

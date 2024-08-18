@@ -1,0 +1,298 @@
+﻿@model RegisterVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://azal.az/favicon.ico">
+    <title>Qeydiyyat | Azərbaycan Hava Yolları</title>
+    <link rel="stylesheet" href="~/assets/css/components.css">
+    <link rel="stylesheet" href="~/assets/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div id="header-main">
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="../asset/img/headerlogo.png" alt="logo">
+                </a>
+            </div>
+            <div class="component">
+                <div class="dropdown-menu">
+                    <button id="dropdown-btn">
+                        <i class="fa-regular fa-user"></i>
+                        <p>Şəxsi Kabinet</p>
+                    </button>
+                    <ul id="dropdown">
+                        <a href="./login.html">
+                            <li>Daxil ol</li>
+                        </a>
+                        <a href="./register.html">
+                            <li>Qeydiyyatdan keç</li>
+                        </a>
+                    </ul>
+                </div>
+                <button id="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="header-hidden">
+            <div class="header-hidden-main">
+                <div class="logo">
+                    <a href="../../index.html">
+                        <img src="../asset/img/headerlogo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="component">
+                    <a href="">
+                        <button>
+                            <i class="fa-regular fa-user"></i>
+                            <p>Şəxsi Kabinet</p>
+                        </button>
+                    </a>
+                    <button id="x-btn">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden-section">
+                <div class="hidden-section-menu">
+                    <ul class="nav">
+                        <li id="nav-main1">
+                            <div id="line1"></div>Səyahətə hazırlaşın
+                        </li>
+                        <li id="nav-main2">
+                            <div id="line2"></div>Xidmətlərimiz
+                        </li>
+                        <li id="nav-main3">
+                            <div id="line3"></div>Təyyarənin Göyərtəsində
+                        </li>
+                        <li id="nav-main4">
+                            <div id="line4"></div>Məlumat
+                        </li>
+                        <li id="nav-main5">
+                            <div id="line5"></div>AZAL Mİles
+                        </li>
+                        <li id="nav-main6">
+                            <div id="line6"></div>AZAL aviaşirkəti
+                        </li>
+                        <li id="nav-main7">
+                            <div id="line7"></div>Korporativ məlumat
+                        </li>
+                    </ul>
+                    <div id="nav-item1" class="nav-items">
+                        <span>Quick links</span>
+                        <ul>
+                            <li>Balların toplanması və istifadəsi</li>
+                            <li>Son xəbərlər</li>
+                            <li>Uçuş zamanı əyləncə</li>
+                            <li>Xüsusi təkliflər</li>
+                        </ul>
+                    </div>
+                    <div id="nav-item2" class="nav-items">
+                        <ul>
+                            <li>Bilet al</li>
+                            <li>Uçuşa qeydiyyat</li>
+                            <li>Rezervasiyanın idarə edilməsi</li>
+                            <li>Xüsusi təkliflər</li>
+                            <li>Azərbaycan üçün viza</li>
+                        </ul>
+                    </div>
+                    <div id="nav-item3" class="nav-items">
+                        <ul>
+                            <li>Premium Ekonom</li>
+                            <li>Biznes sinif</li>
+                            <li>Ekonom Sinif</li>
+                            <li>Class Upgrade xidməti</li>
+                        </ul>
+                    </div>
+                    <div id="nav-item4" class="nav-items">
+                        <ul>
+                            <li>Təyyarədə qidalanma</li>
+                            <li>Uçuş zamanı əyləncə</li>
+                            <li>Daha rahat yerlər</li>
+                        </ul>
+                    </div>
+                    <div id="nav-item5" class="nav-items">
+                        <ul>
+                            <li>Ümumi məlumat</li>
+                            <li>Baqaj haqqında məlumat</li>
+                            <li>Tariflərin qaydaları</li>
+                            <li>Uşaqlar və hamilə qadınlarla səyahət</li>
+                            <li>Heyvanlarla səyahət</li>
+                            <li>Arzuolunmaz sərnişinlər</li>
+                            <li>Overbooking</li>
+                            <li>Təhlükəli əşyalar</li>
+                            <li>Daşınma qaydaları</li>
+                            <li>Qiymət siyasəti</li>
+                        </ul>
+                    </div>
+                    <div id="nav-item6" class="nav-items">
+                        <ul>
+                            <li>Proqram haqqında</li>
+                            <li>Balların toplanması və istifadəsi</li>
+                            <li>Üzv olmaq</li>
+                            <li>Profilə daxil olmaq</li>
+                            <li>Qaydalar və Şərtlər</li>
+                            <li>F.A.Q</li>
+                        </ul>
+                    </div>
+                    <div id="nav-item7" class="nav-items">
+                        <ul>
+                            <li>Haqqımızda</li>
+                            <li>AZAL-ın Müşahidə Şurası</li>
+                            <li>Son xəbərlər</li>
+                            <li>Bizim donanma</li>
+                            <li>Karyera</li>
+                            <li>Məlumat mərkəzi</li>
+                            <li>Bizə yazın</li>
+                            <li>Mobil əlavə</li>
+                        </ul>
+                    </div>
+                    <div id="nav-item8" class="nav-items">
+                        <ul>
+                            <li>Qrup şəklində daşımalar</li>
+                            <li>Satış ofisləri</li>
+                            <li>Ofis və nümayəndəliklər</li>
+                            <li>Qəbul günləri</li>
+                            <li>Mətbuat xidməti</li>
+                            <li>Struktur bölmələri</li>
+                            <li>Maliyyə hesabatları</li>
+                            <li>Agentlər üçün məlumat</li>
+                            <li>İnsan alverinə qarşı məlumat</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden-foot">
+                    <div class="foot-text">
+                        <p>© 2024 Azerbaijan Airlines</p>
+                        <p>|</p>
+                        <p>Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form asp-action="signup" method="post">
+    <div class="register-page">
+        <div class="page-main">
+            <h2>Qeydiyyat</h2>
+            <div class="parts">
+                <div class="part-input">
+                    <label for="name">Ad *</label>
+                    <input id="name" type="text" placeholder="Mətn">
+                </div>
+                <div class="part-input">
+                    <label for="surname">Soyad *</label>
+                    <input id="surname" type="text" placeholder="Mətn">
+                </div>
+                <div class="part-input">
+                    <label for="fname">Ata adı *</label>
+                    <input id="fname" type="text" placeholder="Mətn">
+                </div>
+            </div>
+            <div class="parts">
+                <div class="part-input">
+                    <label for="brithd">Doğulduğu tarix *</label>
+                    <input id="brithd" type="date">
+                </div>
+                <div class="part-input">
+                    <label for="sex">Cins *</label>
+                    <select asp-for="Gender" name="" id="sex">
+                        <option value="" style="visibility: hidden; width: 0;">Seçin</option>
+                        <option value="">Qadın</option>
+                        <option value="">Kişi</option>
+                    </select>
+                </div>
+            </div>
+            <div class="parts">
+                <div class="part-input">
+                    <label for="email">E-poçt *</label>
+                    <input asp-for="Email" id="email" type="text" placeholder="Mətn">
+                </div>
+                <div class="part-input">
+                    <label for="country-code">Ölkə kodu</label>
+                    <input asp-for="CountryCode" id="country-code" type="text" placeholder="Ərazi kodu">
+                </div>
+                <div class="part-input">
+                    <label for="number">Telefon nömrəsi</label>
+                    <input asp-for="PhoneNumber" id="number" type="tel">
+                </div>
+            </div>
+            <div class="parts">
+                <div class="part-input">
+                    <label for="country">Ölkə</label>
+                    <input asp-for="Country" id="country" type="text" placeholder="Mətn">
+                </div>
+                <div class="part-input">
+                    <label for="address">Yaşayış ünvanı</label>
+                    <input asp-for="Address" id="address" type="text">
+                </div>
+            </div>
+            <div class="part-border">
+                <div class="parts">
+                    <div class="part-input">
+                        <label for="document">Sənəd növü</label>
+                        <select asp-for="DocumentType" name="" id="document">
+                            <option value="">Digər</option>
+                            <option value="">Şəxsiyyət vəsiqəsi</option>
+                            <option value="">Pasport</option>
+                        </select>
+                    </div>
+                    <div class="part-input">
+                        <label for="document-n">Sənəd nömrəsi</label>
+                        <input asp-for="DocumentNumber" id="document-n" type="tel">
+                    </div>
+                </div>
+                <div class="parts">
+                   @*  <div class="part-input">
+                        <label for="nationality">Milliyyət</label>
+                        <input asp-for="Natio" id="nationality" placeholder="Mətn">
+                    </div> *@
+                    <div class="part-input">
+                        <label for="document-d">Sənədin etibarlılıq müddəti</label>
+                        <input asp-for=DocumentExpiryDate id="document-d" type="date">
+                    </div>
+                </div>
+            </div>
+            <div class="parts">
+                <div class="part-input">
+                    <label for="password">Şifrə *</label>
+                    <input asp-for="Password" id="password" type="password">
+                </div>
+                <div class="part-input">
+                    <label for="password-c">Şifrəni təsdiqləyin *</label>
+                    <input asp-for="ConfirmPassword" id="password-c" type="password">
+                </div>
+            </div>
+            <div class="info">
+                <h5>Şifrə ən azı aşağıdakı simvollardan ibarət olmalıdır:</h5>
+                <li>8-20 simvol</li>
+                <li>bir böyük hərf</li>
+                <li>bir kiçik hərf</li>
+                <li>bir rəqəm</li>
+                <li>bir xüsusi simvol: ! /# $ % ^ & *</li>
+            </div>
+            <div class="check">
+                <input type="checkbox">
+                <p>Qaydalar və şərtlər ilə razıyam</p>
+            </div>
+            <button type="submit" href="">Qeydiyyat</button>
+
+        </div>
+    </form>
+        <script src="../script.js"></script>
+</body>
+
+</html>

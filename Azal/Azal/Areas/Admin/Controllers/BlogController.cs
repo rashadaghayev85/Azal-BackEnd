@@ -73,12 +73,29 @@ namespace Azal.Areas.Admin.Controllers
                 return View();
             }
 
+
+
             string fileName = Guid.NewGuid().ToString() + "-" + request.Image.FileName;
 
             // return Content(fileName);
 
             string path = Path.Combine(_env.WebRootPath, "assets", "img", fileName);
             await request.Image.SaveFileToLocalAsync(path);
+           
+           
+
+
+
+
+
+
+
+            //string fileName = Guid.NewGuid().ToString() + "-" + request.Image.FileName;
+
+            //// return Content(fileName);
+
+            //string path = Path.Combine(_env.WebRootPath, "assets", "img", fileName);
+            //await request.Image.SaveFileToLocalAsync(path);
 
             await _blogService.CreateAsync(request);
             return RedirectToAction(nameof(Index));

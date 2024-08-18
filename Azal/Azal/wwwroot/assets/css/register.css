@@ -1,0 +1,123 @@
+.register-page{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+.register-page .page-main{
+    max-width:45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    padding: 64px 100px;
+    border: 1px solid #DBE0E4;
+    border-radius: 8px;
+}
+.register-page .page-main h2{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+}
+.register-page .page-main input{
+    padding: 16px 0 16px 10px;
+    background-color: #fff;
+    border: 1px solid #C1C8D1;
+    border-radius: 12px;
+    width: 100%;
+}
+.register-page .page-main select{
+    padding: 16px 10px;
+    background-color: #fff;
+    border: 1px solid #C1C8D1;
+    border-radius: 12px;
+    width: 104%;
+}
+.register-page .page-main .part-border{
+    max-width: 92%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #C1C8D1;
+    border-radius: 10px;
+    gap: 24px;
+}
+.register-page .page-main .parts{
+    /* max-width: 100%;
+    width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    
+}
+.register-page .page-main .parts .part-input{
+    /* max-width: 100%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.register-page .page-main .parts .part-input label{
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #2E3034;
+}
+.register-page .page-main .parts .part-input input::placeholder{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+}
+.register-page .page-main .parts .part-input input:focus{
+    outline-color: #2C8DC7;
+}
+.register-page .page-main .info{
+    max-width: 60%;
+    width: 100%;
+    padding: 16px;
+    background-color: #CCC;
+    border-radius: 8px;
+}
+.register-page .page-main .info h5{
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.register-page .page-main .info{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.register-page .page-main .check{
+    display: flex;
+    max-width: 60%;
+    width: 100%;
+}
+.register-page .page-main .check input{
+    width: 16px;
+}
+.register-page .page-main .check p{
+    font-size: 13px;
+    line-height: 20px;
+    color: #6E7583;
+    margin-left: 5px;
+}
+.register-page .page-main a{
+    max-width: 50%;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color:  #2C8DC7;
+    border-radius: 8px;
+    color: #fff;
+}

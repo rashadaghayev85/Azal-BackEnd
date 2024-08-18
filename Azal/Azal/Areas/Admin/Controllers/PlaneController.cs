@@ -44,7 +44,10 @@ namespace Azal.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(PlaneCreateVM request)
         {
-            
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
 
             await _planeService.CreateAsync(request);
             return RedirectToAction(nameof(Index));

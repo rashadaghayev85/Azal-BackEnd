@@ -44,6 +44,16 @@ namespace Azal.Areas.Admin.Controllers
         public async Task<IActionResult> Create(TicketCreateVM request)
         {
             ViewBag.flights = await _flightService.GetAllSelectedAsync();
+
+            if(request.Flight == 0)
+            {
+                ModelState.AddModelError("Flight", "Input can't be empty");
+                return View();
+            }
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             await _ticketService.CreateAsync(request);
           
 

@@ -21,7 +21,8 @@ namespace Domain.Models
         public string DocumentExpiryDate { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
-
+        public string ReservationNumber { get; set; }
+        public string TicketNumber { get; set; }
         public int FlightId { get; set; }
         public Flight Flight { get; set; }
         public DateTime PurchaseDate { get; set; }= DateTime.Now;   

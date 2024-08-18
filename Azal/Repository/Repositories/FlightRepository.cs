@@ -44,5 +44,31 @@ namespace Repository.Repositories
         {
             await _context.SaveChangesAsync();  
         }
+
+        public async Task<List<Flight>> SearchFlightsAsync(int? departureAirportId, int? arrivalAirportId, DateTime? departureTime)
+        {
+            var query = _context.Flights.AsQueryable();
+
+            if (departureAirportId.HasValue)
+            {
+                query = query.Where(f => f.DepartureAirportId == departureAirportId.Value);
+            }
+
+            if (arrivalAirportId.HasValue)
+            {
+                query = query.Where(f => f.ArrivalAirportId == arrivalAirportId.Value);
+            }
+
+            if (departureTime.HasValue)
+            {
+                query = query.Where(f => f.DepartureTime.Date == departureTime.Value.Date);
+            }
+
+            return await query
+                .Include(f => f.DepartureAirport)
+                .Include(f => f.ArrivalAirport)
+                .Include(f => f.Plane)
+                .ToListAsync();
+        }
     }
 }

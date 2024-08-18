@@ -12,6 +12,7 @@ namespace Service.ViewModels.Blogs
     {
         [Required]
         public IFormFile Image { get; set; }
+      
         public string Name{ get; set; }
         public string Description { get; set; }
       

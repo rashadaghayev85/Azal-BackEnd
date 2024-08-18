@@ -26,12 +26,20 @@ namespace Azal.Areas.Admin.Controllers
             _env = env;
             _mapper = mapper;
         }
-
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var airports = await _airportService.GetAllAsync();
            // ViewBag.TranslateBlogTitle = await _blogTranslateService.GetAllAsync();
             return View(airports);
+
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var airports = await _airportService.GetAllAsync();
+            // ViewBag.TranslateBlogTitle = await _blogTranslateService.GetAllAsync();
+            return Json(airports);
         }
         [HttpGet]
         public async Task<IActionResult> Detail(int id)

@@ -5,8 +5,539 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div class="relative z-[10] h-[80vh]">
+    <div class="mx-auto w-[1160px] pt-[50px]">
+        <div class="tabs flex gap-[8px] overflow-x-auto">
+            <button class=" active tab bg-[#10101033] text-white flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[12px_12px_0_0]">
+                <span class=" font-semibold whitespace-nowrap">Aviabilet almaq</span>
+            </button>
+            <button class="tab bg-[#10101033] text-white flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[12px_12px_0_0]">
+                <span class=" font-semibold whitespace-nowrap">Uçuşa qeydiyyat</span>
+            </button>
+            <button class="tab bg-[#10101033] text-white flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[12px_12px_0_0]">
+                <span class=" font-semibold whitespace-nowrap">Rezervasiyanın idarə edilməsi</span>
+            </button>
+            <button class="tab bg-[#10101033] text-white flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[12px_12px_0_0]">
+                <span class=" font-semibold whitespace-nowrap">Reysin statusu</span>
+            </button>
+        </div>
+        <div class=" h-[128px] bg-white p-[24px] rounded-[0_12px_12px]">
+       
+            <div class="w-full h-[64px] flex relative">
+                <div class="destinations flex-1 flex relative">
+                    <div class="w-[50%] relative">
+                        <div class="rounded-[12px_0_0_12px] flex h-[64px]">
+                            <label class="labell pr-[22px] pl-[16px] w-full rounded-[12px_0_0_12px] border border-[#DBE0E4] flex justify-between bg-white relative">
+                                <div class="flex w-full relative">
+                                    <input name="depatureAirport" type="text" class="from text-[18px] leading-[28px] font-semibold overflow-hidden w-full text-[#2E3034] text-ellipsis whitespace-nowrap bg-transparent outline-none mt-[16px] input1" />
+                                    <div class="label leading-[24px] top-[calc(50%_-_12px)] absolute left-0 origin-top-left">
+                                        Haradan
+                                    </div>
+                                    <button type="button" class="clear-btn hidden absolute right-2 top-1/2 transform -translate-y-1/2">
+                                        &#x2715;
+                                    </button>
+                                </div>
+                            </label>
+                            <div class="w-[330px] dropdown  absolute top-full left-0 bg-white border border-[#DBE0E4] rounded-[12px] max-h-[200px] overflow-auto z-10">
 
+                                @foreach (var item in Model.Airports)
+                                {
+                                    @foreach (var itm in item.AirportTranslates)
+                                    {
+                                        @if (itm.Language.Culture == "az")
+                                        {
+                                            <div class="option cursor-pointer hover:bg-[#eeeeee80]">
+                                                    <button type="button" class="p-[16px] flex items-center text-[14px] font-semibold leading-[20px] w-full">
+                                                    <div class="flex items-center w-full">
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="text-[#CDD5DF] mr-[10px]">
+                                                            <path d="M5.19593 2.6236C5.0576 2.62532 4.91992 2.66184 4.79554 2.73184C4.32471 2.99725 4.22501 3.63237 4.59209 4.02904L8.09307 7.8124L4.88831 9.21296L2.91484 8.05491C2.67109 7.912 2.37143 7.90298 2.11976 8.03131C1.68518 8.25215 1.53424 8.79964 1.79424 9.21214L2.91078 10.9838C3.53161 11.9688 4.77949 12.3521 5.84616 11.8855L17.4868 6.79108C18.2014 6.47858 18.5272 5.64531 18.2151 4.93073C17.9022 4.21615 17.0694 3.88988 16.3548 4.20238L11.9782 6.11481L5.59876 2.72126C5.47272 2.65438 5.33427 2.62188 5.19593 2.6236ZM3.12481 15.8332C3.04199 15.8321 2.95976 15.8474 2.8829 15.8782C2.80605 15.9091 2.7361 15.955 2.67712 16.0131C2.61814 16.0713 2.5713 16.1406 2.53933 16.217C2.50737 16.2934 2.4909 16.3754 2.4909 16.4582C2.4909 16.5411 2.50737 16.6231 2.53933 16.6995C2.5713 16.7759 2.61814 16.8452 2.67712 16.9033C2.7361 16.9615 2.80605 17.0073 2.8829 17.0382C2.95976 17.0691 3.04199 17.0844 3.12481 17.0832H16.8748C16.9576 17.0844 17.0399 17.0691 17.1167 17.0382C17.1936 17.0073 17.2635 16.9615 17.3225 16.9033C17.3815 16.8452 17.4283 16.7759 17.4603 16.6995C17.4922 16.6231 17.5087 16.5411 17.5087 16.4582C17.5087 16.3754 17.4922 16.2934 17.4603 16.217C17.4283 16.1406 17.3815 16.0713 17.3225 16.0131C17.2635 15.955 17.1936 15.9091 17.1167 15.8782C17.0399 15.8474 16.9576 15.8321 16.8748 15.8332H3.12481Z"></path>
+                                                        </svg>
+                                                        
+                                                        <span class="flex-1 text-left">@itm.Location</span>
+                                                        <span id="departureairportcode" class="text-[#6E7583] ">@item.AirportCode</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        }
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                        <button type="button" id="changeBtn" class="absolute top-2/4 left-2/4 z-[1] size-[32px] border border-[#DBE0E4] rounded-full inline-flex items-center justify-center -translate-y-2/4 -translate-x-2/4 bg-white">
+                        <img src="assets/img/change.svg" class="shrink-0 invert-0 size-[16px] relative z-10" alt="">
+                    </button>
+                    <div class="w-[50%] relative">
+                        <div class="flex h-[64px]">
+                            <label class="labell pr-[22px] pl-[16px] w-full border border-[#DBE0E4] flex justify-between bg-white relative">
+                                <div class="flex w-full relative">
+                                        <input type="text"  class="from text-[18px] leading-[28px] font-semibold overflow-hidden w-full text-[#2E3034] text-ellipsis whitespace-nowrap bg-transparent outline-none mt-[16px] input2" />
+                                    <div class="label leading-[24px] top-[calc(50%_-_12px)] absolute left-0 origin-top-left">
+                                        Haraya
+                                    </div>
+                                        <button type="button" class="clear-btn hidden absolute rig
+ht-2 top-1/2 transform -translate-y-1/2">
+                                        &#x2715;
+                                    </button>
+                                </div>
+                            </label>
+                            <div class="w-[330px] dropdown absolute top-full left-0 bg-white border border-[#DBE0E4] rounded-[12px] max-h-[200px] overflow-auto z-10">
+                                @foreach (var item in Model.Airports)
+                                {
+                                    @foreach (var itm in item.AirportTranslates)
+                                    {
+                                        @if (itm.Language.Culture == "az")
+                                        {
+                                            <div class="option cursor-pointer hover:bg-[#eeeeee80]">
+                                                    <button type="button" class="p-[16px] flex items-center text-[14px] font-semibold leading-[20px] w-full">
+                                                    <div class="flex items-center w-full">
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="text-[#CDD5DF] mr-[10px]">
+                                                            <path d="M5.19593 2.6236C5.0576 2.62532 4.91992 2.66184 4.79554 2.73184C4.32471 2.99725 4.22501 3.63237 4.59209 4.02904L8.09307 7.8124L4.88831 9.21296L2.91484 8.05491C2.67109 7.912 2.37143 7.90298 2.11976 8.03131C1.68518 8.25215 1.53424 8.79964 1.79424 9.21214L2.91078 10.9838C3.53161 11.9688 4.77949 12.3521 5.84616 11.8855L17.4868 6.79108C18.2014 6.47858 18.5272 5.64531 18.2151 4.93073C17.9022 4.21615 17.0694 3.88988 16.3548 4.20238L11.9782 6.11481L5.59876 2.72126C5.47272 2.65438 5.33427 2.62188 5.19593 2.6236ZM3.12481 15.8332C3.04199 15.8321 2.95976 15.8474 2.8829 15.8782C2.80605 15.9091 2.7361 15.955 2.67712 16.0131C2.61814 16.0713 2.5713 16.1406 2.53933 16.217C2.50737 16.2934 2.4909 16.3754 2.4909 16.4582C2.4909 16.5411 2.50737 16.6231 2.53933 16.6995C2.5713 16.7759 2.61814 16.8452 2.67712 16.9033C2.7361 16.9615 2.80605 17.0073 2.8829 17.0382C2.95976 17.0691 3.04199 17.0844 3.12481 17.0832H16.8748C16.9576 17.0844 17.0399 17.0691 17.1167 17.0382C17.1936 17.0073 17.2635 16.9615 17.3225 16.9033C17.3815 16.8452 17.4283 16.7759 17.4603 16.6995C17.4922 16.6231 17.5087 16.5411 17.5087 16.4582C17.5087 16.3754 17.4922 16.2934 17.4603 16.217C17.4283 16.1406 17.3815 16.0713 17.3225 16.0131C17.2635 15.955 17.1936 15.9091 17.1167 15.8782C17.0399 15.8474 16.9576 15.8321 16.8748 15.8332H3.12481Z"></path>
+                                                        </svg>
+                                                        <span class="flex-1 text-left">@itm.Location</span>
+                                                        <span id="arrivalairportcode" class="text-[#6E7583] ">@item.AirportCode</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        }
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[32%] h-[64px] flex justify-center bg-white border border-[#DBE0E4] relative">
+                        <button type="button" id="dateBtn" class="pointer flex items-center justify-between size-full px-[16px] ">
+                        <span class="leading-[24px] text-[#6E7583]">Reys tarixi</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="3 3 18 18" class="size-[20px] text-[#6E7583]">
+                            <path d="M6.25 3C4.46403 3 3 4.46403 3 6.25V17.75C3 19.536 4.46403 21 6.25 21H17.75C19.536 21 21 19.536 21 17.75V6.25C21 4.46403 19.536 3 17.75 3H6.25ZM6.25 4.5H17.75C18.725 4.5 19.5 5.27497 19.5 6.25V7H4.5V6.25C4.5 5.27497 5.27497 4.5 6.25 4.5ZM4.5 8.5H19.5V17.75C19.5 18.725 18.725 19.5 17.75 19.5H6.25C5.27497 19.5 4.5 18.725 4.5 17.75V8.5ZM7.75 10.5C7.41848 10.5 7.10054 10.6317 6.86612 10.8661C6.6317 11.1005 6.5 11.4185 6.5 11.75C6.5 12.0815 6.6317 12.3995 6.86612 12.6339C7.10054 12.8683 7.41848 13 7.75 13C8.08152 13 8.39946 12.8683 8.63388 12.6339C8.8683 12.3995 9 12.0815 9 11.75C9 11.4185 8.8683 11.1005 8.63388 10.8661C8.39946 10.6317 8.08152 10.5 7.75 10.5ZM12 10.5C11.6685 10.5 11.3505 10.6317 11.1161 10.8661C10.8817 11.1005 10.75 11.4185 10.75 11.75C10.75 12.0815 10.8817 12.3995 11.1161 12.6339C11.3505 12.8683 11.6685 13 12 13C12.3315 13 12.6495 12.8683 12.8839 12.6339C13.1183 12.3995 13.25 12.0815 13.25 11.75C13.25 11.4185 13.1183 11.1005 12.8839 10.8661C12.6495 10.6317 12.3315 10.5 12 10.5ZM16.25 10.5C15.9185 10.5 15.6005 10.6317 15.3661 10.8661C15.1317 11.1005 15 11.4185 15 11.75C15 12.0815 15.1317 12.3995 15.3661 12.6339C15.6005 12.8683 15.9185 13 16.25 13C16.5815 13 16.8995 12.8683 17.1339 12.6339C17.3683 12.3995 17.5 12.0815 17.5 11.75C17.5 11.4185 17.3683 11.1005 17.1339 10.8661C16.8995 10.6317 16.5815 10.5 16.25 10.5ZM7.75 15C7.41848 15 7.10054 15.1317 6.86612 15.3661C6.6317 15.6005 6.5 15.9185 6.5 16.25C6.5 16.5815 6.6317 16.8995 6.86612 17.1339C7.10054 17.3683 7.41848 17.5 7.75 17.5C8.08152 17.5 8.39946 17.3683 8.63388 17.1339C8.8683 16.8995 9 16.5815 9 16.25C9 15.9185 8.8683 15.6005 8.63388 15.3661C8.39946 15.1317 8.08152 15 7.75 15ZM12 15C11.6685 15 11.3505 15.1317 11.1161 15.3661C10.8817 15.6005 10.75 15.9185 10.75 16.25C10.75 16.5815 10.8817 16.8995 11.1161 17.1339C11.3505 17.3683 11.6685 17.5 12 17.5C12.3315 17.5 12.6495 17.3683 12.8839 17.1339C13.1183 16.8995 13.25 16.5815 13.25 16.25C13.25 15.9185 13.1183 15.6005 12.8839 15.3661C12.6495 15.1317 12.3315 15 12 15Z" fill="currentColor"></path>
+                        </svg>
+                    </button>
+                    <div class="commuting pointer flex items-center justify-between size-full px-[16px] hidden">
+                            <button type="button" class="relative flex flex-1 flex-col h-full p-[10px] ">
+                            <span class="text-[13px] leading-[20px] font-medium text-[#6E7583]">Gediş tarixi</span>
+                            <span class="departure text-[18px] leading-[24px] font-medium"></span>
+                        </button>
+                        <div class="w-[1px] h-[50%] border-l"></div>
+                            <button type="button" class="relative flex flex-1 flex-col h-full p-[10px] ">
+                            <span class="text-[13px] leading-[20px] font-medium text-[#6E7583]">Geri qayıdış</span>
+                            <span class="landing text-[18px] leading-[24px] font-medium"></span>
+                        </button>
+                    </div>
+                    <div class="kalendar flex z-[0] rounded-[8px] absolute w-[736px] hidden bg-white shadow  top-[calc(100%_+_16px)] overflow-hidden">
+                        <div id="monthBtn" class="bg-[#F5F6F8] flex flex-col p-[20px] -[170px]">
+                                <button type="button" id="btnAugust" class="mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap font-semibold text-[#2C8DC7] active">
+                                <div class="line absolute w-[4px] h-[52px] bg-[#2C8DC7] left-0"></div>
+                                Avqust 2024
+                            </button>
+                                <button type="button" id="btnSeptember" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap font-semibold text-[#2C8DC7] ">
+                                Sentyabr 2024
+                            </button>
+                                <button type="button" id="btnOctober" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                Oktyabr 2024
+                            </button>
+                                <button type="button" id="btnNovember" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                Noyabr 2024
+                            </button>
+                                <button type="button" id="btnDecember" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                Dekabr 2024
+                            </button>
+                                <button type="button" id="btnJanuary" id="btnAugust" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                Yanvar 2025
+                            </button>
+                                <button type="button" id="btnFebruary" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                Fevral 2025
+                            </button>
+                                <button type="button" id="btnMart" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                Mart 2025
+                            </button>
+                                <button type="button" id="btnApril" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                Aprel 2025
+                            </button>
+                                <button type="button" id="btnMay" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                May 2025
+                            </button>
+                                <button type="button" id="btnJune" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                İyun 2025
+                            </button>
+                                <button type="button" id="btnJune" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap text-black">
+                                İyul 2025
+                            </button>
+                                <button type="button" id="btnJuly" class=" mt-[12px] text-[13px] leading-[20px] text-left whitespace-nowrap font-semibold text-[#2C8DC7] ">
+                                İyul 2025
+                            </button>
+                        </div>
+                        <div class="flex flex-col w-full px-[16px] py-[20px]">
+                                <button type="button" id="oneWayBtn" class="text-[#2E3034] border border-[#2C8DC7] w-full h-[45px] rounded-[12px] font-semibold bg-white">Yalnız bir istiqamətdə</button>
+                            <div class="flex mt-[16px] gap-[16px]">
+                                <div id="el1" class="pointer flex-1 w-full form-control"></div>
+                                <div id="el2" class="pointer flex-1 w-full form-control"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div>
+                    <button id="passengerBtn" class="relative flex flex-col w-[158px] h-[64px] px-[16px] py-[10px] text-left bg-white border border-[#DBE0E4]">
+                        <span class="text-[13px] leading-[20px] text-[#6E7583]">Sərnişinlər</span>
+                        <span id="passengerCount"
+                              class="text-[18px] font-semibold leading-[24px] text-[#2E3034]">1, Ekonom</span>
+                        <svg width="14" height="8" id="angle" viewBox="0 0 14 8" fill="none"
+                             xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
+                             class="absolute top-[26px] right-[16px] rotate-180">
+                            <path d="M1 7L7 1L13 7" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="passengerMenu" class="absolute hidden bg-white shadow-2xl border border-[#DBE0E4] w-[330px] right-0 p-[20px] rounded-[12px] mt-2 top-[70px]">
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center py-[8px] border-b">
+                                <div class="flex flex-col">
+                                    <div>Böyüklər</div>
+                                    <div class="text-[#6E7583] text-[13px]">12+ yaş</div>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                        <button type="button" class="decrease inline-flex justify-center items-center size-[40px] bg-[#F5F6F8] border border-[#CDD5DF] rounded-full">
+                                        <i class="fa fa-minus text-[20px]"></i>
+                                    </button>
+                                    <div class="count text-[18px] font-semibold w-[25px] text-center">1</div>
+                                        <button type="button" class="increase inline-flex justify-center items-center size-[40px] bg-[#F5F6F8] border border-[#CDD5DF] rounded-full">
+                                        <i class="fa fa-plus text-[20px]"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-[8px] border-b">
+                                <div class="flex flex-col">
+                                    <div>Uşaqlar</div>
+                                    <div class="text-[#6E7583] text-[13px]">2-12 yaş</div>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                        <button type="button" class="decrease inline-flex justify-center items-center size-[40px] bg-[#F5F6F8] border border-[#CDD5DF] rounded-full">
+                                        <i class="fa fa-minus text-[20px]"></i>
+                                    </button>
+                                    <div class="count text-[18px] font-semibold w-[25px] text-center">0</div>
+                                    <button class="increase inline-flex justify-center items-center size-[40px] bg-[#F5F6F8] border border-[#CDD5DF] rounded-full">
+                                        <i class="fa fa-plus text-[20px]"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-[8px] border-b">
+                                <div class="flex flex-col">
+                                    <div>Körpələr</div>
+                                    <div class="text-[#6E7583] text-[13px]">0-2 yaş</div>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                        <button type="button" class="decrease inline-flex justify-center items-center size-[40px] bg-[#F5F6F8] border border-[#CDD5DF] rounded-full">
+                                        <i class="fa fa-minus text-[20px]"></i>
+                                    </button>
+                                    <div class="count text-[18px] font-semibold w-[25px] text-center">0</div>
+                                        <button type="button" class="increase inline-flex justify-center items-center size-[40px] bg-[#F5F6F8] border border-[#CDD5DF] rounded-full">
+                                        <i class="fa fa-plus text-[20px]"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between bg-[#F5F6F8] rounded-[8px] h-[48px] items-center relative">
+                           <button type="button" id="ekonomBtn" class="flex-1 h-full text-[#2C8DC7] font-semibold relative z-10">Ekonom</button>
+                            <div id="borderLine" class="transition-all absolute w-[50%] rounded-[8px] border-[#2C8DC7] border h-full bg-none">
+                            </div>
+                                <button type="button" id="biznesBtn" class="flex-1 rounded-[8px] h-full text-[#2C8DC7] font-semibold relative z-10">Biznes</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="searchId" class="inline-flex justify-center items-center p-[16px] bg-[#01357E] rounded-[0_12px_12px_0] ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="4 4 24.01 24.01" class="size-[24px] shrink-0 text-white"><path d="M13.6667 4C8.33976 4 4 8.33976 4 13.6667C4 18.9936 8.33976 23.3333 13.6667 23.3333C15.9709 23.3333 18.0891 22.5194 19.7526 21.1667L26.293 27.707C26.3851 27.803 26.4955 27.8796 26.6176 27.9324C26.7397 27.9852 26.8712 28.0131 27.0042 28.0144C27.1372 28.0158 27.2692 27.9906 27.3924 27.9403C27.5156 27.89 27.6275 27.8156 27.7216 27.7216C27.8156 27.6275 27.89 27.5156 27.9403 27.3924C27.9906 27.2692 28.0158 27.1372 28.0144 27.0042C28.0131 26.8712 27.9852 26.7397 27.9324 26.6176C27.8796 26.4955 27.803 26.3851 27.707 26.293L21.1667 19.7526C22.5194 18.0891 23.3333 15.9709 23.3333 13.6667C23.3333 8.33976 18.9936 4 13.6667 4ZM13.6667 6C17.9127 6 21.3333 9.42064 21.3333 13.6667C21.3333 15.7351 20.5175 17.6038 19.194 18.9805C19.1124 19.0404 19.0404 19.1124 18.9805 19.194C17.6038 20.5175 15.7351 21.3333 13.6667 21.3333C9.42063 21.3333 6 17.9127 6 13.6667C6 9.42064 9.42063 6 13.6667 6Z" fill="currentColor"></path></svg>
+                </button>
+            </div>
+
+           
+        </div>
+    </div>
+</div>
 <div class="container mx-auto w-[1160px]">
+    <div class="py-[48px] ">
+        <div class="banner mb-[84px]">
+            <img src="~/assets/img/@Model.Banners.FirstOrDefault().Image" class="w-full " alt="">
+        </div>
+        <div class="offers mb-[84px]">
+            <div class="h2 flex items-center justify-between mb-[36px]">
+                <h2 class=" text-[32px]">Xüsusi təkliflər</h2>
+                @*                 <a href="#"
+                class="border border-[#1f2022] text-[15px] font-semibold rounded-[8px] py-[12px] px-[20px]">
+                Hamısına
+                baxın
+                </a> *@
+            </div>
+            <div class="flex items-center gap-[16px]">
+
+                @foreach (var item in Model.SpecialOffers)
+                {
+                    @foreach (var itm in item.SpecialOffersTransLates)
+                    {
+
+                        <div class="flex justify-between">
+                            <div class=" ">
+                                <img src="~/assets/img/@item.Image"
+                                     class="size-full object-contain rounded-[8px] w-[350px] " alt="">
+                            </div>
+                            <div class="pt-[32px] pl-[24px] max-w-[200px] ">
+                                <h3 class="h2 inline-block h-[60px]  overflow-hidden text-[20px]">
+                                    @itm.Name
+
+                                    @* UCard
+                            sahiblərinə rahat və sərfəli səyahət fürsəti! *@
+                                </h3>
+                                <p class=" line-clamp-2 text-ellipsis text-[14px] text-[#6e7583] mb-[24px]">
+                                    @itm.Title
+                                    @*  AZ_ada4a0eacb.81977812.jpg *@
+
+                                    @*  İndi
+                            AZAL-dan bilet aldıqda ödəməni 6 ayadək faizsiz taksitlə edə bilərsiniz. *@
+                                </p>
+                                <a href="#" class="text-[#40b7de] font-semibold hover:underline">Daha ətraflı</a>
+                            </div>
+                        </div>
+                    }
+
+                }
+
+
+
+
+                @*  <div class="flex justify-between">
+                <div class=" ">
+                <img src="~/assets/img/Dubai_2400x1350_AZ_52f604f7b5.da463bfc.jpg"
+                class="size-full object-contain rounded-[8px] w-[350px] " alt="">
+                </div>
+                <div class="pt-[32px] pl-[24px] max-w-[200px] ">
+                <h3 class="h2 inline-block h-[60px]  overflow-hidden text-[20px]">
+                Dubay
+                səyahətinizi reallaşdırmaq üçün əla fürsət! İndi biletlər cəmi 99€-dan başlayan
+                qiymətlərlə!
+                </h3>
+                <p class=" line-clamp-2 text-ellipsis text-[14px] text-[#6e7583] mb-[24px]">
+                Dubay
+                səyahətinizi reallaşdırmaq üçün əla fürsət! İndi biletlər cəmi 99€-dan başlayan
+                qiymətlərlə!
+                </p>
+                <a href="#" class="text-[#40b7de] font-semibold hover:underline">Daha ətraflı</a>
+                </div>
+                </div> *@
+
+
+            </div>
+        </div>
+        <div class="usefulLink mb-[84px]">
+            <div class="h2 flex items-center justify-between mb-[36px]">
+                <h2 class=" text-[32px]">Faydalı keçidlər</h2>
+            </div>
+            <div class="flex gap-[24px]">
+                @foreach (var item in Model.Blogs)
+                {
+                    @foreach (var itm in item.BlogTranslate)
+                    {
+                        @if (itm.Language.Culture == "az")
+                        {
+                            <a href="#" id="useful"
+                               class="border hover:scale-105 transition-all duration-300 flex-1 rounded-[12px]  max-w-[370px] overflow-hidden inline-block">
+                                <div class="h-[208px]">
+                                    <img src="~/assets/img/@item.Image" class="size-full"
+                                         alt="">
+                                </div>
+                                <div class="p-[24px] flex flex-col justify-between h-[196px]">
+                                    <div>
+                                        <h2 class=" h2 text-[20px] font-semibold mb-[8px]">@itm.Name</h2>
+                                        <p class=" text-[#6e7583] text-[14px]">
+                                            @itm.Description
+                                        </p>
+                                    </div>
+                                    <div class="moreBtn text-[16px] text-[#40b7de] font-semibold">
+                                        <p>Daha ətraflı</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                        }
+
+                    }
+                }
+
+                @*  <a href="#" id="useful"
+                class="border hover:scale-105 transition-all duration-300 flex-1 rounded-[12px]  max-w-[370px] overflow-hidden inline-block">
+                <div class="h-[208px]">
+                <img src="~/assets/img/qidalanma_3_d30d72de34.9ffad3ae.jpg" class="size-full" alt="">
+                </div>
+                <div class="p-[24px] flex flex-col justify-between h-[196px]">
+                <div>
+                <h2 class=" h2 text-[20px] font-semibold mb-[8px]">Təyyarədə qidalanma</h2>
+                <p class=" text-[#6e7583] text-[14px]">
+                "Azərbaycan Hava Yolları"
+                aviaşirkətinin bütün beynəlxalq reyslərində pulsuz qidalanma təmin olunur.
+                </p>
+                </div>
+                <div class="moreBtn text-[16px] text-[#40b7de] font-semibold">
+                <p>Daha ətraflı</p>
+                </div>
+                </div>
+                </a>
+                <a href="#" id="useful"
+                class="border hover:scale-105 transition-all duration-300 flex-1 rounded-[12px]  max-w-[370px] overflow-hidden inline-block">
+                <div class="h-[208px]">
+                <img src="~/assets/img/mile_ba6f049c01.aa62193e.jpg" class="size-full" alt="">
+                </div>
+                <div class="p-[24px] flex flex-col justify-between h-[196px]">
+                <div>
+                <h2 class=" h2 text-[20px] font-semibold mb-[8px]">AZAL-Miles</h2>
+                <p class=" text-[#6e7583] text-[14px]">
+                AZAL-Miles proqramı “Azərbaycan Hava
+                Yolları” aviaşirkəti ilə tez-tez uçan sərnişinlər üçün yaradılmış proqramdır.
+                </p>
+                </div>
+                <div class="moreBtn text-[16px] text-[#40b7de] font-semibold">
+                <p>Daha ətraflı</p>
+                </div>
+                </div>
+                </a> *@
+            </div>
+        </div>
+        <div class="directions mb-[84px]">
+            <div class="h2 flex items-center justify-between mb-[36px]">
+                <h2 class="text-[32px]">Populyar istiqamətlər</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-[24px]">
+
+                @foreach (var item in Model.PopularDirections)
+                {
+                    @foreach (var itm in item.PopularDirectionTranslates)
+                    {
+                        @if (itm.Language.Culture == "az")
+                        {
+
+                            <div>
+                                <figure class="max-w-[272px] h-[190px] rounded-[12px] overflow-hidden">
+                                    <img src="~/assets/img/@item.Image" class="size-full object cover" alt="">
+                                </figure>
+                                <div class="mt-[16px] flex flex-col">
+                                    <div class="text-[20px] mb-[4px] h2">
+                                        <h2>@itm.City</h2>
+                                    </div>
+                                    <div class="text-[14px] text-[#6e7583]">
+                                        <p>@itm.Country</p>
+                                    </div>
+                                    <div class="text-[#40b7de] mt-[8px] text-[16px]">
+                                        <p>@item.Price_azn <span>₼</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+
+                @*   <div>
+                <figure class="max-w-[272px] h-[190px] rounded-[12px] overflow-hidden">
+                <img src="~/assets/img/TBS.jpg" class="size-full object cover" alt="">
+                </figure>
+                <div class="mt-[16px] flex flex-col">
+                <div class="text-[20px] mb-[4px] h2">
+                <h2>Tbilisi</h2>
+                </div>
+                <div class="text-[14px] text-[#6e7583]">
+                <p>Gürcüstan</p>
+                </div>
+                <div class="text-[#40b7de] mt-[8px] text-[16px]">
+                <p>93 <span>₼</span></p>
+                </div>
+                </div>
+                </div>
+                <div>
+                <figure class="max-w-[272px] h-[190px] rounded-[12px] overflow-hidden">
+                <img src="~/assets/img/BCN.jpg" class="size-full object cover" alt="">
+                </figure>
+                <div class="mt-[16px] flex flex-col">
+                <div class="text-[20px] mb-[4px] h2">
+                <h2>Barselona</h2>
+                </div>
+                <div class="text-[14px] text-[#6e7583]">
+                <p>İspaniya</p>
+                </div>
+                <div class="text-[#40b7de] mt-[8px] text-[16px]">
+                <p>542 <span>₼</span></p>
+                </div>
+                </div>
+                </div>
+                <div>
+                <figure class="max-w-[272px] h-[190px] rounded-[12px] overflow-hidden">
+                <img src="~/assets/img/DXB.jpg" class="size-full object cover" alt="">
+                </figure>
+                <div class="mt-[16px] flex flex-col">
+                <div class="text-[20px] mb-[4px] h2">
+                <h2>Dubay</h2>
+                </div>
+                <div class="text-[14px] text-[#6e7583]">
+                <p>Birləşmiş Ərəb Əmirlikləri</p>
+                </div>
+                <div class="text-[#40b7de] mt-[8px] text-[16px]">
+                <p>211 <span>₼</span></p>
+                </div>
+                </div>
+                </div> *@
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* <div class="container mx-auto w-[1160px]">
     <div class="py-[48px] ">
         <div class="banner mb-[84px]">
             <img src="~/assets/img/@Model.Banners.FirstOrDefault().Image" class="w-full " alt="">
@@ -38,22 +569,22 @@
                             
                             @* UCard
                             sahiblərinə rahat və sərfəli səyahət fürsəti! *@
-                        </h3>
+                       @*  </h3>
                         <p class=" line-clamp-2 text-ellipsis text-[14px] text-[#6e7583] mb-[24px]">
                                     @itm.Title 
                                    @*  AZ_ada4a0eacb.81977812.jpg *@
 
                             @*  İndi
                             AZAL-dan bilet aldıqda ödəməni 6 ayadək faizsiz taksitlə edə bilərsiniz. *@
-                        </p>
+                        @* </p>
                         <a href="#" class="text-[#40b7de] font-semibold hover:underline">Daha ətraflı</a>
                     </div>
                 </div>
                     }
                     
-                }
+                } *@
                
-                
+             
                 
                 
                @*  <div class="flex justify-between">
@@ -76,7 +607,7 @@
                     </div>
                 </div> *@
 
-
+@* 
             </div>
         </div>
         <div class="usefulLink mb-[84px]">
@@ -112,7 +643,7 @@
                         }
 
                    }
-                }
+                } *@
                 
                @*  <a href="#" id="useful"
                    class="border hover:scale-105 transition-all duration-300 flex-1 rounded-[12px]  max-w-[370px] overflow-hidden inline-block">
@@ -150,7 +681,7 @@
                         </div>
                     </div>
                 </a> *@
-            </div>
+         @*    </div>
         </div>
         <div class="directions mb-[84px]">
             <div class="h2 flex items-center justify-between mb-[36px]">
@@ -183,7 +714,7 @@
                     </div>
                         }
                 }
-                }
+                } *@
                
               @*   <div>
                     <figure class="max-w-[272px] h-[190px] rounded-[12px] overflow-hidden">
@@ -233,9 +764,10 @@
                         </div>
                     </div>
                 </div> *@
-            </div>
+     @*        </div>
         </div>
 
     </div>
 
 </div>
+ *@ 

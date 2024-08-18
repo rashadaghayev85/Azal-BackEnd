@@ -32,6 +32,11 @@ namespace Service.Services
             var flight =await  _flightRepository.GetByIdAsync(model.Flight);
             if (flight.TicketCount!=0)
             {
+                string uniqueCode = GenerateUniqueCode();
+                string randomWord = GenerateRandomWord(6);
+
+                model.TicketNumber = uniqueCode;
+                model.ReservationNumber = randomWord;
             await _ticketRepo.CreateAsync(_mapper.Map<Ticket>(model));
             flight.TicketCount--;
             await _flightRepository.EditSaveAsync();
@@ -43,7 +48,32 @@ namespace Service.Services
             }
 
         }
+        private string GenerateUniqueCode()
+        {
+            Random random = new Random();
+            string code = string.Empty;
 
+            for (int i = 0; i < 13; i++)
+            {
+                code += random.Next(0, 10); // 0-9 arası təsadüfi rəqəm əlavə edir
+            }
+
+            return code;
+        }
+
+        private string GenerateRandomWord(int length)
+        {
+            Random random = new Random();
+            string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Böyük hərflərdən ibarət dəst
+            char[] word = new char[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                word[i] = letters[random.Next(letters.Length)];
+            }
+
+            return new string(word);
+        }
         public async Task<IEnumerable<TicketVM>> GetAllAsync()
         {
             var data = await _ticketRepo.GetAllWithIncludeAsync();
