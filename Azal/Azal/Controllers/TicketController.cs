@@ -28,10 +28,7 @@ namespace Azal.Controllers
             _mapper = mapper;
 
         }
-        public async Task<IActionResult> Index()
-        {
-            return View();
-        }
+      
         [HttpPost]       
         public async Task<IActionResult> Search([FromBody] SearchFlightVM data)
         {
@@ -39,22 +36,27 @@ namespace Azal.Controllers
             {
                 return BadRequest("Invalid search data.");
             }
-          
+
             var flights = await _context.Flights.Where(m => m.ArrivalAirport.AirportCode == data.ArrivalAirportCode).ToListAsync();
 
-            var selectedflight=_mapper.Map<List<FlightDetailVM>>(flights);
-           
+            var selectedflight = _mapper.Map<List<FlightDetailVM>>(flights);
+
 
             // Əgər heç bir uçuş tapılmadısa
             if (!flights.Any())
             {
-                return View("NoFlightsFound");
+                return RedirectToAction(nameof(Index));
             }
 
             // Uçuşları view-ə göndəririk
-            return Redirect($"/ticket");
+           return Ok(flights);
 
         }
-      
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            return View();
+        }
+
     }
 }

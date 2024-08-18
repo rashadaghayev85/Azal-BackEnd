@@ -444,7 +444,8 @@ document.addEventListener('DOMContentLoaded', function () {
             DepatureDate : departureDate ,
             ArrivalDate : returnDate 
         }
-        axios.post(`/ticket/search`,data).then(res => console.log(res)).catch(error => console.log(error))
+        axios.post(`/ticket/search`, data).then(res => window.location.href = "/ticket").catch(error => console.log(error))
+        
     }),
     
 

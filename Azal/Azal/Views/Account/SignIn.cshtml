@@ -1,4 +1,5 @@
-﻿@{
+﻿@model LoginVM
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 
 <body>
@@ -31,7 +33,7 @@
                         <p>Şəxsi Kabinet</p>
                     </button>
                     <ul id="dropdown">
-                        <a href="./login.html">
+                        <a asp-action="signin">
                         <li>Daxil ol</li>
                         </a>
                         <a href="./register.html">
@@ -48,7 +50,7 @@
             <div class="header-hidden-main">
                 <div class="logo">
                     <a href="../../index.html">
-                        <img src="../asset/img/headerlogo.png" alt="logo">
+                        <img src="~/assets/img/logo.svg" alt="logo">
                     </a>
                 </div>
                 <div class="component">
@@ -181,17 +183,19 @@
             </div>
         </div>
     </header>
+        <form asp-action="signin" method="post">
     <div class="login-page">
         <div class="page-main">
             <h2>Şəxsi kabinet</h2>
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Şifrə">
-            <p class="forgot-pass">Şifrənizi unutmusuz?</p>
-            <button>Daxil ol</button>
+            <input asp-for="Email" type="text" placeholder="Email">
+                <input asp-for="Password" type="password" placeholder="Şifrə">
+            <a asp-action="forgotpassword" class="forgot-pass">Şifrənizi unutmusuz?</a>
+            <button >Daxil ol</button>
             <div class="line">
                 <p>və ya</p>
             </div>
-            <a asp-action="signup">Qeydiyyatdan keçin</a>
+        </form>
+            <a  asp-action="signup">Qeydiyyatdan keçin</a>
 
         </div>
         <script src="../script.js"></script>

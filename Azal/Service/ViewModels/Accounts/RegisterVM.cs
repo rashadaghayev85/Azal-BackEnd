@@ -31,8 +31,7 @@ namespace Service.ViewModels.Accounts
 
         [Required]
         public DateTime BirthDay { get; set; }
-        [Required]
-        public string Gender { get; set; }
+    
         [Required]
         public string PhoneNumber { get; set; }
         [Required]
@@ -42,8 +41,7 @@ namespace Service.ViewModels.Accounts
         public string Address { get; set; }
         [Required]
         public string DocumentExpiryDate { get; set; }
-        [Required]
-        public string DocumentType { get; set; }
+       
         [Required]
         public string DocumentNumber { get; set; }
     }

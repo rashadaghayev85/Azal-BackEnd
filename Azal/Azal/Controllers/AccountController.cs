@@ -46,14 +46,13 @@ namespace Azal.Controllers
             AppUser user = new()
             {
                 Name = request.Name,
+                UserName=request.Email,
                 Email = request.Email,
                 Surname = request.Surname,
                 FatherName=request.FatherName,
                 DocumentExpiryDate = request.DocumentExpiryDate,
                 DocumentNumber = request.DocumentNumber,
-                DocumentType= request.DocumentType,
                 BirthDay=request.BirthDay,
-                Gender=request.Gender,
                 CountryCode=request.CountryCode,
                 Country=request.Country,
                 Address=request.Address,    
@@ -66,7 +65,7 @@ namespace Azal.Controllers
                 {
                     ModelState.AddModelError(string.Empty, item.Description);
                 }
-                return View();
+                //return View();
             }
 
             await _userManager.AddToRoleAsync(user, nameof(Roles.Member));
@@ -81,6 +80,7 @@ namespace Azal.Controllers
 
             // create email message
             var email = new MimeMessage();
+
             email.From.Add(MailboxAddress.Parse("rashadra@code.edu.az"));
             email.To.Add(MailboxAddress.Parse(user.Email));
             email.Subject = "Azal Confirmation";
@@ -89,7 +89,7 @@ namespace Azal.Controllers
             // send email
             using var smtp = new SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("rashadra@code.edu.az", "opjp gnrz ozok jxpr");
+            smtp.Authenticate("rashadra@code.edu.az", "dqrj nmca rhmi jwbe");
             smtp.Send(email);
             smtp.Disconnect(true);
 
@@ -132,10 +132,10 @@ namespace Azal.Controllers
             {
                 return View();
             }
-            var existUser = await _userManager.FindByEmailAsync(request.EmailOrUsername);
+            var existUser = await _userManager.FindByEmailAsync(request.Email);
             if (existUser == null)
             {
-                existUser = await _userManager.FindByNameAsync(request.EmailOrUsername);
+                existUser = await _userManager.FindByNameAsync(request.Email);
             }
 
             if (existUser == null)
@@ -195,6 +195,42 @@ namespace Azal.Controllers
 
             ViewBag.Message = "Şifrə sıfırlama linki email ünvanınıza göndərildi.";
             return View();
+        }
+        [HttpGet]
+        public IActionResult ResetPassword(string token, string userId)
+        {
+            if (token == null || userId == null)
+                return BadRequest();
+
+            var model = new ResetPasswordVM { Token = token, UserId = userId };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var user = await _userManager.FindByIdAsync(model.UserId);
+            if (user == null)
+            {
+                ModelState.AddModelError("", "İstifadəçi tapılmadı.");
+                return View();
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("ResetPasswordConfirmation");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+            return RedirectToAction(nameof(SignIn));
         }
     }
 }

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -23,7 +24,7 @@
         <div id="header-main">
             <div class="logo">
                 <a href="../../index.html">
-                    <img src="../asset/img/headerlogo.png" alt="logo">
+                    <img src="~/assets/img/logo.svg" alt="logo">
                 </a>
             </div>
             <div class="component">
@@ -191,25 +192,29 @@
             <div class="parts">
                 <div class="part-input">
                     <label for="name">Ad *</label>
-                    <input id="name" type="text" placeholder="Mətn">
+                        <input asp-for="Name" id="name" type="text" placeholder="Mətn">
+                        <span class="text-danger" asp-validation-for="Name"></span>
                 </div>
                 <div class="part-input">
                     <label for="surname">Soyad *</label>
-                    <input id="surname" type="text" placeholder="Mətn">
+                        <input asp-for="Surname" id="surname" type="text" placeholder="Mətn">
+                        <span class="text-danger" asp-validation-for="Surname"></span>
                 </div>
                 <div class="part-input">
                     <label for="fname">Ata adı *</label>
-                    <input id="fname" type="text" placeholder="Mətn">
+                    <input asp-for="FatherName" id="fname" type="text" placeholder="Mətn">
+                        <span class="text-danger" asp-validation-for="FatherName"></span>
                 </div>
             </div>
             <div class="parts">
                 <div class="part-input">
                     <label for="brithd">Doğulduğu tarix *</label>
-                    <input id="brithd" type="date">
+                        <input asp-for="BirthDay" id="brithd" type="date">
+                        <span class="text-danger" asp-validation-for="BirthDay"></span>
                 </div>
                 <div class="part-input">
                     <label for="sex">Cins *</label>
-                    <select asp-for="Gender" name="" id="sex">
+                    <select  name="" id="sex">
                         <option value="" style="visibility: hidden; width: 0;">Seçin</option>
                         <option value="">Qadın</option>
                         <option value="">Kişi</option>
@@ -220,31 +225,36 @@
                 <div class="part-input">
                     <label for="email">E-poçt *</label>
                     <input asp-for="Email" id="email" type="text" placeholder="Mətn">
+                     <span class="text-danger" asp-validation-for="Email"></span>
                 </div>
                 <div class="part-input">
                     <label for="country-code">Ölkə kodu</label>
                     <input asp-for="CountryCode" id="country-code" type="text" placeholder="Ərazi kodu">
+                        <span class="text-danger" asp-validation-for="CountryCode"></span>
                 </div>
                 <div class="part-input">
                     <label for="number">Telefon nömrəsi</label>
                     <input asp-for="PhoneNumber" id="number" type="tel">
+                        <span class="text-danger" asp-validation-for="PhoneNumber"></span>
                 </div>
             </div>
             <div class="parts">
                 <div class="part-input">
                     <label for="country">Ölkə</label>
                     <input asp-for="Country" id="country" type="text" placeholder="Mətn">
+                        <span class="text-danger" asp-validation-for="Country"></span>
                 </div>
                 <div class="part-input">
                     <label for="address">Yaşayış ünvanı</label>
                     <input asp-for="Address" id="address" type="text">
+                        <span class="text-danger" asp-validation-for="Address"></span>
                 </div>
             </div>
             <div class="part-border">
                 <div class="parts">
                     <div class="part-input">
                         <label for="document">Sənəd növü</label>
-                        <select asp-for="DocumentType" name="" id="document">
+                        <select  name="" id="document">
                             <option value="">Digər</option>
                             <option value="">Şəxsiyyət vəsiqəsi</option>
                             <option value="">Pasport</option>
@@ -253,6 +263,7 @@
                     <div class="part-input">
                         <label for="document-n">Sənəd nömrəsi</label>
                         <input asp-for="DocumentNumber" id="document-n" type="tel">
+                            <span class="text-danger" asp-validation-for="DocumentNumber"></span>
                     </div>
                 </div>
                 <div class="parts">
@@ -263,6 +274,7 @@
                     <div class="part-input">
                         <label for="document-d">Sənədin etibarlılıq müddəti</label>
                         <input asp-for=DocumentExpiryDate id="document-d" type="date">
+                            <span class="text-danger" asp-validation-for="DocumentExpiryDate"></span>
                     </div>
                 </div>
             </div>
@@ -270,10 +282,12 @@
                 <div class="part-input">
                     <label for="password">Şifrə *</label>
                     <input asp-for="Password" id="password" type="password">
+                        <span class="text-danger" asp-validation-for="Password"></span>
                 </div>
                 <div class="part-input">
                     <label for="password-c">Şifrəni təsdiqləyin *</label>
                     <input asp-for="ConfirmPassword" id="password-c" type="password">
+                        <span class="text-danger" asp-validation-for="Password"></span>
                 </div>
             </div>
             <div class="info">

@@ -60,7 +60,7 @@
     justify-content: center;
     width: 100%;
 }
-.login-page .page-main  p{
+.login-page .page-main  a{
     background-color: #fff;
     padding: 0 20px;
 }

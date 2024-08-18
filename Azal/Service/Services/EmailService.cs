@@ -23,7 +23,7 @@ namespace Service.Services
 
             using var smtp = new SmtpClient();
             await smtp.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            await smtp.AuthenticateAsync("rashadra@code.edu.az", "opjp gnrz ozok jxpr");
+            await smtp.AuthenticateAsync("rashadra@code.edu.az", "dqrj nmca rhmi jwbe");
             await smtp.SendAsync(email);
             await smtp.DisconnectAsync(true);
         }
