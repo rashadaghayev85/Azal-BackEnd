@@ -1,4 +1,4 @@
-﻿@model List<FlightDetailVM>
+﻿@model List<Flight>
 @{
    Layout = null;
 }
@@ -234,26 +234,28 @@
 </head>
 <body>
     <div class="main">
-       
+       @foreach (var item in Model)
+        {
+            
         <div class="ticket">
             <div class="Left">
                 <div class="logo"><img src="~/assets/img/AZALAzerbaijanAirlines.png" width="50px" height="50px" alt="azalLogo"> <span>Azerbaijan Airlines</span> </div>
                 <div class="time">
-                    <div class="depart"><h1>07:00</h1> <br> <i class="fa-solid fa-plane-departure" style="color: #979DA8;"></i></div>
+                        <div class="depart"><h1>@item.DepartureTime.ToString("HH:mm")</h1> <br> <i class="fa-solid fa-plane-departure" style="color: #979DA8;"></i></div>
                     <div class="where">
                         <div class="border">
-                            <span>GYD</span>
-                            <span>VKO</span>
+                            <span>@item.DepartureAirport.AirportCode</span>
+                            <span>@item.ArrivalAirport.AirportCode</span>
                         </div>
                     </div>
-                    <div class="arrival"><h1>09:20</h1> <br> <i class="fa-solid fa-plane-arrival" style="color: #979DA8;"></i></div>
+                        <div class="arrival"><h1>@item.ArrivalTime.ToString("HH:mm")</h1> <br> <i class="fa-solid fa-plane-arrival" style="color: #979DA8;"></i></div>
                     <div class="departure"></div>
                 </div>
 
                 <div class="terminalName">
-                    <div class="firstName">Bakı <br> <span style="color:#6E7583;">Terminal 1 <br> 15 Fev, CA</span> </div>
+                    <div class="firstName">@item.DepartureAirport <br> <span style="color:#6E7583;">Terminal 1 <br> 15 Fev, CA</span> </div>
                     <div class="space"></div>
-                    <div class="secondName">Moskva, VKO <br> <span style="color:#6E7583;"> Terminal 1 <br> 15 Fev, CA</span> </div>
+                    <div class="secondName">@item.ArrivalAirport <br> <span style="color:#6E7583;"> Terminal 1 <br> 15 Fev, CA</span> </div>
                 </div>
             </div>
 
@@ -262,7 +264,7 @@
                     <span style="color: #6E7583;"><i class="fa-solid fa-ticket"></i> J2 807 <i class="fa-solid fa-plane"></i> Airbus A320</span>
                 </div>
 
-                <div class="duration">3 s. 20 dəq</div>
+                <div class="duration">1 s. 30 dəq</div>
 
                 <div class="transfer">
                     Dayanacaqlar olmadan
@@ -274,17 +276,18 @@
                 <div class="price">
                     <div class="econom">
                         <div class="title">Ekonom</div>
-                        <div class="subPrice">306.95 <i class="fa-solid fa-manat-sign"></i></div>
+                        <div class="subPrice">@item.Price_azn <i class="fa-solid fa-manat-sign"></i></div>
                         <div class="subTitle">Başlanğıc qiyməti</div>
                     </div>
                     <div class="business">
                         <div class="title">Biznes</div>
-                        <div class="subPrice">1106.26 <i class="fa-solid fa-manat-sign"></i></div>
+                        <div class="subPrice">@item.Price_usd <i class="fa-solid fa-manat-sign"></i></div>
                         <div class="subTitle">Başlanğıc qiyməti</div>
                     </div>
                 </div>
             </div>
         </div>
+        }
             
 
 
@@ -294,56 +297,7 @@
 
 
 
-        <div class="ticket">
-            <div class="Left">
-                <div class="logo"><img src="~/assets/img/AZALAzerbaijanAirlines.png" width="50px" height="50px" alt="azalLogo"> <span>Azerbaijan Airlines</span> </div>
-                <div class="time">
-                    <div class="depart"><h1>09:05</h1> <br> <i class="fa-solid fa-plane-departure" style="color: #979DA8;"></i></div>
-                    <div class="where">
-                        <div class="border">
-                            <span>GYD</span>
-                            <span>VKO</span>
-                        </div>
-                    </div>
-                    <div class="arrival"><h1>11:30</h1> <br> <i class="fa-solid fa-plane-arrival" style="color: #979DA8;"></i></div>
-                    <div class="departure"></div>
-                </div>
-
-                <div class="terminalName">
-                    <div class="firstName">Bakı <br> <span style="color:#6E7583;">Terminal 1 <br> 15 Fev, CA</span> </div>
-                    <div class="space"></div>
-                    <div class="secondName">Moskva, DME <br> <span style="color:#6E7583;"> 15 Fev, CA</span> </div>
-                </div>
-            </div>
-
-            <div class="Center">
-                <div class="planeId">
-                    <span style="color: #6E7583;"><i class="fa-solid fa-ticket"></i> J2 807 <i class="fa-solid fa-plane"></i> Airbus A320</span>
-                </div>
-
-                <div class="duration">3 s. 30 dəq</div>
-
-                <div class="transfer">
-                    Dayanacaqlar olmadan
-                </div>
-            </div>
-
-
-            <div class="Right">
-                <div class="price">
-                    <div class="econom">
-                        <div class="title">Ekonom</div>
-                        <div class="subPrice">306.95 <i class="fa-solid fa-manat-sign"></i></div>
-                        <div class="subTitle">Başlanğıc qiyməti</div>
-                    </div>
-                    <div class="business">
-                        <div class="title">Biznes</div>
-                        <div class="subPrice">1106.26 <i class="fa-solid fa-manat-sign"></i></div>
-                        <div class="subTitle">Başlanğıc qiyməti</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
     </div>
 </body>
 </html>

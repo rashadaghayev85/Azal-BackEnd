@@ -8,6 +8,7 @@ namespace Service.ViewModels
 {
     public class SearchFlightVM
     {
+        
         public string DepartureAirport { get; set; }
         public string ArrivalAirport { get; set; }
         public DateTime DepatureDate { get; set; }

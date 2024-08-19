@@ -8,6 +8,7 @@ namespace Service.ViewModels.Flights
 {
     public class FlightDetailVM
     {
+        public int Id { get; set; }
         public string FlightNumber { get; set; }
         public int TicketCount { get; set; }
         public string DepartureAirport { get; set; }

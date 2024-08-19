@@ -1,15 +1,16 @@
 ﻿using Domain.Models;
-using MailKit.Security;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MimeKit;
-using MimeKit.Text;
+
 using Service.Helpers.Enums;
 using Service.ViewModels.Accounts;
-using System.Net.Mail;
-using MailKit.Net.Smtp;
-using SmtpClient = MailKit.Net.Smtp.SmtpClient;
+
+
 using Service.Services;
+using MimeKit;
+using MimeKit.Text;
+using MailKit.Net.Smtp;
+
 
 namespace Azal.Controllers
 {
@@ -88,8 +89,8 @@ namespace Azal.Controllers
 
             // send email
             using var smtp = new SmtpClient();
-            smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("rashadra@code.edu.az", "dqrj nmca rhmi jwbe");
+            smtp.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+            smtp.Authenticate("rashadra@code.edu.az", "wugf kjzi zhge tzmb");
             smtp.Send(email);
             smtp.Disconnect(true);
 
@@ -196,41 +197,41 @@ namespace Azal.Controllers
             ViewBag.Message = "Şifrə sıfırlama linki email ünvanınıza göndərildi.";
             return View();
         }
-        [HttpGet]
-        public IActionResult ResetPassword(string token, string userId)
-        {
-            if (token == null || userId == null)
-                return BadRequest();
+        //[HttpGet]
+        //public IActionResult ResetPassword(string token, string userId)
+        //{
+        //    if (token == null || userId == null)
+        //        return BadRequest();
 
-            var model = new ResetPasswordVM { Token = token, UserId = userId };
-            return View(model);
-        }
+        //    var model = new ResetPasswordVM { Token = token, UserId = userId };
+        //    return View(model);
+        //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
-        {
-            if (!ModelState.IsValid)
-                return View(model);
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return View(model);
 
-            var user = await _userManager.FindByIdAsync(model.UserId);
-            if (user == null)
-            {
-                ModelState.AddModelError("", "İstifadəçi tapılmadı.");
-                return View();
-            }
+        //    var user = await _userManager.FindByIdAsync(model.UserId);
+        //    if (user == null)
+        //    {
+        //        ModelState.AddModelError("", "İstifadəçi tapılmadı.");
+        //        return View();
+        //    }
 
-            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
-            if (result.Succeeded)
-            {
-                return RedirectToAction("ResetPasswordConfirmation");
-            }
+        //    var result = await _userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+        //    if (result.Succeeded)
+        //    {
+        //        return RedirectToAction("ResetPasswordConfirmation");
+        //    }
 
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error.Description);
-            }
-            return RedirectToAction(nameof(SignIn));
-        }
+        //    foreach (var error in result.Errors)
+        //    {
+        //        ModelState.AddModelError("", error.Description);
+        //    }
+        //    return RedirectToAction(nameof(SignIn));
+        //}
     }
 }

@@ -1,11 +1,6 @@
-﻿using MailKit.Net.Smtp;
-using MailKit.Security;
+﻿
+using MailKit.Net.Smtp;
 using MimeKit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.Services
 {
@@ -22,8 +17,8 @@ namespace Service.Services
             email.Body = builder.ToMessageBody();
 
             using var smtp = new SmtpClient();
-            await smtp.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            await smtp.AuthenticateAsync("rashadra@code.edu.az", "dqrj nmca rhmi jwbe");
+            await smtp.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+            await smtp.AuthenticateAsync("rashadra@code.edu.az", "wugf kjzi zhge tzmb");
             await smtp.SendAsync(email);
             await smtp.DisconnectAsync(true);
         }

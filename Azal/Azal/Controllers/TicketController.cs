@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
@@ -28,8 +29,10 @@ namespace Azal.Controllers
             _mapper = mapper;
 
         }
-      
-        [HttpPost]       
+
+
+
+        [HttpPost]
         public async Task<IActionResult> Search([FromBody] SearchFlightVM data)
         {
             if (data == null)
@@ -37,26 +40,48 @@ namespace Azal.Controllers
                 return BadRequest("Invalid search data.");
             }
 
-            var flights = await _context.Flights.Where(m => m.ArrivalAirport.AirportCode == data.ArrivalAirportCode).ToListAsync();
+            var flights = await _context.Flights
+                .Include(m => m.ArrivalAirport)
+                .ThenInclude(m => m.AirportTranslates
+                    .Where(at => at.Location == data.ArrivalAirport))
+                .Include(m => m.DepartureAirport)
+                .ThenInclude(m => m.AirportTranslates
+                    .Where(dt => dt.Location == data.DepartureAirport))
+                .ToListAsync();
 
-            var selectedflight = _mapper.Map<List<FlightDetailVM>>(flights);
-
-
-            // Əgər heç bir uçuş tapılmadısa
-            if (!flights.Any())
+            var datas = flights.Where(m =>
+                    m.DepartureTime.Year == data.DepatureDate.Year &&
+                    m.DepartureTime.Month == data.DepatureDate.Month &&
+                    m.DepartureTime.Day == data.DepatureDate.Day);
+            if (!datas.Any())
             {
-                return RedirectToAction(nameof(Index));
+                return Ok(new List<int>());
             }
 
-            // Uçuşları view-ə göndəririk
-           return Ok(flights);
-
+            var flightIds = datas.Select(m => m.Id).ToList();
+            return Ok(flightIds);
+          
         }
+
+
+
+
+
+
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index([FromQuery] string ids)
         {
-            return View();
-        }
+            var idList = ids?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
+            var flights = await _context.Flights
+             .Include(m => m.ArrivalAirport)
+             .Include(m => m.DepartureAirport)
+            .Where(f => idList.Contains(f.Id))
+             .ToListAsync();
 
+            // Use the idList as needed
+            // Example: Fetching related data based on idList
+
+            return View(flights);
+        }
     }
 }
