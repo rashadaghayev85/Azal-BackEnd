@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const year = date.getFullYear();
         const month = date.getMonth();
         const firstDay = new Date(year, month, 1);
-        const lastDay = new Date(year, month + 1, 0);
+        const lastDay = new Date(year, month + 1, 0);   
 
         let table = '<table class="w-full">';
         table += '<tr><th colspan="7" class="text-[16px] font-bold py-[16px]">' +
@@ -450,9 +450,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 const ids = res.data; // This should be a list of IDs
                 if (ids.length > 0) {
                     const queryString = new URLSearchParams({ ids: ids.join(',') }).toString();
+                    
                     window.location.href = `/ticket/index?${queryString}`;
                 } else {
                     // Handle the case where no flights were found, if needed
+                    window.location.href = `/ticket/notFound`;
                     console.log('No flights found.');
                 }
             })

@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     @* <link rel="stylesheet" href="style.css"> *@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
     <title>Document</title>
     <style>
         .ticket {
@@ -237,7 +238,7 @@
        @foreach (var item in Model)
         {
             
-        <div class="ticket">
+                <div class="ticket mt-5">
             <div class="Left">
                 <div class="logo"><img src="~/assets/img/AZALAzerbaijanAirlines.png" width="50px" height="50px" alt="azalLogo"> <span>Azerbaijan Airlines</span> </div>
                 <div class="time">
@@ -253,15 +254,15 @@
                 </div>
 
                 <div class="terminalName">
-                    <div class="firstName">@item.DepartureAirport <br> <span style="color:#6E7583;">Terminal 1 <br> 15 Fev, CA</span> </div>
+                        <div class="firstName"> <br> <span style="color:#6E7583;">Terminal 1 <br> @item.DepartureTime.ToString("dd MMM, HH:mm")</span> </div>
                     <div class="space"></div>
-                    <div class="secondName">@item.ArrivalAirport <br> <span style="color:#6E7583;"> Terminal 1 <br> 15 Fev, CA</span> </div>
+                        <div class="secondName"> <br> <span style="color:#6E7583;"> Terminal 1 <br> @item.ArrivalTime.ToString("dd MMM, HH:mm")</span> </div>
                 </div>
             </div>
 
             <div class="Center">
                 <div class="planeId">
-                    <span style="color: #6E7583;"><i class="fa-solid fa-ticket"></i> J2 807 <i class="fa-solid fa-plane"></i> Airbus A320</span>
+                    <span style="color: #6E7583;"><i class="fa-solid fa-ticket"></i> @item.FlightNumber <i class="fa-solid fa-plane"></i> @item.Plane.Model</span>
                 </div>
 
                 <div class="duration">1 s. 30 dəq</div>
@@ -287,17 +288,16 @@
                 </div>
             </div>
         </div>
-        }
-            
-
-
-
-
         <br>
+       
+
+        }
 
 
 
-     
+
+
+
     </div>
 </body>
 </html>

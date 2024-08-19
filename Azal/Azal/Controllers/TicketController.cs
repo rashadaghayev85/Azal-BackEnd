@@ -32,6 +32,34 @@ namespace Azal.Controllers
 
 
 
+        //[HttpPost]
+        //public async Task<IActionResult> Search([FromBody] SearchFlightVM data)
+        //{
+        //    if (data == null)
+        //    {
+        //        return BadRequest("Invalid search data.");
+        //    }
+
+        //    var flights = await _context.Flights
+        //        .Where(m => m.DepartureAirport.AirportTranslates
+        //                        .Any(dt => dt.Location == data.DepartureAirport) &&
+        //                    m.ArrivalAirport.AirportTranslates
+        //                        .Any(at => at.Location == data.ArrivalAirport))
+        //        .Include(m => m.ArrivalAirport)
+        //        .ThenInclude(m => m.AirportTranslates)
+        //        .Include(m => m.DepartureAirport)
+        //        .ThenInclude(m => m.AirportTranslates)
+        //        .ToListAsync();
+
+        //    if (!flights.Any())
+        //    {
+        //        return Ok(new List<int>());
+        //    }
+
+        //    var flightIds = flights.Select(m => m.Id).ToList();
+        //    return Ok(flightIds);
+        //}
+
         [HttpPost]
         public async Task<IActionResult> Search([FromBody] SearchFlightVM data)
         {
@@ -40,28 +68,36 @@ namespace Azal.Controllers
                 return BadRequest("Invalid search data.");
             }
 
+            // Tüm uçuşları yükleyin
             var flights = await _context.Flights
-                .Include(m => m.ArrivalAirport)
-                .ThenInclude(m => m.AirportTranslates
-                    .Where(at => at.Location == data.ArrivalAirport))
-                .Include(m => m.DepartureAirport)
-                .ThenInclude(m => m.AirportTranslates
-                    .Where(dt => dt.Location == data.DepartureAirport))
+                .Include(f => f.DepartureAirport)
+                    .ThenInclude(a => a.AirportTranslates)
+                .Include(f => f.ArrivalAirport)
+                    .ThenInclude(a => a.AirportTranslates)
                 .ToListAsync();
 
-            var datas = flights.Where(m =>
-                    m.DepartureTime.Year == data.DepatureDate.Year &&
-                    m.DepartureTime.Month == data.DepatureDate.Month &&
-                    m.DepartureTime.Day == data.DepatureDate.Day);
-            if (!datas.Any())
+            // Bellek üzerinde filtreleme yapın
+            var filteredFlights = flights
+       .Where(f =>
+           f.DepartureAirport.AirportTranslates
+               .Any(at => at.Location.Equals(data.DepartureAirport, StringComparison.OrdinalIgnoreCase)) &&
+           f.ArrivalAirport.AirportTranslates
+               .Any(at => at.Location.Equals(data.ArrivalAirport, StringComparison.OrdinalIgnoreCase)) &&
+           f.DepartureTime.Year == data.DepatureDate.Year &&
+            f.DepartureTime.Month == data.DepatureDate.Month &&
+            f.DepartureTime.Day == data.DepatureDate.Day)
+       .ToList();
+
+
+            if (!filteredFlights.Any())
             {
-                return Ok(new List<int>());
+                return Ok(new List<int>()); // Boş sonuç döner
             }
 
-            var flightIds = datas.Select(m => m.Id).ToList();
-            return Ok(flightIds);
-          
+            var flightIds = filteredFlights.Select(f => f.Id).ToList();
+            return Ok(flightIds); // Uçuş ID'lerini döner
         }
+
 
 
 
@@ -75,6 +111,7 @@ namespace Azal.Controllers
             var flights = await _context.Flights
              .Include(m => m.ArrivalAirport)
              .Include(m => m.DepartureAirport)
+             .Include(m => m.Plane)
             .Where(f => idList.Contains(f.Id))
              .ToListAsync();
 
@@ -82,6 +119,12 @@ namespace Azal.Controllers
             // Example: Fetching related data based on idList
 
             return View(flights);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> NotFound()
+        {
+            return View();
         }
     }
 }
