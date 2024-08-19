@@ -173,16 +173,13 @@ function inputValueCheck() {
 
 function setupInputs() {
     const inputs = document.querySelectorAll('.from');
-
     inputs.forEach(input => {
-
         const dropdown = input.closest('.labell').nextElementSibling;
-
         input.addEventListener('input', function () {
             filterOptions(input, dropdown, destinations);
         });
-
         const clearBtn = input.parentElement.querySelector('.clear-btn');
+        const airportCodeSpan = input.parentElement.querySelector('.airport-code');
         const label = input.nextElementSibling;
         const border = input.closest('.labell');
 
@@ -190,43 +187,45 @@ function setupInputs() {
             if (input.value) {
                 label.classList.add('focused');
                 border.style.borderColor = '#37A6DB';
+                airportCodeSpan.classList.add('hidden');
                 clearBtn.classList.remove('hidden');
             } else {
                 label.classList.remove('focused');
                 border.style.borderColor = '#DBE0E4';
+                airportCodeSpan.classList.remove('hidden');
                 clearBtn.classList.add('hidden');
             }
         }
 
         input.addEventListener('input', updateInputState);
-
         input.addEventListener('focus', () => {
             border.style.borderColor = '#37A6DB';
             label.classList.add('focused');
         });
-
         input.addEventListener('blur', () => {
             if (!input.value) {
-                // label.classList.remove('focused');
                 border.style.borderColor = '#DBE0E4';
             }
         });
 
         input.parentElement.addEventListener('mouseenter', () => {
             if (input.value) {
+                airportCodeSpan.classList.add('hidden');
                 clearBtn.classList.remove('hidden');
             }
         });
 
         input.parentElement.addEventListener('mouseleave', () => {
-            clearBtn.classList.add('hidden');
+            if (input.value) {
+                clearBtn.classList.add('hidden');
+                airportCodeSpan.classList.remove('hidden');
+            }
         });
 
         clearBtn.addEventListener('click', (e) => {
             e.preventDefault();
             input.value = '';
             updateInputState();
-            // label.classList.remove('focused');
             border.style.borderColor = '#DBE0E4';
         });
 
@@ -328,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
             btn.classList.toggle('active', i === index);
             if (i === index) {
                 const line = document.createElement('div');
-                line.className = 'line absolute w-[4px] h-[52px] bg-[#2C8DC7] left-0';
+                line.className = 'line absolute w-[4px] h-[32px] bg-[#2C8DC7] left-0';
                 btn.appendChild(line);
             } else {
                 const line = btn.querySelector('.line');
@@ -348,17 +347,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const year = date.getFullYear();
         const month = date.getMonth();
         const firstDay = new Date(year, month, 1);
-        const lastDay = new Date(year, month + 1, 0);   
+        const lastDay = new Date(year, month + 1, 0);
 
         let table = '<table class="w-full">';
         table += '<tr><th colspan="7" class="text-[16px] font-bold py-[16px]">' +
             azMonths[month] + ' ' + year + '</th></tr>';
         table += '<tr class="text-[14px] font-medium text-[#9CA3AF]">' +
             '<th>BE</th><th>ÇA</th><th>Ç</th><th>CA</th><th>C</th><th>Ş</th><th>B</th></tr>';
+
         let day = 1;
         const firstDayIndex = (firstDay.getDay() + 6) % 7;
 
-      
         for (let i = 0; i < 6; i++) {
             table += '<tr>';
             for (let j = 0; j < 7; j++) {
@@ -384,7 +383,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     table += `<td class="${cellClass}" 
                                   ${!isPastDate ? `onclick="selectDate(${year}, ${month}, ${day})"` : ''}>${day}</td>`;
                     day++;
-                   
                 }
             }
             table += '</tr>';
@@ -394,11 +392,8 @@ document.addEventListener('DOMContentLoaded', function () {
         element.innerHTML = table;
     }
 
-    function formatDateString(date) {
-        const day = date.getDate();
-        const month = azMonths[date.getMonth()];
-        return `${day} ${month}`;
-    }
+
+    
 
     function updateSelectedDates() {
 
@@ -421,10 +416,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (selectedDates.length === 2 || isOneWay) {
                 kalendarDiv.classList.add('hidden');
             }
-            
+
         }
     }
-    document.querySelector("#searchId").addEventListener("click", function() {
+    document.querySelector("#searchId").addEventListener("click", function () {
 
         var input1 = document.querySelector(".input1")
         var departureAirportcode = document.querySelector("#departureairportcode").innerHTML
@@ -432,25 +427,25 @@ document.addEventListener('DOMContentLoaded', function () {
         var input2 = document.querySelector(".input2")
         const [departureDate, returnDate] = selectedDates;
         var passengerCount = document.querySelector("#passengerCount").innerHTML
-        
+
         var array = passengerCount.split(",")
         const data = {
-            DepartureAirport: input1.value ,
+            DepartureAirport: input1.value,
             ArrivalAirport: input2.value,
             DepartureAirportCode: departureAirportcode,
             ArrivalAirportCode: arrivalAirportCode,
-            Count: parseInt(array[0]) , 
-            TicketType : array[1] ,
-            DepatureDate : departureDate ,
-            ArrivalDate : returnDate 
+            Count: parseInt(array[0]),
+            TicketType: array[1],
+            DepatureDate: departureDate,
+            ArrivalDate: returnDate
         }
-       // axios.post(`/ticket/search`, data).then(res => window.location.href = "/ticket").catch(error => console.log(error))
+        // axios.post(`/ticket/search`, data).then(res => window.location.href = "/ticket").catch(error => console.log(error))
         axios.post('/ticket/search', data)
             .then(res => {
                 const ids = res.data; // This should be a list of IDs
                 if (ids.length > 0) {
                     const queryString = new URLSearchParams({ ids: ids.join(',') }).toString();
-                    
+
                     window.location.href = `/ticket/index?${queryString}`;
                 } else {
                     // Handle the case where no flights were found, if needed
@@ -461,45 +456,42 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(error => console.log(error));
         //window.location.href = "/ticket"
     }),
-    
 
-    window.selectDate = function (year, month, day) {
-        const selectedDate = new Date(year, month, day);
 
-        // Keçmiş tarixlərin seçilməsini əngəlləyirik
-        if (selectedDate < today) {
-            return;
-        }
+        window.selectDate = function (year, month, day) {
+            const selectedDate = new Date(Date.UTC(year, month, day)); // UTC formatında tarix yaradırıq
 
-        const index = selectedDates.findIndex(d => d.toDateString() === selectedDate.toDateString());
-        if (isOneWay && selectedDates.length === 1) {
-            sendDatesToBackend();
-        } else if (!isOneWay && selectedDates.length === 2) {
-            sendDatesToBackend();
-        } else {
+            // Keçmiş tarixlərin seçilməsini əngəlləyirik
+            if (selectedDate < today) {
+                return;
+            }
+
+            const index = selectedDates.findIndex(d => d.toDateString() === selectedDate.toDateString());
+
+            if (index > -1) {
+                selectedDates.splice(index, 1);
+            } else {
+                if (isOneWay) {
+                    selectedDates = [selectedDate];
+                } else if (selectedDates.length < 2) {
+                    selectedDates.push(selectedDate);
+                } else {
+                    selectedDates.shift();
+                    selectedDates.push(selectedDate);
+                }
+            }
+
+            selectedDates.sort((a, b) => a - b);
             updateSelectedDates();
             renderCalendars(currentMonths[0], currentMonths[1]);
-        }
 
-
-        if (index > -1) {
-            selectedDates.splice(index, 1);
-        } else {
-            if (isOneWay) {
-                selectedDates = [selectedDate];
-            } else if (selectedDates.length < 2) {
-                selectedDates.push(selectedDate);
-            } else {
-                selectedDates.shift();
-                selectedDates.push(selectedDate);
+            // Tarixləri backend-ə göndəririk
+            if (isOneWay && selectedDates.length === 1) {
+                sendDatesToBackend();
+            } else if (!isOneWay && selectedDates.length === 2) {
+                sendDatesToBackend();
             }
-        }
-
-        selectedDates.sort((a, b) => a - b);
-        updateSelectedDates();
-        renderCalendars(currentMonths[0], currentMonths[1]);
-    }
-
+        };
     function formatDateString(date) {
         const day = date.getDate();
         const month = azMonths[date.getMonth()];

@@ -33,19 +33,22 @@
                                     <div class="label leading-[24px] top-[calc(50%_-_12px)] absolute left-0 origin-top-left">
                                         Haradan
                                     </div>
+
+                                    <span class="airport-code absolute right-2 top-1/2 transform -translate-y-1/2">AirportCode</span>
+                                    
                                     <button type="button" class="clear-btn hidden absolute right-2 top-1/2 transform -translate-y-1/2">
                                         &#x2715;
                                     </button>
                                 </div>
                             </label>
                             <div class="w-[330px] dropdown  absolute top-full left-0 bg-white border border-[#DBE0E4] rounded-[12px] max-h-[200px] overflow-auto z-10">
-
                                 @foreach (var item in Model.Airports)
                                 {
                                     @foreach (var itm in item.AirportTranslates)
                                     {
                                         @if (itm.Language.Culture == "az")
                                         {
+
                                             <div class="option cursor-pointer hover:bg-[#eeeeee80]">
                                                     <button type="button" class="p-[16px] flex items-center text-[14px] font-semibold leading-[20px] w-full">
                                                     <div class="flex items-center w-full">
@@ -71,12 +74,12 @@
                         <div class="flex h-[64px]">
                             <label class="labell pr-[22px] pl-[16px] w-full border border-[#DBE0E4] flex justify-between bg-white relative">
                                 <div class="flex w-full relative">
-                                        <input type="text"  class="from text-[18px] leading-[28px] font-semibold overflow-hidden w-full text-[#2E3034] text-ellipsis whitespace-nowrap bg-transparent outline-none mt-[16px] input2" />
+                                    <input type="text" class="from text-[18px] leading-[28px] font-semibold overflow-hidden w-full text-[#2E3034] text-ellipsis whitespace-nowrap bg-transparent outline-none mt-[16px] input2" />
                                     <div class="label leading-[24px] top-[calc(50%_-_12px)] absolute left-0 origin-top-left">
                                         Haraya
                                     </div>
-                                        <button type="button" class="clear-btn hidden absolute rig
-ht-2 top-1/2 transform -translate-y-1/2">
+                                    <span class="airport-code absolute right-2 top-1/2 transform -translate-y-1/2">AirportCode</span>
+                                    <button type="button" class="clear-btn hidden absolute right-2 top-1/2 transform -translate-y-1/2">
                                         &#x2715;
                                     </button>
                                 </div>
