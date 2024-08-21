@@ -11,6 +11,7 @@ using Service.ViewModels.PopularDirections;
 using Service.ViewModels.Settings;
 using Service.ViewModels.SpecialOffers;
 using Service.ViewModels.Tickets;
+using Service.ViewModels.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -100,6 +101,7 @@ namespace Service.Helpers
 
             CreateMap<Setting, SettingEditVM>();
 
+            CreateMap<UserEditVM, AppUser>().ReverseMap();
         }
     }
 }

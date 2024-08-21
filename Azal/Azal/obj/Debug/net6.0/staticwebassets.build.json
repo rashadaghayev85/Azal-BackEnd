@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LkYlp4+oqZ2AN31My92XW0C+OKuqQTDqy3irD4zp7p4=",
+  "Hash": "LbuXoa1Q/Ll4GpjmxAPBBpzp2WWT+Tf6C48rNGMxFLc=",
   "Source": "Azal",
   "BasePath": "_content/Azal",
   "Mode": "Default",
@@ -11341,6 +11341,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\login.css"
     },
     {
+      "Identity": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\profile.css",
+      "SourceId": "Azal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\",
+      "BasePath": "_content/Azal",
+      "RelativePath": "assets/css/profile.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\profile.css"
+    },
+    {
       "Identity": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\register.css",
       "SourceId": "Azal",
       "SourceType": "Discovered",
@@ -12650,6 +12669,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\moon.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg",
+      "SourceId": "Azal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\",
+      "BasePath": "_content/Azal",
+      "RelativePath": "assets/img/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg"
     },
     {
       "Identity": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\refferans-1.svg",

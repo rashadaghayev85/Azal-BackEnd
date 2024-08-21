@@ -275,7 +275,8 @@
 
             <div class="Right">
                 <div class="price">
-                        <a asp-action="Purchase" asp-route-id="@item.Id" style="text-decoration:none" class="econom">
+                    
+                        <a asp-action="Purchase" asp-route-id="@item.Id" asp-route-count="@ViewBag.Count" style="text-decoration:none" class="econom">
                         <div class="title">Ekonom</div>
                         <div class="subPrice">@item.Price_azn <i class="fa-solid fa-manat-sign"></i></div>
                         <div class="subTitle">Başlanğıc qiyməti</div>

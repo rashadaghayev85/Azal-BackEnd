@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Models;
+using MailKit.Search;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
@@ -9,6 +10,7 @@ using Service.ViewModels;
 using Service.ViewModels.Flights;
 using Service.ViewModels.Tickets;
 using Stripe.Checkout;
+using Stripe.Climate;
 
 namespace Azal.Controllers
 {
@@ -69,6 +71,7 @@ namespace Azal.Controllers
         [HttpPost]
         public async Task<IActionResult> Search([FromBody] SearchFlightVM data)
         {
+          
             if (data == null)
             {
                 return BadRequest("Invalid search data.");
@@ -97,11 +100,38 @@ namespace Azal.Controllers
 
             if (!filteredFlights.Any())
             {
-                return Ok(new List<int>()); // Boş sonuç döner
+                var result = new SearchResultVM
+                {
+                    Count = 0,
+                    FlightIds = new List<int>()
+                };
+                return Ok(result);
+              //  return Ok(); // Boş sonuç döner
             }
 
             var flightIds = filteredFlights.Select(f => f.Id).ToList();
-            return Ok(flightIds); // Uçuş ID'lerini döner
+            if (flightIds is not null)
+            {
+
+            var count = data.Count;
+            var result = new SearchResultVM
+            {
+                Count = count,
+                FlightIds = flightIds
+            };
+                return Ok(result);
+            }
+            else
+            {
+                var result = new SearchResultVM
+                {
+                    Count = 0,
+                    FlightIds = flightIds
+                };
+            return Ok(result); // Uçuş ID'lerini döner
+            }
+
+            // return RedirectToAction("Purchase", new { id = flightIds.FirstOrDefault(), count = count });
         }
 
 
@@ -111,8 +141,9 @@ namespace Azal.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Index([FromQuery] string ids)
+        public async Task<IActionResult> Index([FromQuery] string ids, [FromQuery] int count)
         {
+            ViewBag.Count = count;
             var idList = ids?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
             var flights = await _context.Flights
              .Include(m => m.ArrivalAirport)
@@ -136,10 +167,11 @@ namespace Azal.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Purchase(int id)
+        public async Task<IActionResult> Purchase(int id,int count)
         {
+            ViewBag.Count = count;
+          
 
-           
             ViewBag.flightId = id;
             return View();
         }
@@ -147,7 +179,9 @@ namespace Azal.Controllers
         //[ValidateAntiForgeryToken]
         //public async Task<IActionResult> Purchase(TicketCreateVM request)
         //{
-        //    // İstifadəçinin seçdiyi uçuşu `Flight`-dan əldə edin
+        //    // ViewBag.Count ilə formdan gələn məlumatı yenidən doldura bilərsiniz
+        //    int count = ViewBag.Count;
+
         //    if (request.Flight == 0)
         //    {
         //        ModelState.AddModelError("Flight", "Input can't be empty");
@@ -159,70 +193,96 @@ namespace Azal.Controllers
         //        return View(request);
         //    }
 
-        //    //await _ticketService.CreateAsync(request);
-        //    return  Redirect($"/payment/CheckOut{request}");
-
-        //    //return RedirectToAction(nameof(Index));
+        //    // CheckOut metoduna yönləndirərkən count dəyərini də ötürün
+        //    return RedirectToAction("CheckOut", new
+        //    {
+        //        count = count,
+        //        Flight = request.Flight,
+        //        DocumentExpiryDate = request.DocumentExpiryDate,
+        //        DocumentNumber = request.DocumentNumber,
+        //        DocumentType = request.DocumentType,
+        //        Name = request.Name,
+        //        Surname = request.Surname,
+        //        FatherName = request.FatherName,
+        //        Gender = request.Gender,
+        //        DateOfBirth = request.DateOfBirth,
+        //        PhoneNumber = request.PhoneNumber,
+        //        Email = request.Email
+        //    });
         //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Purchase(TicketCreateVM request)
         {
-            // `request`-də bilet məlumatları formdan alınıb
+
+          
+                
             if (request.Flight == 0)
-            {
-                ModelState.AddModelError("Flight", "Input can't be empty");
-                return View(request);
-            }
+                {
+                    ModelState.AddModelError("Flight", "Input can't be empty");
+                    return View(request);
+                }
 
-            if (!ModelState.IsValid)
-            {
-                return View(request);
-            }
+                if (!ModelState.IsValid)
+                {
+                    return View(request);
+                }
+         
 
-            // Ödəniş üçün CheckOut metoduna yönləndiririk
+          
             return RedirectToAction("CheckOut", request);
+             //request`-də bilet məlumatları formdan alınıb
+
+          //   Ödəniş üçün CheckOut metoduna yönləndiririk
+
+
+
+
+
+
         }
 
         public async Task<IActionResult> CheckOut(TicketCreateVM request)
         {
-            var flight=await _flightService.GetByIdAsync(request.Flight);
-            var datas = await _flightService.GetAllAsync();
-            var domain = "https://localhost:7201/";
+            
+                var flight = await _flightService.GetByIdAsync(request.Flight);
+                var datas = await _flightService.GetAllAsync();
+                var domain = "https://localhost:7201/";
 
-            var options = new SessionCreateOptions
-            {
-                SuccessUrl = domain + $"payment/OrderConfirmation?flightId={request.Flight}&documentExpiryDate={request.DocumentExpiryDate}&documentNumber={request.DocumentNumber}&documentType={request.DocumentType}&name={request.Name}&surname={request.Surname}&fatherName={request.FatherName}& gender ={request.Gender}&dateOfBirth ={request.DateOfBirth}& documentExpiryDate ={request.DocumentExpiryDate}&phoneNumber ={request.PhoneNumber}&email={request.Email}" ,
-                CancelUrl = domain + "payment/login",
-                LineItems = new List<SessionLineItemOptions>(),
-                Mode = "payment",
-            };
-
-            foreach (var item in datas)
-            {
-                var sessionListItem = new SessionLineItemOptions
+                var options = new SessionCreateOptions
                 {
-                    PriceData = new SessionLineItemPriceDataOptions
-                    {
-                        UnitAmount = flight.Price_azn,
-                        Currency = "azn",
-                        ProductData = new SessionLineItemPriceDataProductDataOptions
-                        {
-                            Name = item.FlightNumber.ToString(),
-                        },
-                    },
-                    Quantity = 2
+                    SuccessUrl = domain + $"payment/OrderConfirmation?flightId={request.Flight}&documentExpiryDate={request.DocumentExpiryDate}&documentNumber={request.DocumentNumber}&documentType={request.DocumentType}&name={request.Name}&surname={request.Surname}&fatherName={request.FatherName}& gender ={request.Gender}&dateOfBirth ={request.DateOfBirth}& documentExpiryDate ={request.DocumentExpiryDate}&phoneNumber ={request.PhoneNumber}&email={request.Email}",
+                    CancelUrl = domain + "payment/login",
+                    LineItems = new List<SessionLineItemOptions>(),
+                    Mode = "payment",
                 };
-                options.LineItems.Add(sessionListItem);
-            }
 
-            var service = new SessionService();
-            Session session = service.Create(options);
+                foreach (var itm in datas)
+                {
+                    var sessionListItem = new SessionLineItemOptions
+                    {
+                        PriceData = new SessionLineItemPriceDataOptions
+                        {
+                            UnitAmount = flight.Price_azn * 10,
+                            Currency = "azn",
+                            ProductData = new SessionLineItemPriceDataProductDataOptions
+                            {
+                                Name = itm.FlightNumber.ToString(),
+                            },
+                        },
+                        Quantity = 2
+                    };
+                    options.LineItems.Add(sessionListItem);
+                }
 
-            // Ödəniş səhifəsinə yönləndirmək
-            Response.Headers.Add("Location", session.Url);
-            return new StatusCodeResult(303);
+                var service = new SessionService();
+                Session session = service.Create(options);
+
+                // Ödəniş səhifəsinə yönləndirmək
+                Response.Headers.Add("Location", session.Url);
+                return new StatusCodeResult(303);
+            
         }
     }
 }

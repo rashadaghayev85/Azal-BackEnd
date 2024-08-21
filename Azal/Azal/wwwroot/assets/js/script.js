@@ -439,24 +439,49 @@ document.addEventListener('DOMContentLoaded', function () {
             DepatureDate: departureDate,
             ArrivalDate: returnDate
         }
-        // axios.post(`/ticket/search`, data).then(res => window.location.href = "/ticket").catch(error => console.log(error))
+        //axios.post(`/ticket/search`, data).then(res => window.location.href = "/ticket").catch(error => console.log(error))
+        //axios.post('/ticket/search', data)
+        //    .then(res, count => {
+        //        console.log(count)
+        //        const ids = res.data; // This should be a list of IDs
+        //        if (ids.length > 0) {
+        //            const queryString = new URLSearchParams({ ids: ids.join(',') }).toString();
+
+        //            window.location.href = `/ticket/index?${queryString}`;
+        //        } else {
+        //            // Handle the case where no flights were found, if needed
+        //            window.location.href = `/ticket/notFound`;
+        //            console.log('No flights found.');
+        //        }
+        //    })
+        //    .catch(error => console.log(error));
+
+
+        //window.location.href = "/ticket"
+
+
+
+
         axios.post('/ticket/search', data)
             .then(res => {
-                const ids = res.data; // This should be a list of IDs
-                if (ids.length > 0) {
-                    const queryString = new URLSearchParams({ ids: ids.join(',') }).toString();
+                const result = res.data; // Burada serverdən gələn cavabı saxlayırıq
+                const count = result.count; // Count dəyərini alırıq
+                const ids = result.flightIds; // FlightIds siyahısını alırıq
 
-                    window.location.href = `/ticket/index?${queryString}`;
-                } else {
-                    // Handle the case where no flights were found, if needed
+                console.log('Passenger count:', count); // Count dəyərini console-a yazırıq
+
+                if (ids.length > 0)
+                {
+                    const queryString = new URLSearchParams({ ids: ids.join(',') }).toString();
+                    window.location.href = `/ticket/index?${queryString}&count=${count}`;
+                }
+                else {
+                    // Uçuş tapılmadığında nə edəcəyinizi idarə edin
                     window.location.href = `/ticket/notFound`;
                     console.log('No flights found.');
                 }
             })
             .catch(error => console.log(error));
-
-       
-        //window.location.href = "/ticket"
     }),
 
 

@@ -10,6 +10,9 @@ using Service.Services;
 using MimeKit;
 using MimeKit.Text;
 using MailKit.Net.Smtp;
+using Service.ViewModels.Users;
+using Service.ViewModels.Blogs;
+using AutoMapper;
 
 
 namespace Azal.Controllers
@@ -20,15 +23,18 @@ namespace Azal.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly EmailService _emailService;
+        private readonly IMapper _mapper;
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
                                  RoleManager<IdentityRole> roleManager,
-                                 EmailService emailService)
+                                 EmailService emailService,
+                                 IMapper mapper)
         {
             _userManager = userManager;
             _emailService = emailService;
             _signInManager = signInManager;
             _userManager = userManager;
+            _mapper = mapper;
 
         }
         [HttpGet]
@@ -155,18 +161,18 @@ namespace Azal.Controllers
 
         }
 
-        [HttpGet]
-        public async Task<IActionResult> CreateRoles()
-        {
-            foreach (var role in Enum.GetValues(typeof(Roles)))
-            {
-                if (!await _roleManager.RoleExistsAsync(role.ToString()))
-                {
-                    await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
-                }
-            }
-            return Ok();
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> CreateRoles()
+        //{
+        //    foreach (var role in Enum.GetValues(typeof(Roles)))
+        //    {
+        //        if (!await _roleManager.RoleExistsAsync(role.ToString()))
+        //        {
+        //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+        //        }
+        //    }
+        //    return Ok();
+        //}
 
 
         [HttpGet]
@@ -233,5 +239,92 @@ namespace Azal.Controllers
             }
             return RedirectToAction(nameof(SignIn));
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Profile(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+           var model=  _mapper.Map<UserEditVM>(user);
+
+            return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Profile(UserEditVM request)
+        {
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(request);
+            //}
+
+            //var user = await _userManager.FindByIdAsync(email);
+            //if (user == null)
+            //{
+            //    return NotFound();
+            //}
+
+            //user.Name = request.Name;
+            //user.Email = request.Email;
+            //user.Surname = request.Surname;
+            //user.FatherName = request.FatherName;
+            //user.Address = request.Address;
+
+            //var result = await _userManager.UpdateAsync(user);
+
+            //if (result.Succeeded)
+            //{
+            //    return RedirectToAction(nameof(Index)); // və ya uyğun bir view
+            //}
+
+            //foreach (var error in result.Errors)
+            //{
+            //    ModelState.AddModelError(string.Empty, error.Description);
+            //}
+
+            //return View(request);
+
+
+
+            if (!ModelState.IsValid)
+            {
+                return View(request);
+            }
+
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            user.Name = request.Name;
+            user.Email = request.Email;
+            user.Surname = request.Surname;
+            user.FatherName = request.FatherName;
+            user.Address = request.Address;
+
+            var result = await _userManager.UpdateAsync(user);
+            
+
+            if (result.Succeeded)
+            {
+                return Redirect($"/account/profile?email={request.Email}");
+               // return red($"account/profile?email={request.Email}"); // və ya uyğun bir view
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View();
+        }
+
+       
+
     }
 }

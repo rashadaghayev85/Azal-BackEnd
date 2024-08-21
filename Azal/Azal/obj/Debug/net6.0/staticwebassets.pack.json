@@ -2381,6 +2381,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\login.css"
     },
     {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\profile.css",
+      "PackagePath": "staticwebassets\\assets\\css\\profile.css"
+    },
+    {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\register.css",
       "PackagePath": "staticwebassets\\assets\\css\\register.css"
     },
@@ -2659,6 +2663,10 @@
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\moon.svg",
       "PackagePath": "staticwebassets\\assets\\img\\moon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg"
     },
     {
       "Id": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\qidalanma_3_d30d72de34.9ffad3ae.jpg",

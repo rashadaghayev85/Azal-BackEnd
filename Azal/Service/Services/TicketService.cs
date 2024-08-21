@@ -86,5 +86,5 @@ namespace Service.Services
 
             return _mapper.Map<Ticket>(ticket);
         }
-    }
+    } 
 }

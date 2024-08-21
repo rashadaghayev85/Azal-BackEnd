@@ -73,16 +73,16 @@
     height: 1px;
     background-color: #DBE0E4;
 }
-.login-page .page-main a{
-    max-width: 100%;
-    width: 100%;
-    padding: 15px;
-    display: flex;
-    font-weight: 600;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    border: 2px solid #2C8DC7;
-    border-radius: 8px;
-}
+    .login-page .page-main a:last-child {
+        max-width: 100%;
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        font-weight: 600;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        border: 2px solid #2C8DC7;
+        border-radius: 8px;
+    }
