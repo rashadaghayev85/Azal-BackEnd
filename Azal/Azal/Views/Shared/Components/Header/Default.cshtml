@@ -2,7 +2,7 @@
 
 <header class="flex h-[112px] p-[32px] items-center justify-between relative z-[20]">
     <div class="logo">
-        <a>
+        <a asp-controller="home" asp-action="index">
             <img src="~/assets/img/@Model.Settings.FirstOrDefault(m => m.Key == "Logo").Value" class="z-10" alt="salam">
         
         </a>
@@ -12,10 +12,23 @@
                 class="p-[12px] rounded-full bg-[#ffffff1a] size-[48px] inline-flex items-center justify-center transition-all duration-200 hover:bg-[#40b7de] ">
             <img class="light" src="~/assets/img/light.svg" alt="">
         </button>
-        <button class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px]inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
-            <span class="text-[14px]">Valyuta</span>
+          @if (User.Identity.IsAuthenticated)
+        {
+            <form asp-controller="account" asp-action="Logout">
+
+            <button  class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px]inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
+                <span class="text-[14px]">Valyuta</span>
             <i class="fa-solid fa-angle-down"></i>
         </button>
+            </form>
+        }
+        else
+        {
+            <button class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px]inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
+                <span class="text-[14px]">Valyuta</span>
+                <i class="fa-solid fa-angle-down"></i>
+            </button>
+        }
         <button class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px] inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
             <img src="~/assets/img/globe.svg" class="size-[20px]" alt="">
             <span class="text-[14px]">Azərbaycan</span>

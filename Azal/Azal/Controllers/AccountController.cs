@@ -37,6 +37,14 @@ namespace Azal.Controllers
             _mapper = mapper;
 
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
         [HttpGet]
         public IActionResult SignUp()
         {
@@ -119,13 +127,7 @@ namespace Azal.Controllers
             return View();
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
-        }
+       
         [HttpGet]
         public IActionResult SignIn()
         {

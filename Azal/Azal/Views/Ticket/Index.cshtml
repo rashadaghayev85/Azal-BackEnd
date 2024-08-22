@@ -275,17 +275,17 @@
 
             <div class="Right">
                 <div class="price">
-                    
-                        <a asp-action="Purchase" asp-route-id="@item.Id" asp-route-count="@ViewBag.Count" style="text-decoration:none" class="econom">
+
+                        <a asp-action="Purchase" asp-route-id="@item.Id" asp-route-count="@ViewBag.Count" style="text-decoration:none; rgb(1, 53, 126):black" class="econom">
                         <div class="title">Ekonom</div>
                         <div class="subPrice">@item.Price_azn <i class="fa-solid fa-manat-sign"></i></div>
                         <div class="subTitle">Başlanğıc qiyməti</div>
                     </a>
-                    <div class="business">
+                        <a asp-action="PurchaseBiznes" asp-route-id="@item.Id" asp-route-count="@ViewBag.Count" style="text-decoration:none; rgb(1, 53, 126)" class="business">
                         <div class="title">Biznes</div>
                         <div class="subPrice">@item.Price_usd <i class="fa-solid fa-manat-sign"></i></div>
                         <div class="subTitle">Başlanğıc qiyməti</div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

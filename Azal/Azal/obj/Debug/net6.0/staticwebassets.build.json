@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LbuXoa1Q/Ll4GpjmxAPBBpzp2WWT+Tf6C48rNGMxFLc=",
+  "Hash": "Ao8L/2EhTjN/D7DbGbfuzVmEuhM5LjDmlE/Pp9CVeFk=",
   "Source": "Azal",
   "BasePath": "_content/Azal",
   "Mode": "Default",
@@ -11797,6 +11797,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\5218b5bb-fe7d-4493-9f44-16bb63a7b879-business_class_p_2_33c4d907d3.fd011fad.jpg"
     },
     {
+      "Identity": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\55dfb8bf-468a-43de-985e-e74f40364db1-0ee88811-f83b-4843-883b-8d25a0d24db1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "SourceId": "Azal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\",
+      "BasePath": "_content/Azal",
+      "RelativePath": "assets/img/55dfb8bf-468a-43de-985e-e74f40364db1-0ee88811-f83b-4843-883b-8d25a0d24db1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\55dfb8bf-468a-43de-985e-e74f40364db1-0ee88811-f83b-4843-883b-8d25a0d24db1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
+    },
+    {
       "Identity": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\5f0cee3f-c93b-47d0-afba-5558dbf86f73-business_class_p_2_33c4d907d3.fd011fad.jpg",
       "SourceId": "Azal",
       "SourceType": "Discovered",
@@ -12042,6 +12061,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\996282bc-9673-4b97-a75b-1636376d3128-business_class_p_2_33c4d907d3.fd011fad.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\9f5e48d4-1a20-4143-b054-6214c6d684d6-0ee88811-f83b-4843-883b-8d25a0d24db1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "SourceId": "Azal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\",
+      "BasePath": "_content/Azal",
+      "RelativePath": "assets/img/9f5e48d4-1a20-4143-b054-6214c6d684d6-0ee88811-f83b-4843-883b-8d25a0d24db1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\9f5e48d4-1a20-4143-b054-6214c6d684d6-0ee88811-f83b-4843-883b-8d25a0d24db1-1160x150_8px_radius_d4e1a23146.4a3e3dad.png"
     },
     {
       "Identity": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\img\\a052debe-7dbf-4cc7-9f45-09c38c8c8a6c-business_class_p_2_33c4d907d3.fd011fad.jpg",

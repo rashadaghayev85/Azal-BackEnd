@@ -66,9 +66,9 @@ namespace Azal.Controllers
         //    var options = new SessionCreateOptions
         //    {
         //        SuccessUrl = domain + $"payment/OrderConfirmation",
-        //        CancelUrl=domain + "payment/login",
-        //        LineItems=new List<SessionLineItemOptions>(),  
-        //        Mode="payment",
+        //        CancelUrl = domain + "payment/login",
+        //        LineItems = new List<SessionLineItemOptions>(),
+        //        Mode = "payment",
         //        //CustomerEmail="rashadra@code.edu.az"
         //    };
 
@@ -79,13 +79,13 @@ namespace Azal.Controllers
         //            PriceData = new SessionLineItemPriceDataOptions
         //            {
         //                UnitAmount = item.Price_azn,//(long)(item.Price_azn*item.PassengerCount),
-        //                Currency="azn",
-        //                ProductData=new SessionLineItemPriceDataProductDataOptions
+        //                Currency = "azn",
+        //                ProductData = new SessionLineItemPriceDataProductDataOptions
         //                {
-        //                    Name=item.FlightNumber.ToString(),
+        //                    Name = item.FlightNumber.ToString(),
         //                },
         //            },
-        //                Quantity=2//item.PassengerCount
+        //            Quantity = 2//item.PassengerCount
         //        };
         //        options.LineItems.Add(sessionListItem);
         //    }
@@ -96,6 +96,6 @@ namespace Azal.Controllers
         //    return new StatusCodeResult(303);
         //}
 
-       
+
     }
 }
