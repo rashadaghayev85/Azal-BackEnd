@@ -25,8 +25,8 @@ namespace Domain.Models
 
         public int PlaneId { get; set; }
         public Plane Plane { get; set; }
-        public int Price_azn { get; set; }
-        public int Price_usd { get; set; }
+        public int Price_econom { get; set; }
+        public int Price_biznes { get; set; }
 
         public int PassengerCount { get; set; }
 

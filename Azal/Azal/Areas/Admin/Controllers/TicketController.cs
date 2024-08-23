@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services;
 using Service.Services.Interfaces;
@@ -8,6 +9,7 @@ using Service.ViewModels.Tickets;
 namespace Azal.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class TicketController : Controller
     {
         private readonly IWebHostEnvironment _env;

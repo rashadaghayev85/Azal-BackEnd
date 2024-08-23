@@ -16,14 +16,14 @@ namespace Service.ViewModels.Flights
         public string PlaneModel { get; set; }
         public int ArrivalAirport { get; set; }
         public int DepartureAirport { get; set; }
-        public int Price_azn { get; set; }
-        public int Price_usd { get; set; }
+        public int Price_econom { get; set; }
+        public int Price_biznes { get; set; }
         public int PassengerCount { get; set; }
 
 
       
-        public int Price { get; set; }
-        public int AvailableSeats { get; set; }
-        public string PlaneName { get; set; }
+        //public int Price { get; set; }
+        //public int AvailableSeats { get; set; }
+        //public string PlaneName { get; set; }
     }
 }

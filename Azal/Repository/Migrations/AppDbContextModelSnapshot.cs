@@ -295,10 +295,10 @@ namespace Repository.Migrations
                     b.Property<int>("PlaneId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Price_azn")
+                    b.Property<int>("Price_biznes")
                         .HasColumnType("int");
 
-                    b.Property<int>("Price_usd")
+                    b.Property<int>("Price_econom")
                         .HasColumnType("int");
 
                     b.Property<bool>("SoftDelete")

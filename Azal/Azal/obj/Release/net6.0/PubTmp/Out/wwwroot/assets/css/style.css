@@ -1,0 +1,58 @@
+.logo img, button img {
+    filter: brightness(0) invert(1);
+}
+
+/* .label {
+    transition: all ease .4s;
+} */
+.label {
+    transition: transform 0.2s ease-in-out;
+}
+
+.focused {
+    transform: translateY(-10px) scale(0.75);
+}
+
+.tab {
+    background-color: #10101033; /* Default background color */
+}
+
+.tab.active {
+    background-color: white; /* Active background color */
+    color: #01357E; /* Active text color */
+}
+
+
+
+.labell {
+    position: relative;
+    transition: border-color 0.2s ease-in-out;
+}
+
+
+.dropdown {
+    display: none;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+.option {
+    /* padding: 8px 16px; */
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+.line {
+    display: none;
+}
+.active .line {
+    display: block;
+}
+

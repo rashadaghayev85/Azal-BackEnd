@@ -84,7 +84,7 @@ namespace Azal.Controllers
                .Any(at => at.Location.Equals(data.ArrivalAirport, StringComparison.OrdinalIgnoreCase)) &&
            f.DepartureTime.Year == data.DepatureDate.Year &&
             f.DepartureTime.Month == data.DepatureDate.Month &&
-            f.DepartureTime.Day == data.DepatureDate.Day)
+            f.DepartureTime.Day == data.DepatureDate.Day).Where(m=>m.TicketCount-data.Count>=0)
        .ToList();
 
 
@@ -98,13 +98,13 @@ namespace Azal.Controllers
                 return Ok(result);
               //  return Ok(); // Boş sonuç döner
             }
-
+            
             var flightIds = filteredFlights.Select(f => f.Id).ToList();
             if (flightIds is not null)
             {
-
-            var count = data.Count;
-            var result = new SearchResultVM
+               
+                var count = data.Count;
+               var result = new SearchResultVM
             {
                 Count = count,
                 FlightIds = flightIds
@@ -232,7 +232,7 @@ namespace Azal.Controllers
         {
             ViewBag.Count = count;
 
-
+           
             if (request.Flight == 0)
             {
                 ModelState.AddModelError("Flight", "Input can't be empty");
@@ -246,7 +246,7 @@ namespace Azal.Controllers
 
 
 
-
+           
             return RedirectToAction("CheckOutBiznes", request);
             //request`-də bilet məlumatları formdan alınıb
 
@@ -280,7 +280,7 @@ namespace Azal.Controllers
                 {
                     PriceData = new SessionLineItemPriceDataOptions
                     {
-                        UnitAmount =flight.Price_azn *100,
+                        UnitAmount =flight.Price_econom *100,
                         Currency = "azn",
                         ProductData = new SessionLineItemPriceDataProductDataOptions
                         {
@@ -323,7 +323,7 @@ namespace Azal.Controllers
             {
                 PriceData = new SessionLineItemPriceDataOptions
                 {
-                    UnitAmount = flight.Price_usd * 100,
+                    UnitAmount = flight.Price_biznes * 100,
                     Currency = "azn",
                     ProductData = new SessionLineItemPriceDataProductDataOptions
                     {

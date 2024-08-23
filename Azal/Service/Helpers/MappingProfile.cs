@@ -61,8 +61,8 @@ namespace Service.Helpers
             .ForMember(dest => dest.Plane, opt => opt.Ignore());
            // CreateMap<Flight, FlightEditVM>();
             CreateMap<FlightEditVM, Flight>().ForMember(dest => dest.DepartureAirportId, opt => opt.MapFrom(src => src.DepartureAirport))
-                .ForMember(dest => dest.Price_azn, opt => opt.MapFrom(src => src.Price_azn))
-                .ForMember(dest => dest.Price_usd, opt => opt.MapFrom(src => src.Price_usd))
+                .ForMember(dest => dest.Price_econom, opt => opt.MapFrom(src => src.Price_econom))
+                .ForMember(dest => dest.Price_biznes, opt => opt.MapFrom(src => src.Price_biznes))
             .ForMember(dest => dest.ArrivalAirportId, opt => opt.MapFrom(src => src.ArrivalAirport))
             .ForMember(dest => dest.PlaneId, opt => opt.MapFrom(src => src.Plane))
             .ForMember(dest => dest.DepartureAirport, opt => opt.Ignore())

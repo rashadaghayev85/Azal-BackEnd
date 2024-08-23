@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services;
 using Service.Services.Interfaces;
@@ -9,6 +10,7 @@ using Service.ViewModels.Planes;
 namespace Azal.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class FlightController : Controller
     {
         private readonly IFlightService _flightService;
@@ -137,13 +139,13 @@ namespace Azal.Areas.Admin.Controllers
             {
                 flight.TicketCount = request.TicketCount;
             }
-            if (request.Price_azn != 0)
+            if (request.Price_econom != 0)
             {
-                flight.Price_azn = request.Price_azn;
+                flight.Price_econom = request.Price_econom;
             }
-            if (request.Price_usd != 0)
+            if (request.Price_biznes != 0)
             {
-                flight.Price_usd = request.Price_usd;
+                flight.Price_biznes = request.Price_biznes;
             }
 
 

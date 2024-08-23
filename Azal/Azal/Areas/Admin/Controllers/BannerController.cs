@@ -4,10 +4,12 @@ using Service.ViewModels.Banners;
 using Service.Helpers.Extensions;
 using Domain.Models;
 using Service.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Azal.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class BannerController : Controller
     {
         private readonly IBannerService _bannerService;

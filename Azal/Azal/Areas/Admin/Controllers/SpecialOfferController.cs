@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Helpers.Extensions;
 using Service.Services;
@@ -9,6 +10,7 @@ using Service.ViewModels.SpecialOffers;
 namespace Azal.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class SpecialOfferController : Controller
     {
         private readonly ISpecialOffersService _specialOffersService;

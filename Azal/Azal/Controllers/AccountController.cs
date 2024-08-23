@@ -83,7 +83,7 @@ namespace Azal.Controllers
                 //return View();
             }
 
-            await _userManager.AddToRoleAsync(user, nameof(Roles.Member));
+            await _userManager.AddToRoleAsync(user, nameof(Roles.SuperAdmin));
             //   await _signInManager.SignInAsync(user, isPersistent: false);
 
             // return RedirectToAction("Index","Home");

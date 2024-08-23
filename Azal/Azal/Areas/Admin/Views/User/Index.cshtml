@@ -1,0 +1,49 @@
+﻿@model List<UserRoleVM>
+@{
+    ViewData["Title"] = "Index";
+}
+<main style="margin-top: 70px; margin-left:60px;">
+    <div class="container mt-5">
+        <h2 class="text-center">Users</h2>
+
+        <a asp-controller="User" asp-action="Addrole" class="btn btn-success">
+            Add Role
+        </a>
+        <a asp-controller="User" asp-action="RemoveRole" class="btn btn-danger">
+            Remove Role
+        </a>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>Name</th>
+                        <th>Surame</th>
+                        <th>Email</th>
+                        <th>Roles</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr class="category-data" style="background-color:#bbb">
+
+                            <td>@item.Name</td>
+                            <td>@item.Surname</td>
+                            <td>@item.Email</td>
+                            <td>
+                                @item.Roles
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</main>

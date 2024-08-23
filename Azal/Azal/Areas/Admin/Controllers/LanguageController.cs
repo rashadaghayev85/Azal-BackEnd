@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services.Interfaces;
 using Service.ViewModels.Languages;
@@ -6,6 +7,7 @@ using Service.ViewModels.Languages;
 namespace Azal.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class LanguageController : Controller
     {
         private readonly ILanguageService _languageService;

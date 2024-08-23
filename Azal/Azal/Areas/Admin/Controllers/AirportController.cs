@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Helpers.Extensions;
 using Service.Services.Interfaces;
@@ -8,6 +9,7 @@ using Service.ViewModels.Blogs;
 namespace Azal.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class AirportController : Controller
     {
         private readonly IAirportService _airportService;

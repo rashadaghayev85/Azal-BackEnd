@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Azal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06de4de08153a77fea2a0013afe7b6e73c1ca0a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afd52d710c4c055ca96fb99b89edeb74dfab3e09")]
 [assembly: System.Reflection.AssemblyProductAttribute("Azal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Azal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

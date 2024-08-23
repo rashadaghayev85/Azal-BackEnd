@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Service.Helpers.Extensions;
@@ -9,6 +10,7 @@ using Service.ViewModels.Blogs;
 namespace Azal.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class BlogController : Controller
     {
         private readonly IBlogService _blogService;
