@@ -269,7 +269,7 @@ namespace Azal.Controllers
             var options = new SessionCreateOptions
             {
                 SuccessUrl = domain + $"payment/OrderConfirmation?flightId={request.Flight}&documentExpiryDate={request.DocumentExpiryDate}&documentNumber={request.DocumentNumber}&documentType={request.DocumentType}&name={request.Name}&surname={request.Surname}&fatherName={request.FatherName}& gender ={request.Gender}&dateOfBirth ={request.DateOfBirth}& documentExpiryDate ={request.DocumentExpiryDate}&phoneNumber ={request.PhoneNumber}&email={request.Email}",
-                CancelUrl = domain + "payment/login",
+                CancelUrl = domain + "home/index",
                 LineItems = new List<SessionLineItemOptions>(),
                 Mode = "payment",
             };

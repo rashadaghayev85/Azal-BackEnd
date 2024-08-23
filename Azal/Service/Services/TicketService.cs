@@ -40,7 +40,7 @@ namespace Service.Services
             await _ticketRepo.CreateAsync(_mapper.Map<Ticket>(model));
             flight.TicketCount--;
             await _flightRepository.EditSaveAsync();
-
+                return;
             }
             else
             {

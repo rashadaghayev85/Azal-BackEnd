@@ -472,6 +472,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (ids.length > 0)
                 {
+                   
                     const queryString = new URLSearchParams({ ids: ids.join(',') }).toString();
                     window.location.href = `/ticket/index?${queryString}&count=${count}`;
                 }

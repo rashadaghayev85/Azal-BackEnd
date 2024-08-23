@@ -14,11 +14,12 @@ namespace Azal.Controllers
     {
         private readonly IFlightService _flightService;
         private readonly ITicketService _ticketService;
-        public PaymentController(IFlightService flightService, ITicketService ticketService)
+        private readonly EmailService _emailService;
+        public PaymentController(IFlightService flightService, ITicketService ticketService, EmailService emailService)
         {
             _flightService = flightService;
             _ticketService = ticketService;
-
+            _emailService = emailService;
         }
         public async Task<IActionResult> Index()
         {
@@ -56,8 +57,10 @@ namespace Azal.Controllers
 
             await _ticketService.CreateAsync(ticket);
 
+            await _emailService.SendTicketAsync(email, "Biletin Təsdiqi", $"Bilet uğurla alınmışdır");
             // Sifariş təsdiq səhifəsinə yönləndirmək və ya istifadəçiyə mesaj göstərmək
-            return View("OrderConfirmation", ticket);
+            //return View("OrderConfirmation", ticket);
+            return View();
         }
         //public async Task<IActionResult> CheckOut(TicketCreateVM request)
         //{

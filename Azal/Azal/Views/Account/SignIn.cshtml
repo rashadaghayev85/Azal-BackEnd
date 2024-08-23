@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    @* <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" /> *@
 </head>
 
 <body>
@@ -186,9 +186,12 @@
         <form asp-action="signin" method="post">
     <div class="login-page">
         <div class="page-main">
+            <div style="color:red" asp-validation-summary="ModelOnly"></div>
             <h2>Şəxsi kabinet</h2>
             <input asp-for="Email" type="text" placeholder="Email">
+                <span style="color:red" class="text-danger" asp-validation-for="Email"></span>
                 <input asp-for="Password" type="password" placeholder="Şifrə">
+                <span style="color:red" class="text-danger" asp-validation-for="Password"></span>
             <a asp-action="forgotpassword" class="forgot-pass">Şifrənizi unutmusunuz?</a>
             <button >Daxil ol</button>
             <div class="line">
