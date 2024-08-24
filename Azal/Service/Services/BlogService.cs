@@ -40,6 +40,7 @@ namespace Service.Services
                     {
                         Name = model.Name,
                         Description = model.Description,
+                        Title= model.Title,
                         Language=language
                     }
 
@@ -72,6 +73,7 @@ namespace Service.Services
             if (blogTranslation != null)
             {
                 blogTranslation.Name = model.Name;
+                blogTranslation.Title = model.Title;
                 blogTranslation.Description = model.Description;
                 await _blogRepo.EditAsync(blog);
             }

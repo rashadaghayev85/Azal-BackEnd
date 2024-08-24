@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Service.Helpers.Extensions;
+using Service.Services;
 using Service.Services.Interfaces;
 using Service.ViewModels.Blogs;
 
@@ -186,6 +187,10 @@ namespace Azal.Areas.Admin.Controllers
                 {
                     blog.BlogTranslates.FirstOrDefault().Name = request.Name;
                 }
+                if (request.Title is not null)
+                {
+                    blog.BlogTranslates.FirstOrDefault().Title = request.Title;
+                }
 
                 if (request.Description is not null)
                 {
@@ -223,6 +228,10 @@ namespace Azal.Areas.Admin.Controllers
                 {
                     category.BlogTranslates.FirstOrDefault().Name = request.Name;
                 }
+                if (request.Title is not null)
+                {
+                    category.BlogTranslates.FirstOrDefault().Title = request.Title;
+                }
                 if (request.Description is not null)
                 {
                     category.BlogTranslates.FirstOrDefault().Description = request.Description;
@@ -242,11 +251,24 @@ namespace Azal.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //[HttpPost, ActionName("Delete")]
-        //public async Task<IActionResult> DeleteConfirmed(int id)
-        //{
-        //    await _blogService.DeleteAsync(id);
-        //    return RedirectToAction(nameof(Index));
-        //}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> IsActive(int id)
+        {
+
+            var data = await _blogService.GetByIdAsync(id);
+            if (data.IsActive == true)
+            {
+                data.IsActive = false;
+                await _blogService.EditSaveAsync();
+            }
+            else
+            {
+                data.IsActive = true;
+                await _blogService.EditSaveAsync();
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

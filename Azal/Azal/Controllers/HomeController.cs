@@ -49,7 +49,7 @@ namespace Azal.Controllers
                 Banners = banner.Where(m=>m.IsActive == true),
                 SpecialOffers = specialOffer.Where(m=>m.IsActive==true),
                 PopularDirections = popularDirection,
-                Blogs = blogs,
+                Blogs = blogs.Where(m => m.IsActive == true),
                 Airports=airports
 
             };

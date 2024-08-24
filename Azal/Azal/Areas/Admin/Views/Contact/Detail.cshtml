@@ -1,0 +1,57 @@
+﻿@model Contact
+@{
+	ViewData["Title"] = "Detail";
+}
+
+<main style="margin-top: 70px; margin-left:60px;">
+    <h2>Flight Details</h2>
+
+    <div>
+        <h4>Flight</h4>
+        <hr />
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>From User</th>
+                        <th>Subject</th>
+                        <th>Message</th>
+                       
+
+                    </tr>
+                </thead>
+                <tbody>
+
+
+
+                    <tr style="background-color:#bbb">
+
+
+
+                        <td>
+                            @Model.Email
+                        </td>
+                       
+                        <td>
+                            @Model.Subject
+                        </td>
+                        <td>
+                            @Model.Message
+                        </td>
+                      
+                    </tr>
+
+
+
+
+                </tbody>
+            </table>
+
+            <div>
+                <a class="btn btn-primary" asp-action="Index">Back to List</a>
+            </div>
+        </div>
+</main>
+
+

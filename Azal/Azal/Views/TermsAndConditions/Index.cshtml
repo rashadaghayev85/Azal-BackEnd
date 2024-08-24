@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-   @*  <link rel="stylesheet" href="../../asset/css/services.css">
+    @*  <link rel="stylesheet" href="../../asset/css/services.css">
     <link rel="stylesheet" href="../../asset/css/components.css"> *@
 
     <style>
@@ -132,7 +132,7 @@
 
         .page .section1 #header-hidden {
             background-color: white;
-            background-image: url(https://azal.az/_next/static/media/expandedBg.9f4a9f36.png);
+            background-image: url(https://azal.az/_next/static/media/pets_2f0dddb4c7.b11ef29e.jpg );
             background-size: contain;
             background-position: right;
             background-position-y: 80px;
@@ -606,7 +606,7 @@
             position: relative;
         }
 
-             .page .section1 {
+            .page .section1 {
                 display: flex;
                 max-width: 100%;
                 width: 100%;
@@ -614,18 +614,20 @@
                 display: flex;
                 align-items: start;
                 flex-direction: column;
-                background-image: url(https://www.azal.az/_next/static/media/bus_cla_64de61b22e.b07de6b0.jpg);
+                /* background-image: url(https://azal.az/_next/static/media/pets_2f0dddb4c7.b11ef29e.jpg ); */
+                /* background-image: url(https://www.azal.az/_next/static/media/bus_cla_64de61b22e.b07de6b0.jpg); */
                 background-size: cover;
                 background-position: bottom;
             }
 
             .page #meals {
-                background-image: url(https://www.azal.az/_next/static/media/meals2_c002921a41.1c8983e2.jpg);
+                /* background-image: url(https://azal.az/_next/static/media/overbooking_0494e9e08c.11ec44d4.jpg ); */
             }
 
             .page #miles {
-                background-image: url(https://www.azal.az/_next/static/media/hero_Bg_Childreen_41c3cb7670.3f725d38.jpg);
-            } 
+                background-image: url(https://azal.az/_next/static/media/blog_Main_Banner_a5381e89d4_70d3dc4c13052024_fa9d264236.295480f8.png);
+                */
+            }
 
             .page .background {
                 z-index: 5;
@@ -636,7 +638,7 @@
                 opacity: 0.5;
                 background: rgb(104,82,67);
                 background: linear-gradient(90deg, rgb(58, 43, 33) 0%, rgb(120, 120, 120) 50%, rgba(104,82,67,1) 100%);
-            } 
+            }
 
             .page .section1 .text {
                 z-index: 10;
@@ -769,7 +771,7 @@
             <header>
                 <div id="header-main">
                     <div class="logo">
-                        <a href="../../index.html">
+                        <a asp-controller="home" asp-action="index">
                             <img src="~/assets/img/logo.svg" alt="logo">
                         </a>
                     </div>
@@ -780,10 +782,10 @@
                                 <p>Şəxsi Kabinet</p>
                             </button>
                             <ul id="dropdown">
-                                <a href="../login.html">
+                                <a asp-controller="account" asp-action="signin">
                                 <li>Daxil ol</li>
                                 </a>
-                                <a href="../register.html">
+                                <a asp-controller="account" asp-action="signup">
                                 <li>Qeydiyyatdan keç</li>
                                 </a>
                             </ul>
@@ -796,8 +798,8 @@
                 <div id="header-hidden">
                     <div class="header-hidden-main">
                         <div class="logo">
-                            <a href="../../index.html">
-                                <img src="../../asset/img/headerlogo.png" alt="logo">
+                            <a asp-controller="home" asp-action="index">
+                                <img src="~/assets/img/logo.svg" alt="logo">
                             </a>
                         </div>
                         <div class="component">
@@ -932,11 +934,11 @@
             </header>
             <div class="text">
                 <div>
-                    <a href="../../index.html">Ana səhifə</a>
+                    <a asp-controller="home" asp-action="index">Ana səhifə</a>
                     <p>•</p>
-                    <a href="../services/meals.html">Uşaqlar və hamilə qadınlarla səyahət</a>
+                    <a href="../services/meals.html">Qaydalar və şərtlər</a>
                 </div>
-                <h1>Uşaqlar və hamilə qadınlarla səyahət</h1>
+                <h1>Qaydalar və şərtlər
             </div>
         </div>
 
@@ -944,81 +946,189 @@
     <div class="service-page">
         <div class="page-main">
             <div class="text-main">
-              
-                <h3>Müşayiət olunmayan azyaşlılar</h3>
-                <h4>Hörmətli sərnişin</h4>
+
+                <h3>Qaydalar və şərtlər</h3>
+
                 <p>
-                    5 yaşdan 14 yaşadək uşaqlar aviasiya şirkətinin reyslərinə yalnız 18 yaş və ondan böyük sərnişinin (valideyn/qəyyum və ya onların qanuni təmsilçisinin) müşayiəti ilə və ya aviaşirkətin uşaqların müşayiət olunması xidmətindən istifadə edərək böyük sərnişinin müşayiəti olmadan qəbul olunur.
+                    AZAL Miles proqramının üzvü olmaq və üstünlüklərdən yararlanmaq üçün sadəcə qeyd olunan qaydalara əməl etməlisiniz. Bu səhifədə Siz AZAL Miles proqramının şərtləri, qiymətləndirmə prosesi, iştirakçı statusları, uçuş milləri və status balları anlayışları, mükafatlandırıcı aviabiletlər və digər müddəalar ilə yaxından tanış olacaqsınız. Aşağıda qeyd olunan qayda və şərtlər "Azərbaycan Hava Yolları" aviaşirkəti ilə AZAL Miles proqramının hər bir iştirakçısı arasında mövcud olan hüquq münasibətlərini müəyyən edir.
                 </p>
-                <h4>”Azərbaycan Hava Yolları” QSC aşağıdakı hallarda uşaqların müşayiət olunması xidmətini göstərmir:</h4>
-               <p>Uçuşa terminallar/hava limanları arasında transfer daxil olduqda uşaqların müşayiət olunması xidmətindən istifadə etmək qeyri-mümkündür. “Azərbaycan Hava Yolları”nın marketinq daşıyıcısı qismində çıxış etdiyi kod-şerinq reyslərində və interlayn daşıyıcıların reyslərində uşaqların müşayiət olunması xidməti təqdim olunmur. Tranzit hava limanında gecə dayanacaqları olduğu halda uşaqlar reysə qəbul olunmur.</p>
-              <h4>Ölkələr üzrə hüquqi tələblərdə fərqlər</h4>
-              <p>Bəzi ölkələrin immiqrasiya xidmətləri gələn, gedən və tranzitlə keçən uşaqlar üçün əlavə sənədlər tələb edirlər. Tələb olunan əlavə sənədlər getdiyiniz ölkədən asılıdır, bu səbəbdən səfərdən əvvəl onlar barədə məlumat alın. IATA Turizm Mərkəzi Sizə hər bir ölkə üçün tələb olunan sənədlər barədə tövsiyə verə bilər. Əlavə tələblərin göstərilməsi üçün uşağın doğum tarixini mütləq qeyd edin.</p>
-           
-              <h4>Reysə qədər</h4>
-              <p>Uşaqların müşayiət olunması xidmətindən istifadə etmək üçün marşrutun bütün seqmentləri üzrə bu xidməti əvvəlcədən təxsis etmək və aviasiya şirkətinin təsdiqini almaq zəruridir, xidmətinin ödənişi qabaqcadan eləmək lazımdır. Siz aviabiletin təxsis olunması ilə eyni zamanda, lakin uçuşdan ən az 20 saat əvvəl uşağınız üçün qida sifariş edə bilərsiz.</p>
-              <h4>Hava limanında</h4>
-              <p>Valideynlər/qəyyumlar və ya onların qanuni təmsilçiləri qeydiyyat proseduruna uçuşdan ən azı 2 saat (bəzi hava limanlarında 3 saat) əvvəl gəlməlidirlər. Uşaqların müşayiət olunması xidməti yalnız valideynlərin/qəyyumların və ya onların qanuni təmsilçilərinin uşağın müşayiətsiz uçuşuna icazəsi olduqda göstərilir. Əlavə olaraq,valideynlər/qəyyumlar və ya onların qanuni təmsilçiləri Aviaşirkət tərəfindən müəyyən edilmiş nümunədə «Valideynlərin/qəyyumların və ya onların qanuni təmsilçilərinin müşayiət olunmayan uşağın daşınması üçün ərizəsi» ni doldurub imzalayırlar. Hava limanının təhlükəsizlik zonasında, gözləmə zalında və təyyarəyə minik zamanı bütün rəsmi prosedurlar aparılarkən aviasiya şirkətinin əməkdaşı uşağınızı müşayiət edəcək, hava gəmisinin göyərtəsində isə təyyarə bələdçiləri onun qayğısına qalacaqlar. Valideynlər/qəyyumlar və ya onların qanuni təmsilçiləri uçuş başlayanadək hava limanında qalmalıdırlar.</p>
-          </div>
+                <h3>Əsas anlayışlar</h3>
+                <p>
+                    Bu səhifədə istifadə olunan əsas anlayışlar və ixtisarlar aşağıdakı mənaları ifadə edir:
+                </p>
+                <p>
+                    AZAL – Azərbaycan Hava Yolları
+                </p>
+                <p>
+                    AZAL Miles proqramı – “Azərbaycan Hava Yolları” aviaşirkəti ilə tez-tez səyahət edən sərnişinlər üçün loyallıq proqramıdır.
+                </p>
+                <p>
+                    İştirakçı nömrəsi – AZAL Miles hesabı ilə bağlı fərdi iştirakçı nömrəsidir.
+                </p>
+                <p>
+                    Mükafatlandırma - pulsuz aviabilet, xidmət sinfinin artırılması və digər imtiyazları nəzərdə tutur.
+                </p>
+                <p>
+                    Uçuş milləri- “Azərbaycan Hava Yolları” aviaşirkəti ilə həyata keçirilən müntəzəm uçuşlara görə hesaba əlavə edilən millərdir. Hesaba əlavə edilən uçuş millərinin sayı ödənilmiş əsas tarifdən (rüsumlar, hava limanı yığımları və əlavə xərclər istisna olmaqla) və iştirakçı statusundan asılıdır. Uçuş milləri imtiyazların əldə olunmasına istifadə edilə bilər.
+
+
+                </p>
+                <p>
+                    Status balları – “Azərbaycan Hava Yolları” aviaşirkəti ilə həyata keçirilən uçuşlara görə verilir. Status ballarının sayı əldə olunmuş aviabiletin tarifindən və xidmət sinfindən asılı olaraq müəyyən edilir. Status balları AZAL Miles proqramı üzrə iştirakçı statuslarını təyin etmək və müvafiq iştirakçı statusuna görə proqramın təklif etdiyi imtiyazlardan yararlanmaq üçün istifadə edilir.
+                </p>
+                <p>
+                    İştirakçı statusu - iştirakçının AZAL Miles proqramında ilkin statusdan başlayaraq status səviyyəsinin yüksəlməsini müəyyən edir.
+                </p>
+                <p>Ailə hesabı – AZAL Miles proqramında ailə üzvlərinin vahid hesabda birləşdirilməsi nəzərdə tutulur.</p>
+          <p>
+                    Çağrı Mərkəzi – AZAL-ın məlumat və əlaqə mərkəzidir (Bakı şəhəri, tel.: +994 (12) 598 88 80).
+          </p>
+            </div>
         </div>
     </div>
 
     <footer>
         <div class="footer-main">
             <div class="footer-logos">
-                <a href="https://azranking.az/az"><img src="../asset/img/footerLogo1.png" alt=""></a>
-                <a href="https://www.dxr.az/"><img src="../asset/img/footerLogo2.png" alt=""></a>
-                <a href="https://portal.azal.az/az/azal-miles/"><img src="../asset/img/footerLogo3.png" alt=""></a>
+                <a href="https://azranking.az/az"><img src="~/assets/img/refferans-1.svg" alt=""></a>
+                <a href="https://www.dxr.az/"><img src="~/assets/img/refferans-2.svg" alt=""></a>
+                <a href="https://portal.azal.az/az/azal-miles/"><img src="~/assets/img/refferans-3.svg" alt=""></a>
                 <a href="https://azerbaijan.travel/?hl=az" style="border: none;">
-                    <img src="../asset/img/footerLogo4.png"
+                    <img src="~/assets/img/refferans-4.svg"
                          alt="">
                 </a>
             </div>
             <div class="footer-text">
                 <div class="text-main">
                     <h4>Məlumat</h4>
-                    <p>Ümumi məlumat</p>
-                    <p>Baqaj haqqında məlumat</p>
-                    <p>Tariflərin qaydaları</p>
-                    <p>Uşaqlar və hamilə qadınlarla səyahət</p>
-                    <p>Heyvanlarla səyahət</p>
-                    <p>Arzuolunmaz sərnişinlər</p>
-                    <p>Overbooking</p>
-                    <p>Təhlükəli əşyalar</p>
-                    <p>Daşınma qaydaları</p>
-                    <p>Qiymət siyasəti</p>
+                    <a asp-controller="generalinformation" asp-action="index" style="text-decoration:none">
+
+                        <p>Ümumi məlumat</p>
+                    </a>
+                    <a asp-controller="Baggage" asp-action="index" style="text-decoration:none">
+                        <p>Baqaj haqqında məlumat</p>
+                    </a>
+                    <a asp-controller="FareRules" asp-action="index" style="text-decoration:none">
+                        <p>Tariflərin qaydaları</p>
+
+                    </a>
+                    <a asp-controller="TravellingWithChildrenAndPregnant" asp-action="index" style="text-decoration:none">
+                        <p>Uşaqlar və hamilə qadınlarla səyahət</p>
+
+                    </a>
+                    <a asp-controller="TravellingWithPets" asp-action="index" style="text-decoration:none">
+                        <p>Heyvanlarla səyahət</p>
+
+                    </a>
+                    <a asp-controller="UnwantedPassengers" asp-action="index" style="text-decoration:none">
+                        <p>Arzuolunmaz sərnişinlər</p>
+
+                    </a>
+                    <a asp-controller="overbooking" asp-action="index" style="text-decoration:none">
+
+                        <p>Overbooking</p>
+                    </a>
+                    <a asp-controller="DangerousObjects" asp-action="index" style="text-decoration:none">
+
+                        <p>Təhlükəli əşyalar</p>
+                    </a>
+                    <a asp-controller="Rules_Conditions" asp-action="index" style="text-decoration:none">
+
+                        <p>Daşınma qaydaları</p>
+                    </a>
+                    <a asp-controller="PricingPolicy" asp-action="index" style="text-decoration:none">
+                        <p>Qiymət siyasəti</p>
+
+                    </a>
                 </div>
                 <div class="text-main">
                     <h4>AZAL Miles</h4>
-                    <p>Proqram haqqında</p>
-                    <p>Balların toplanması və istifadəsi</p>
-                    <p>Üzv olmaq</p>
-                    <p>Profilə daxil olmaq</p>
-                    <p>Qaydalar və Şərtlər</p>
-                    <p>F.A.Q</p>
+                    <a asp-controller="programcontent" asp-action="index" style="text-decoration:none">
+                        <p>Proqram haqqında</p>
+                    </a>
+                    <a asp-controller="programusing" asp-action="index" style="text-decoration:none">
+
+                        <p>Balların toplanması və istifadəsi</p>
+                    </a>
+                    <a asp-controller="TermsAndConditions" asp-action="index" style="text-decoration:none">
+
+                        <p>Üzv olmaq</p>
+                    </a>
+                    <a asp-controller="account" asp-action="signin" style="text-decoration:none">
+                        <p>Profilə daxil olmaq</p>
+
+                    </a>
+                    <a asp-controller="TermsAndConditions" asp-action="index" style="text-decoration:none">
+
+                        <p>Qaydalar və Şərtlər</p>
+                    </a>
+                    <a asp-controller="FAQ" asp-action="index" style="text-decoration:none">
+                        <p>F.A.Q</p>
+
+                    </a>
                 </div>
                 <div class="text-main">
                     <h4>AZAL aviaşirkəti</h4>
-                    <p>Haqqımızda</p>
-                    <p>AZAL-ın Müşahidə Şurası</p>
-                    <p>Son xəbərlər</p>
-                    <p>Bizim donanma</p>
-                    <p>Karyera</p>
-                    <p>Məlumat mərkəzi</p>
-                    <p>Bizə yazın</p>
-                    <p>Mobil əlavə</p>
+
+                    <a asp-controller="aboutus" asp-action="index" style="text-decoration:none">
+
+                        <p>Haqqımızda</p>
+
+                    </a>
+                    <a asp-controller="SupervisoryAzal" asp-action="index" style="text-decoration:none">
+
+
+
+                        <p>AZAL-ın Müşahidə Şurası</p>
+                    </a>
+                    <a asp-controller="latestnews" asp-action="index" style="text-decoration:none">
+
+                        <p>Son xəbərlər</p>
+                    </a>
+                    <a asp-controller="ourfleet" asp-action="index" style="text-decoration:none">
+                        <p>Bizim donanma</p>
+                    </a>
+                    <a asp-controller="Career" asp-action="index" style="text-decoration:none">
+                        <p>Karyera</p>
+                    </a>
+                    <a asp-controller="HelpCenter" asp-action="index" style="text-decoration:none">
+                        <p>Məlumat mərkəzi</p>
+                    </a>
+                    <a asp-controller="WriteUs" asp-action="index" style="text-decoration:none">
+                        <p>Bizə yazın</p>
+                    </a>
+
+
+
                 </div>
                 <div class="text-main">
                     <h4>Korporativ məlumat</h4>
-                    <p>Qrup şəklində daşımalar</p>
-                    <p>Satış ofisləri</p>
-                    <p>Ofis və nümayəndəliklər</p>
-                    <p>Qəbul günləri</p>
-                    <p>Mətbuat xidməti</p>
-                    <p>Struktur bölmələri</p>
-                    <p>Maliyyə hesabatları</p>
-                    <p>Agentlər üçün məlumat</p>
-                    <p>İnsan alverinə qarşı məlumat</p>
+                    <a asp-controller="GroupTransportations" asp-action="index" style="text-decoration:none">
+
+                        <p>Qrup şəklində daşımalar</p>
+                    </a>
+                    <a asp-controller="SalesOffices" asp-action="index" style="text-decoration:none">
+
+                        <p>Satış ofisləri</p>
+                    </a>
+                    <a asp-controller="SalesOffices" asp-action="OfficeRepresentationOffices" style="text-decoration:none">
+
+                        <p>Ofis və nümayəndəliklər</p>
+                    </a>
+                    <a asp-controller="VisitingDays" asp-action="index" style="text-decoration:none">
+
+                        <p>Qəbul günləri</p>
+                    </a>
+                    <a asp-controller="PressRoom" asp-action="index" style="text-decoration:none">
+
+                        <p>Mətbuat xidməti</p>
+                    </a>
+                    <a asp-controller="FinancialReports" asp-action="index" style="text-decoration:none">
+                        <p>Maliyyə hesabatları</p>
+
+                    </a>
+
+
                 </div>
             </div>
         </div>
@@ -1039,10 +1149,10 @@
                 </div>
                 <div class="btns">
                     <a href="https://play.google.com/store/apps/details?id=az.azal.app">
-                        <img src="./asset/img/btn1.png" alt="">
+                        <img src="~/assets/img/googlePlay.svg" alt="">
                     </a>
                     <a href="https://apps.apple.com/us/app/azal/id1451475994">
-                        <img src="./asset/img/btn2.png" alt="">
+                        <img src="~/assets/img/appStore.svg" alt="">
                     </a>
                 </div>
             </div>

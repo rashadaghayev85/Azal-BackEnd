@@ -278,7 +278,8 @@
                 {
                     @foreach (var itm in item.SpecialOffersTransLates)
                     {
-
+                        @if (itm.Language.Culture == "az")
+                        {
                         <div class="flex justify-between">
                             <div class=" ">
                                 <img src="~/assets/img/@item.Image"
@@ -298,11 +299,11 @@
                                     @*  İndi
                             AZAL-dan bilet aldıqda ödəməni 6 ayadək faizsiz taksitlə edə bilərsiniz. *@
                                 </p>
-                                <a href="#" class="text-[#40b7de] font-semibold hover:underline">Daha ətraflı</a>
+                                <a asp-controller="specialoffer" asp-action="detail" asp-route-id="@item.Id" class="text-[#40b7de] font-semibold hover:underline">Daha ətraflı</a>
                             </div>
                         </div>
                     }
-
+                    }
                 }
 
 
@@ -342,7 +343,7 @@
                     {
                         @if (itm.Language.Culture == "az")
                         {
-                            <a href="#" id="useful"
+                            <a asp-controller="blog" asp-action="detail" asp-route-id="@item.Id" id="useful"
                                class="border hover:scale-105 transition-all duration-300 flex-1 rounded-[12px]  max-w-[370px] overflow-hidden inline-block">
                                 <div class="h-[208px]">
                                     <img src="~/assets/img/@item.Image" class="size-full"
@@ -352,11 +353,14 @@
                                     <div>
                                         <h2 class=" h2 text-[20px] font-semibold mb-[8px]">@itm.Name</h2>
                                         <p class=" text-[#6e7583] text-[14px]">
-                                            @itm.Description
+                                            @itm.Title
                                         </p>
                                     </div>
                                     <div class="moreBtn text-[16px] text-[#40b7de] font-semibold">
-                                        <p>Daha ətraflı</p>
+                                       
+
+                                        <p >Daha ətraflı</p>
+                                       
                                     </div>
                                 </div>
                             </a>

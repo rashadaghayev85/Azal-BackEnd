@@ -1,0 +1,148 @@
+.page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.page .section1{
+ 
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+   
+    background-size: cover;
+    background-position: bottom;
+    
+}
+.page #meals{
+    background-image: url(https://www.azal.az/_next/static/media/meals2_c002921a41.1c8983e2.jpg);
+}
+.page #miles{
+    background-image: url(https://www.azal.az/_next/static/media/miles_28f8e962aa.9574f57f.jpg);
+}
+.page .background{
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 65vh;
+    opacity: 0.5;
+    background: rgb(104,82,67);
+background: linear-gradient(90deg, rgb(58, 43, 33) 0%, rgb(120, 120, 120) 50%, rgba(104,82,67,1) 100%);
+}
+.page .section1 .text{
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    padding: 33vh 0 0 15%;
+}
+.page .section1 .text div{
+    display: flex;
+    gap: 10px;
+}
+.page .section1 .text div p{
+    margin: 0;
+    margin-top: 2px;
+    color: #fff;
+}
+.page .section1 .text div a{
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    color: #2e3034;
+    text-decoration: none;
+    color: #fff;
+}
+.page .section1 .text h1{
+    color: #fff;
+}
+
+.service-page{
+    max-width: 95%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-page .page-main{
+    max-width: 75%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.service-page .page-main .text-main .btn-login{
+    max-width: 100%;
+    width: 100%;
+    background-color: #40b7de;
+    background-image: url(https://www.azal.az/_next/static/media/signInBlockBg.17781bce.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 70%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+.service-page .page-main .text-main .btn-login .text{
+    width: 35%;
+    font-size: 20px;
+    line-height: 28px;
+    color: #fff;
+}
+.service-page .page-main .text-main .btn-login .btns{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+}
+.service-page .page-main .text-main .btn-login .btns a{
+    color: #40b7de;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+.service-page .page-main .text-main h3{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #01357e;
+}
+.service-page .page-main .text-main h4{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #01357e;
+}
+.service-page .page-main .text-main p,li{
+    font-size: 14px;
+    line-height: 24px;
+    color: #6e7583;
+    list-style: none;
+}
+.service-page .page-main .text-main li::before{
+    content: "—";
+    position: relative;
+    left: -7px;
+    color: #40b7de;
+}
+
+

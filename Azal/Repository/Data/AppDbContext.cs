@@ -22,7 +22,8 @@ namespace Repository.Data
         public DbSet<SpecialOffersTransLate> SpecialOffersTransLates { get; set; }
         public DbSet<PopularDirection> PopularDirections { get; set; }
         public DbSet<PopularDirectionTranslate> PopularDirectionTranslates { get; set; }
-        public DbSet<Flight> Flights { get; set; }
+		public DbSet<Contact> Contacts { get; set; }
+		public DbSet<Flight> Flights { get; set; }
       //  public DbSet<Passenger> Passengers { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Plane> Planes { get; set; }

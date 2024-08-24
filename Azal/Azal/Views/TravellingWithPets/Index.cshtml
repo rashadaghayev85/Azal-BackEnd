@@ -132,7 +132,8 @@
 
         .page .section1 #header-hidden {
             background-color: white;
-            background-image: url(https://azal.az/_next/static/media/expandedBg.9f4a9f36.png);
+            background-image: url(https://azal.az/_next/static/media/pets_2f0dddb4c7.b11ef29e.jpg );
+   
             background-size: contain;
             background-position: right;
             background-position-y: 80px;
@@ -614,17 +615,18 @@
                 display: flex;
                 align-items: start;
                 flex-direction: column;
-                background-image: url(https://www.azal.az/_next/static/media/bus_cla_64de61b22e.b07de6b0.jpg);
+                background-image: url(https://azal.az/_next/static/media/pets_2f0dddb4c7.b11ef29e.jpg );
+                /* background-image: url(https://www.azal.az/_next/static/media/bus_cla_64de61b22e.b07de6b0.jpg); */
                 background-size: cover;
                 background-position: bottom;
             }
 
             .page #meals {
-                background-image: url(https://www.azal.az/_next/static/media/meals2_c002921a41.1c8983e2.jpg);
+                /* background-image: url(https://azal.az/_next/static/media/pets_2f0dddb4c7.b11ef29e.jpg ); */
             }
 
             .page #miles {
-                background-image: url(https://www.azal.az/_next/static/media/hero_Bg_Childreen_41c3cb7670.3f725d38.jpg);
+                background-image: url(https://azal.az/_next/static/media/pets_2f0dddb4c7.b11ef29e.jpg );
             }
 
             .page .background {
@@ -769,7 +771,7 @@
             <header>
                 <div id="header-main">
                     <div class="logo">
-                        <a href="../../index.html">
+                        <a asp-controller="home" asp-action="index">
                             <img src="~/assets/img/logo.svg" alt="logo">
                         </a>
                     </div>
@@ -796,8 +798,8 @@
                 <div id="header-hidden">
                     <div class="header-hidden-main">
                         <div class="logo">
-                            <a href="../../index.html">
-                                <img src="../../asset/img/headerlogo.png" alt="logo">
+                            <a asp-controller="home" asp-action="index">
+                                <img src="../../assets/img/logo.svg" alt="logo">
                             </a>
                         </div>
                         <div class="component">
@@ -932,11 +934,11 @@
             </header>
             <div class="text">
                 <div>
-                    <a href="../../index.html">Ana səhifə</a>
+                    <a asp-controller="home" asp-action="index">Ana səhifə</a>
                     <p>•</p>
-                    <a href="../services/meals.html">Uşaqlar və hamilə qadınlarla səyahət</a>
+                    <a href="../services/meals.html">Heyvanlarla səyahət</a>
                 </div>
-                <h1>Uşaqlar və hamilə qadınlarla səyahət</h1>
+                <h1>Heyvanlarla səyahət</h1>
             </div>
         </div>
 
@@ -945,20 +947,30 @@
         <div class="page-main">
             <div class="text-main">
 
-                <h3>Müşayiət olunmayan azyaşlılar</h3>
+                <h3>Ev heyvanınızı uçuşa hazırlamaq</h3>
                 <h4>Hörmətli sərnişin</h4>
                 <p>
-                    5 yaşdan 14 yaşadək uşaqlar aviasiya şirkətinin reyslərinə yalnız 18 yaş və ondan böyük sərnişinin (valideyn/qəyyum və ya onların qanuni təmsilçisinin) müşayiəti ilə və ya aviaşirkətin uşaqların müşayiət olunması xidmətindən istifadə edərək böyük sərnişinin müşayiəti olmadan qəbul olunur.
+                    Ev heyvanınızın uçuşa daha sakit dözməsi üçün əvvəlcədən yaxşı hazırlaşmağa dəyər. Altı ay əvvəl, hətta ondan əvvəl, aviaşirkətin tələblərinə cavab verən daşıyıcı alın, içərisinə rahat, tanış yataq dəsti və onun oyuncaqları qoyun - bu, həbsxana kamerası deyil, sevimli guşəyə çevrilməlidir. Heyvan evdə qəfəsə öyrəşsin.
                 </p>
-                <h4>”Azərbaycan Hava Yolları” QSC aşağıdakı hallarda uşaqların müşayiət olunması xidmətini göstərmir:</h4>
-                <p>Uçuşa terminallar/hava limanları arasında transfer daxil olduqda uşaqların müşayiət olunması xidmətindən istifadə etmək qeyri-mümkündür. “Azərbaycan Hava Yolları”nın marketinq daşıyıcısı qismində çıxış etdiyi kod-şerinq reyslərində və interlayn daşıyıcıların reyslərində uşaqların müşayiət olunması xidməti təqdim olunmur. Tranzit hava limanında gecə dayanacaqları olduğu halda uşaqlar reysə qəbul olunmur.</p>
-                <h4>Ölkələr üzrə hüquqi tələblərdə fərqlər</h4>
-                <p>Bəzi ölkələrin immiqrasiya xidmətləri gələn, gedən və tranzitlə keçən uşaqlar üçün əlavə sənədlər tələb edirlər. Tələb olunan əlavə sənədlər getdiyiniz ölkədən asılıdır, bu səbəbdən səfərdən əvvəl onlar barədə məlumat alın. IATA Turizm Mərkəzi Sizə hər bir ölkə üçün tələb olunan sənədlər barədə tövsiyə verə bilər. Əlavə tələblərin göstərilməsi üçün uşağın doğum tarixini mütləq qeyd edin.</p>
-
-                <h4>Reysə qədər</h4>
-                <p>Uşaqların müşayiət olunması xidmətindən istifadə etmək üçün marşrutun bütün seqmentləri üzrə bu xidməti əvvəlcədən təxsis etmək və aviasiya şirkətinin təsdiqini almaq zəruridir, xidmətinin ödənişi qabaqcadan eləmək lazımdır. Siz aviabiletin təxsis olunması ilə eyni zamanda, lakin uçuşdan ən az 20 saat əvvəl uşağınız üçün qida sifariş edə bilərsiz.</p>
-                <h4>Hava limanında</h4>
-                <p>Valideynlər/qəyyumlar və ya onların qanuni təmsilçiləri qeydiyyat proseduruna uçuşdan ən azı 2 saat (bəzi hava limanlarında 3 saat) əvvəl gəlməlidirlər. Uşaqların müşayiət olunması xidməti yalnız valideynlərin/qəyyumların və ya onların qanuni təmsilçilərinin uşağın müşayiətsiz uçuşuna icazəsi olduqda göstərilir. Əlavə olaraq,valideynlər/qəyyumlar və ya onların qanuni təmsilçiləri Aviaşirkət tərəfindən müəyyən edilmiş nümunədə «Valideynlərin/qəyyumların və ya onların qanuni təmsilçilərinin müşayiət olunmayan uşağın daşınması üçün ərizəsi» ni doldurub imzalayırlar. Hava limanının təhlükəsizlik zonasında, gözləmə zalında və təyyarəyə minik zamanı bütün rəsmi prosedurlar aparılarkən aviasiya şirkətinin əməkdaşı uşağınızı müşayiət edəcək, hava gəmisinin göyərtəsində isə təyyarə bələdçiləri onun qayğısına qalacaqlar. Valideynlər/qəyyumlar və ya onların qanuni təmsilçiləri uçuş başlayanadək hava limanında qalmalıdırlar.</p>
+                <p>Çəkisi konteynerlə birlikdə 32 ilə 75 kq arasında olan iri itlər aşağıdakı tələblərə uyğun olaraq təyyarənin baqaj hissəsində xüsusi qapalı qablarda daşınmalıdır:</p>
+                    <ul>
+                        <li>
+                        qab, hündürlüyü, eni və uzunluğu ilə itin ölçüsünə uyğun olmalıdır və elə seçilməlidir ki, heyvan nəinki oturub yatsın, həm də onun içində tam hündürlükdə dayana və 360° sərbəst dönə bilsin;
+                        </li>
+                    <li>qabın markalanmasında daşınan heyvanın icazə verilən maksimum çəkisi, habelə boş qabın çəkisi göstərilməlidir;</li>
+                      <li>
+                        Qəfəsin iki hissəsi boltlar vasitəsilə birləşdirilməlidir. Hər hansı digər kilidləmə sistemi ilə qəfəslərin istifadəsinə icazə verilmir;
+                      </li>
+                    <li>çəkisi 32 kq-dan çox heyvan olan istənilən konteyner ən azı iki yan tutacaqla təchiz olunmalıdır;</li>
+                     <li>
+                        Qəfəsdə bir sabit su qabı olmalıdır;
+                     </li>
+                     <li>
+                        Qapı dörd tərəfdən kilidi bağlayan mərkəzləşdirilmiş kilidləmə sistemi ilə təchiz olunmalıdır. Bundan əlavə, hər tərəfdən plastik bağlardan istifadə etmək lazımdır;
+                     </li>
+                    <li>Qəfəsin təkərləri çıxarılmalı və ya geri çəkilə biləndirsə, geri çəkilməli və ya yapışan lentlə bərkidilməlidir;</li>
+                    <li>Qəfəsin dibi yorğan, qəzet və ya digər uducu materialla örtülməlidir. Nəzərə alın ki, saman və torfdan istifadə etmək qadağandır; Heyvanla konteynerin təyyarəyə yüklənməsi/boşaldılması zamanı zədələnməmək üçün əlavə qatlanan tutacaqlar qatlanmalı və yapışan lentlə bağlanmalıdır.</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -966,59 +978,145 @@
     <footer>
         <div class="footer-main">
             <div class="footer-logos">
-                <a href="https://azranking.az/az"><img src="../asset/img/footerLogo1.png" alt=""></a>
-                <a href="https://www.dxr.az/"><img src="../asset/img/footerLogo2.png" alt=""></a>
-                <a href="https://portal.azal.az/az/azal-miles/"><img src="../asset/img/footerLogo3.png" alt=""></a>
+                <a href="https://azranking.az/az"><img src="~/assets/img/refferans-1.svg" alt=""></a>
+                <a href="https://www.dxr.az/"><img src="~/assets/img/refferans-2.svg" alt=""></a>
+                <a href="https://portal.azal.az/az/azal-miles/"><img src="~/assets/img/refferans-3.svg" alt=""></a>
                 <a href="https://azerbaijan.travel/?hl=az" style="border: none;">
-                    <img src="../asset/img/footerLogo4.png"
+                    <img src="~/assets/img/refferans-4.svg"
                          alt="">
                 </a>
             </div>
             <div class="footer-text">
                 <div class="text-main">
                     <h4>Məlumat</h4>
-                    <p>Ümumi məlumat</p>
-                    <p>Baqaj haqqında məlumat</p>
-                    <p>Tariflərin qaydaları</p>
-                    <p>Uşaqlar və hamilə qadınlarla səyahət</p>
-                    <p>Heyvanlarla səyahət</p>
-                    <p>Arzuolunmaz sərnişinlər</p>
-                    <p>Overbooking</p>
-                    <p>Təhlükəli əşyalar</p>
-                    <p>Daşınma qaydaları</p>
-                    <p>Qiymət siyasəti</p>
+                    <a asp-controller="generalinformation" asp-action="index" style="text-decoration:none">
+
+                        <p>Ümumi məlumat</p>
+                    </a>
+                    <a asp-controller="Baggage" asp-action="index" style="text-decoration:none">
+                        <p>Baqaj haqqında məlumat</p>
+                    </a>
+                    <a asp-controller="FareRules" asp-action="index" style="text-decoration:none">
+                        <p>Tariflərin qaydaları</p>
+
+                    </a>
+                    <a asp-controller="TravellingWithChildrenAndPregnant" asp-action="index" style="text-decoration:none">
+                        <p>Uşaqlar və hamilə qadınlarla səyahət</p>
+
+                    </a>
+                    <a asp-controller="TravellingWithPets" asp-action="index" style="text-decoration:none">
+                        <p>Heyvanlarla səyahət</p>
+
+                    </a>
+                    <a asp-controller="UnwantedPassengers" asp-action="index" style="text-decoration:none">
+                        <p>Arzuolunmaz sərnişinlər</p>
+
+                    </a>
+                    <a asp-controller="overbooking" asp-action="index" style="text-decoration:none">
+
+                        <p>Overbooking</p>
+                    </a>
+                    <a asp-controller="DangerousObjects" asp-action="index" style="text-decoration:none">
+
+                        <p>Təhlükəli əşyalar</p>
+                    </a>
+                    <a asp-controller="Rules_Conditions" asp-action="index" style="text-decoration:none">
+
+                        <p>Daşınma qaydaları</p>
+                    </a>
+                    <a asp-controller="PricingPolicy" asp-action="index" style="text-decoration:none">
+                        <p>Qiymət siyasəti</p>
+
+                    </a>
                 </div>
                 <div class="text-main">
                     <h4>AZAL Miles</h4>
-                    <p>Proqram haqqında</p>
-                    <p>Balların toplanması və istifadəsi</p>
-                    <p>Üzv olmaq</p>
-                    <p>Profilə daxil olmaq</p>
-                    <p>Qaydalar və Şərtlər</p>
-                    <p>F.A.Q</p>
+                    <a asp-controller="programcontent" asp-action="index" style="text-decoration:none">
+                        <p>Proqram haqqında</p>
+                    </a>
+                    <a asp-controller="programusing" asp-action="index" style="text-decoration:none">
+
+                        <p>Balların toplanması və istifadəsi</p>
+                    </a>
+                    <a asp-controller="TermsAndConditions" asp-action="index" style="text-decoration:none">
+
+                        <p>Üzv olmaq</p>
+                    </a>
+                    <a asp-controller="account" asp-action="signin" style="text-decoration:none">
+                        <p>Profilə daxil olmaq</p>
+
+                    </a>
+                    <a asp-controller="TermsAndConditions" asp-action="index" style="text-decoration:none">
+
+                        <p>Qaydalar və Şərtlər</p>
+                    </a>
+                    <a asp-controller="FAQ" asp-action="index" style="text-decoration:none">
+                        <p>F.A.Q</p>
+
+                    </a>
                 </div>
                 <div class="text-main">
                     <h4>AZAL aviaşirkəti</h4>
-                    <p>Haqqımızda</p>
-                    <p>AZAL-ın Müşahidə Şurası</p>
-                    <p>Son xəbərlər</p>
-                    <p>Bizim donanma</p>
-                    <p>Karyera</p>
-                    <p>Məlumat mərkəzi</p>
-                    <p>Bizə yazın</p>
-                    <p>Mobil əlavə</p>
+
+                    <a asp-controller="aboutus" asp-action="index" style="text-decoration:none">
+
+                        <p>Haqqımızda</p>
+
+                    </a>
+                    <a asp-controller="SupervisoryAzal" asp-action="index" style="text-decoration:none">
+
+
+
+                        <p>AZAL-ın Müşahidə Şurası</p>
+                    </a>
+                    <a asp-controller="latestnews" asp-action="index" style="text-decoration:none">
+
+                        <p>Son xəbərlər</p>
+                    </a>
+                    <a asp-controller="ourfleet" asp-action="index" style="text-decoration:none">
+                        <p>Bizim donanma</p>
+                    </a>
+                    <a asp-controller="Career" asp-action="index" style="text-decoration:none">
+                        <p>Karyera</p>
+                    </a>
+                    <a asp-controller="HelpCenter" asp-action="index" style="text-decoration:none">
+                        <p>Məlumat mərkəzi</p>
+                    </a>
+                    <a asp-controller="WriteUs" asp-action="index" style="text-decoration:none">
+                        <p>Bizə yazın</p>
+                    </a>
+
+
+
                 </div>
                 <div class="text-main">
                     <h4>Korporativ məlumat</h4>
-                    <p>Qrup şəklində daşımalar</p>
-                    <p>Satış ofisləri</p>
-                    <p>Ofis və nümayəndəliklər</p>
-                    <p>Qəbul günləri</p>
-                    <p>Mətbuat xidməti</p>
-                    <p>Struktur bölmələri</p>
-                    <p>Maliyyə hesabatları</p>
-                    <p>Agentlər üçün məlumat</p>
-                    <p>İnsan alverinə qarşı məlumat</p>
+                    <a asp-controller="GroupTransportations" asp-action="index" style="text-decoration:none">
+
+                        <p>Qrup şəklində daşımalar</p>
+                    </a>
+                    <a asp-controller="SalesOffices" asp-action="index" style="text-decoration:none">
+
+                        <p>Satış ofisləri</p>
+                    </a>
+                    <a asp-controller="SalesOffices" asp-action="OfficeRepresentationOffices" style="text-decoration:none">
+
+                        <p>Ofis və nümayəndəliklər</p>
+                    </a>
+                    <a asp-controller="VisitingDays" asp-action="index" style="text-decoration:none">
+
+                        <p>Qəbul günləri</p>
+                    </a>
+                    <a asp-controller="PressRoom" asp-action="index" style="text-decoration:none">
+
+                        <p>Mətbuat xidməti</p>
+                    </a>
+                    <a asp-controller="FinancialReports" asp-action="index" style="text-decoration:none">
+                        <p>Maliyyə hesabatları</p>
+
+                    </a>
+
+
                 </div>
             </div>
         </div>
@@ -1039,10 +1137,10 @@
                 </div>
                 <div class="btns">
                     <a href="https://play.google.com/store/apps/details?id=az.azal.app">
-                        <img src="./asset/img/btn1.png" alt="">
+                        <img src="~/assets/img/googlePlay.svg" alt="">
                     </a>
                     <a href="https://apps.apple.com/us/app/azal/id1451475994">
-                        <img src="./asset/img/btn2.png" alt="">
+                        <img src="~/assets/img/appStore.svg" alt="">
                     </a>
                 </div>
             </div>

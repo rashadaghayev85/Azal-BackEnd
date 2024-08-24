@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Stripe.Tax;
 
 namespace Repository
 {
@@ -27,10 +28,8 @@ namespace Repository
             services.AddScoped<ISpecialOffersRepository, SpecialOffersRepository>();
             services.AddScoped<IPopularDirectionRepository, PopularDirectionRepository>();
             services.AddScoped<ISettingsRepository, SettingsRepository>();
-
-
-            return services;
-
-        }
+			services.AddScoped<IContactRepository, ContactRepository>();
+			return services;
+		}
     }
 }

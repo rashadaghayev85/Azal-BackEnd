@@ -60,7 +60,7 @@ namespace Azal.Controllers
             await _emailService.SendTicketAsync(email, "Biletin Təsdiqi", $"Bilet uğurla alınmışdır");
             // Sifariş təsdiq səhifəsinə yönləndirmək və ya istifadəçiyə mesaj göstərmək
             //return View("OrderConfirmation", ticket);
-            return View();
+            return Redirect("/home");
         }
         //public async Task<IActionResult> CheckOut(TicketCreateVM request)
         //{

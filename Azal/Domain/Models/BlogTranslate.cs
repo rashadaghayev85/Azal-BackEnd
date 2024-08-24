@@ -16,6 +16,7 @@ namespace Domain.Models
         public Language Language { get; set; }
 
         public string Name { get; set; }
+        public string Title { get; set; }
         public string Description { get; set; }
 
     }

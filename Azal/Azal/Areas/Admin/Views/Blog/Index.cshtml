@@ -17,7 +17,7 @@
                     <tr>
 
                         <th>Image</th>
-                        <th>Title</th>
+                        <th>Name</th>
                         <th>Language</th>
                         
 
@@ -57,6 +57,28 @@
                                 <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning text-white small">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
+                                    @if (item.IsActive == false)
+                                    {
+                                        <form class="d-inline" method="post" asp-action="IsActive" asp-route-id="@item.Id">
+
+                                            <button type="submit" class="btn btn-success text-white small">
+                                                <i class="fa-solid fa-check"></i>
+                                            </button>
+                                        </form>
+
+
+                                    }
+                                    @if (item.IsActive == true)
+                                    {
+                                        <form class="d-inline" method="post" asp-action="IsActive" asp-route-id="@item.Id">
+
+                                            <button type="submit" class="btn btn-success text-white small">
+                                                <i class="fa-solid fa-circle-minus"></i>
+                                            </button>
+                                        </form>
+
+
+                                    }
                                 <form class="d-inline" method="post" asp-action="Delete" asp-route-id="@item.Id">
 
                                     <button type="submit" class="btn btn-danger text-white small">
