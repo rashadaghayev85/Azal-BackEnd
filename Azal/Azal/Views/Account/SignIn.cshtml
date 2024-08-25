@@ -16,6 +16,7 @@
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     @* <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" /> *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -190,7 +191,7 @@
             <h2>Şəxsi kabinet</h2>
             <input asp-for="Email" type="text" placeholder="Email">
                 <span style="color:red" class="text-danger" asp-validation-for="Email"></span>
-                <input asp-for="Password" type="password" placeholder="Şifrə">
+                <input asp-for="Password" type="password" placeholder="Şifrə" class="psw">
                 <span style="color:red" class="text-danger" asp-validation-for="Password"></span>
             <a asp-action="forgotpassword" class="forgot-pass">Şifrənizi unutmusunuz?</a>
             <button >Daxil ol</button>
@@ -202,6 +203,7 @@
 
         </div>
         <script src="~/assets/js/script.js"></script>
+        <script src="https://kit.fontawesome.com/9cd2072b0c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

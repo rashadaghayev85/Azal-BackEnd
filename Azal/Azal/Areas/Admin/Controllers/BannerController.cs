@@ -5,6 +5,8 @@ using Service.Helpers.Extensions;
 using Domain.Models;
 using Service.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Service.Helpers;
 
 namespace Azal.Areas.Admin.Controllers
 {
@@ -21,12 +23,28 @@ namespace Azal.Areas.Admin.Controllers
             _bannerService = bannerService;
             _env = env;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page=1)
         
         
         {
-            var data = await _bannerService.GetAllAsync();
-            return View(data);
+            //var data = await _bannerService.GetAllAsync();
+            //return View(data);
+
+            var banner = await _bannerService.GetAllPaginateAsync(page, 4);
+
+            var mappedDatas =await _bannerService.GetMappedDatas(banner);
+            int totalPage = await GetPageCountAsync(4);
+
+            Paginate<Banner> paginateDatas = new(mappedDatas, totalPage, page);
+
+            return View(paginateDatas);
+        }
+
+        private async Task<int> GetPageCountAsync(int take)
+        {
+            int productCount = await _bannerService.GetCountAsync();
+
+            return (int)Math.Ceiling((decimal)productCount / take);
         }
         [HttpGet]
         public IActionResult Create()

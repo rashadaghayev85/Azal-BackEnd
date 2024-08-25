@@ -17,6 +17,8 @@ namespace Repository.Repositories
             
         }
 
+      
+
         public async Task<IEnumerable<PopularDirection>> GetAllWithIncludeAsync()
         {
             return _context.PopularDirections
@@ -32,5 +34,7 @@ namespace Repository.Repositories
                 .ThenInclude(bt => bt.Language)
                 .SingleOrDefault(b => b.Id == id);
         }
+
+       
     }
 }

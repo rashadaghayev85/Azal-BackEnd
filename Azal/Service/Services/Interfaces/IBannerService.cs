@@ -16,5 +16,8 @@ namespace Service.Services.Interfaces
         Task EditAsync(int id,BannerEditVM model);
         Task EditSaveAsync();
         Task DeleteAsync(int id);
+        Task<IEnumerable<Banner>> GetAllPaginateAsync(int page, int take);
+        Task<IEnumerable<Banner>> GetMappedDatas(IEnumerable<Banner> banners);
+        Task<int> GetCountAsync();
     }
 }

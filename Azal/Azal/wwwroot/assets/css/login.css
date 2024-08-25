@@ -86,3 +86,6 @@
         border: 2px solid #2C8DC7;
         border-radius: 8px;
     }
+    .psw {
+        position:relative;
+    }

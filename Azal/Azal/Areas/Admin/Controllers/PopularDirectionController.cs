@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Service.Helpers.Extensions;
 using Service.Services;
 using Service.Services.Interfaces;
@@ -35,7 +36,11 @@ namespace Azal.Areas.Admin.Controllers
         {
             var popularDirections = await _popularDirectionService.GetAllAsync();
             return View(popularDirections);
+
+         
         }
+
+
         [HttpGet]
         public async Task<IActionResult> Detail(int? id)
         {

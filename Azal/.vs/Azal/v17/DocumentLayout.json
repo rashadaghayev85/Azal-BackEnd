@@ -3,68 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\views\\account\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\views\\account\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\helpers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\azal\\areas\\admin\\views\\blog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\blog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\shared\\components\\adminheader\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\shared\\components\\adminheader\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\controllers\\languagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\controllers\\languagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\language\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\language\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\service\\viewmodels\\languages\\languageeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3DF52C2-6837-4ED4-9742-9D2A2B2583AF}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\languages\\languageeditvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\language\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\language\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\airport\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\airport\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\airport\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\airport\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\flight\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\flight\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\plane\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\plane\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\areas\\admin\\views\\plane\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\plane\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\azal\\areas\\admin\\views\\ticket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\areas\\admin\\views\\ticket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\wwwroot\\assets\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\wwwroot\\assets\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -79,209 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Azal\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACgAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:58:37.12Z",
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\login.css",
+              "RelativeDocumentMoniker": "Azal\\wwwroot\\assets\\css\\login.css",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\login.css",
+              "RelativeToolTip": "Azal\\wwwroot\\assets\\css\\login.css",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAFsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-25T19:41:26.164Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Shared\\Components\\Header\\Default.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Views\\Shared\\Components\\Header\\Default.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Shared\\Components\\Header\\Default.cshtml",
-              "RelativeToolTip": "Azal\\Views\\Shared\\Components\\Header\\Default.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAADwAAAAJAAAA",
+              "Title": "SignIn.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Account\\SignIn.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Views\\Account\\SignIn.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Account\\SignIn.cshtml",
+              "RelativeToolTip": "Azal\\Views\\Account\\SignIn.cshtml",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAAAMAAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:56:11.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Shared\\Components\\AdminHeader\\Default.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Shared\\Components\\AdminHeader\\Default.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Shared\\Components\\AdminHeader\\Default.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Shared\\Components\\AdminHeader\\Default.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:53:10.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Helpers\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Service\\Helpers\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\Helpers\\MappingProfile.cs",
-              "RelativeToolTip": "Service\\Helpers\\MappingProfile.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAqwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T18:46:44.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Language\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Language\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Language\\Edit.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Language\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:43:51.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LanguageEditVM.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Languages\\LanguageEditVM.cs",
-              "RelativeDocumentMoniker": "Service\\ViewModels\\Languages\\LanguageEditVM.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Service\\ViewModels\\Languages\\LanguageEditVM.cs",
-              "RelativeToolTip": "Service\\ViewModels\\Languages\\LanguageEditVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T18:43:31.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:42:48.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LanguageController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\LanguageController.cs",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Controllers\\LanguageController.cs",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Controllers\\LanguageController.cs",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Controllers\\LanguageController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwDoAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T18:40:29.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Language\\Index.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Language\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Language\\Index.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Language\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:39:39.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Airport\\Create.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Airport\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Airport\\Create.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Airport\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:38:24.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Airport\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Airport\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Airport\\Edit.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Airport\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:38:13.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Flight\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Flight\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Flight\\Edit.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Flight\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:35:47.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Plane\\Detail.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Plane\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Plane\\Detail.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Plane\\Detail.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:34:17.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Plane\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Plane\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Plane\\Edit.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Plane\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T18:34:00.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T14:41:15.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Ticket\\Index.cshtml",
-              "RelativeDocumentMoniker": "Azal\\Areas\\Admin\\Views\\Ticket\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Areas\\Admin\\Views\\Ticket\\Index.cshtml",
-              "RelativeToolTip": "Azal\\Areas\\Admin\\Views\\Ticket\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T11:21:00.145Z",
+              "WhenOpened": "2024-08-25T19:40:16.116Z",
               "EditorCaption": ""
             }
           ]

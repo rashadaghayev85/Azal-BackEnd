@@ -63,9 +63,24 @@ namespace Service.Services
             return _mapper.Map<IEnumerable<BannerVM>>(data);
         }
 
+        public async Task<IEnumerable<Banner>> GetAllPaginateAsync(int page, int take)
+        {
+            return await _bannerRepo.GetAllPaginateAsync(page, take);
+        }
+
         public async Task<Banner> GetByIdAsync(int? id)
         {
             return _mapper.Map<Banner>(await _bannerRepo.GetByIdAsync((int)id));
+        }
+
+        public async Task<int> GetCountAsync()
+        {
+            return await _bannerRepo.GetCountAsync();
+        }
+
+        public async Task<IEnumerable<Banner>> GetMappedDatas(IEnumerable<Banner> banners)
+        {
+           return await _bannerRepo.GetMappedDatas(banners);    
         }
     }
 }
