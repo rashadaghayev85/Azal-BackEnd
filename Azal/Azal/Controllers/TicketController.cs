@@ -202,10 +202,10 @@ namespace Azal.Controllers
                 {
                     return View(request);
                 }
-            
-         
 
-          
+
+            request.PassengerCount = count;
+
             return RedirectToAction("CheckOut", request);
              //request`-də bilet məlumatları formdan alınıb
 
@@ -245,8 +245,8 @@ namespace Azal.Controllers
             }
 
 
-
-           
+          
+           request.PassengerCount = count;
             return RedirectToAction("CheckOutBiznes", request);
             //request`-də bilet məlumatları formdan alınıb
 
@@ -261,14 +261,14 @@ namespace Azal.Controllers
 
         public async Task<IActionResult> CheckOut(TicketCreateVM request)
         {
-            
+           
             var flight = await _flightService.GetByIdAsync(request.Flight);
             //var datas = await _flightService.GetAllAsync();
             var domain = "https://localhost:7201/";
 
             var options = new SessionCreateOptions
             {
-                SuccessUrl = domain + $"payment/OrderConfirmation?flightId={request.Flight}&documentExpiryDate={request.DocumentExpiryDate}&documentNumber={request.DocumentNumber}&documentType={request.DocumentType}&name={request.Name}&surname={request.Surname}&fatherName={request.FatherName}& gender ={request.Gender}&dateOfBirth ={request.DateOfBirth}& documentExpiryDate ={request.DocumentExpiryDate}&phoneNumber ={request.PhoneNumber}&email={request.Email}",
+                SuccessUrl = domain + $"payment/OrderConfirmation?flightId={request.Flight}&documentExpiryDate={request.DocumentExpiryDate}&documentNumber={request.DocumentNumber}&documentType={request.DocumentType}&name={request.Name}&surname={request.Surname}&fatherName={request.FatherName}& gender ={request.Gender}&dateOfBirth ={request.DateOfBirth}& documentExpiryDate ={request.DocumentExpiryDate}&phoneNumber ={request.PhoneNumber}&email={request.Email}&count={request.PassengerCount}",
                 CancelUrl = domain + "home/index",
                 LineItems = new List<SessionLineItemOptions>(),
                 Mode = "payment",
@@ -287,7 +287,7 @@ namespace Azal.Controllers
                             Name = flight.FlightNumber.ToString(),
                         },
                     },
-                    Quantity = 1
+                    Quantity = request.PassengerCount
                 };
                 options.LineItems.Add(sessionListItem);
            // }
@@ -311,7 +311,7 @@ namespace Azal.Controllers
 
             var options = new SessionCreateOptions
             {
-                SuccessUrl = domain + $"payment/OrderConfirmation?flightId={request.Flight}&documentExpiryDate={request.DocumentExpiryDate}&documentNumber={request.DocumentNumber}&documentType={request.DocumentType}&name={request.Name}&surname={request.Surname}&fatherName={request.FatherName}& gender ={request.Gender}&dateOfBirth ={request.DateOfBirth}& documentExpiryDate ={request.DocumentExpiryDate}&phoneNumber ={request.PhoneNumber}&email={request.Email}",
+                SuccessUrl = domain + $"payment/OrderConfirmation?flightId={request.Flight}&documentExpiryDate={request.DocumentExpiryDate}&documentNumber={request.DocumentNumber}&documentType={request.DocumentType}&name={request.Name}&surname={request.Surname}&fatherName={request.FatherName}& gender ={request.Gender}&dateOfBirth ={request.DateOfBirth}& documentExpiryDate ={request.DocumentExpiryDate}&phoneNumber ={request.PhoneNumber}&email={request.Email}&count={request.PassengerCount}",
                 CancelUrl = domain + "payment/login",
                 LineItems = new List<SessionLineItemOptions>(),
                 Mode = "payment",
@@ -330,7 +330,7 @@ namespace Azal.Controllers
                         Name = flight.FlightNumber.ToString(),
                     },
                 },
-                Quantity = 1
+                Quantity = request.PassengerCount
             };
             options.LineItems.Add(sessionListItem);
             // }
@@ -343,5 +343,12 @@ namespace Azal.Controllers
             return new StatusCodeResult(303);
 
         }
+        [HttpGet]
+        public async Task<IActionResult> OrderConfirmation(int id, int count)
+        {
+            
+            return View();
+        }
+
     }
 }

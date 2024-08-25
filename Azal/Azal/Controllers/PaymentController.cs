@@ -35,7 +35,7 @@ namespace Azal.Controllers
             ModelState.AddModelError("", "Ödəniş uğursuz oldu. Yenidən cəhd edin.");
             return View("Purchase");
         }
-        public async Task<IActionResult> OrderConfirmation(int flightId,string documentExpiryDate,string gender,string documentNumber,string documentType,string email,string name,string surname,string fatherName,string phoneNumber,DateTime dateOfBirth)
+        public async Task<IActionResult> OrderConfirmation(int flightId,string documentExpiryDate,string gender,string documentNumber,string documentType,string email,string name,string surname,string fatherName,string phoneNumber,DateTime dateOfBirth,int count)
         {
             // request-i burada bərpa edə bilərsiniz, məsələn sessiondan və ya database-dən
             var ticket = new TicketCreateVM
@@ -55,12 +55,13 @@ namespace Azal.Controllers
                 // Digər məlumatları buraya əlavə edə bilərsiniz
             };
 
-            await _ticketService.CreateAsync(ticket);
+            await _ticketService.CreateAsync(ticket,count);
 
             await _emailService.SendTicketAsync(email, "Biletin Təsdiqi", $"Bilet uğurla alınmışdır");
             // Sifariş təsdiq səhifəsinə yönləndirmək və ya istifadəçiyə mesaj göstərmək
             //return View("OrderConfirmation", ticket);
-            return Redirect("/home");
+            return Redirect("/ticket/OrderConfirmation");
+            
         }
         //public async Task<IActionResult> CheckOut(TicketCreateVM request)
         //{

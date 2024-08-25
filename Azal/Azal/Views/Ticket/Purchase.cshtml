@@ -1,258 +1,317 @@
 ﻿@model TicketCreateVM
 
-@{
+@* @{
     Layout = null;
-}
+} *@
 
-<h1>Tickets</h1>
-
-<hr />
 
 
 
  @for (int i = 0; i < ViewBag.Count - 1; i++)
 {
+    <div class="container mx-auto w-[1160px] my-[32px]">
+        <h2 class="mb-[24px] text-[24px] leading-[32px] text-[#2E3034]">Sərnişin məlumatlarını doldurun</h2>
+        <div class="flex flex-col gap-y-[16px] ">
+            <div class="rounded-[8px] border border-gray-300 overflow-hidden bg-white">
+                <div class="ticketHead px-[30px] py-[24px] flex w-full bg-[#01357E] gap-[15px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 18 18" class="text-white"><path d="M9 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 11c-3.004 0-9 1.508-9 4.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1.5c0-2.992-5.996-4.5-9-4.5Z"></path></svg>
+                    <span class="text-white">Sərnişin</span>
+                </div>
+
+                <form asp-action="Purchase" class="p-[32px]">
+                    <input type="hidden" name="Flight" value="@ViewBag.FlightId" />
+                    <div class="grid grid-cols-4 gap-x-[50px] gap-y-[24px] justify-between pb-[40px] border-b-2 border-[#DBE0E4]">
+                        <div>
+                            <label asp-for="Name" class="flex flex-col justify-center">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Ad (Latin hərfləri ilə) *</span>
+                                <input asp-for="Name" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                                <span asp-validation-for="Name" class="text-red-500"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <label asp-for="Surname" class="flex flex-col justify-center">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Soyad (Latin hərfləri ilə) *</span>
+                                <input asp-for="Surname" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                                <span asp-validation-for="Surname" class="text-red-500"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <label asp-for="FatherName" class="flex flex-col justify-center">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Ata adı (Latin hərfləri ilə) </span>
+                                <input asp-for="FatherName" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                                <span asp-validation-for="FatherName" class="text-red-500"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <label asp-for="DateOfBirth" class="flex flex-col justify-center">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Doğulduğu tarix *</span>
+                                <input asp-for="DateOfBirth" type="date" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                                <span asp-validation-for="DateOfBirth" class="text-red-500"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mt-[40px]">
+                        <h2 class="mb-[24px] text-[24px] leading-[32px] text-[#2E3034]">Sənəd barədə məlumatlar</h2>
+                        <div class="grid grid-cols-4 gap-[45px] justify-between">
+                            <div>
+                                <label asp-for="DocumentType" class="flex flex-col justify-center">
+                                    <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Sənəd növü *</span>
+                                    <select asp-for="DocumentType" id="" class="mt-[8px] outline-none border border-[#DBE0E4] p-[10px]">
+                                        <option value="">seçilməyib</option>
+                                        <option value="">pasport</option>
+                                        <option class="text-ellipsis text-clip-1" value="">şəxsiyyət vəsiqəsi</option>
+                                    </select>
+                                    <span asp-validation-for="DocumentType" class="text-red-500"></span>
+                                </label>
+                            </div>
+                            <div>
+                                <label asp-for="DocumentNumber" class="flex flex-col justify-center">
+                                    <span class=" text-[13px] leading-[20px] text-[#6E7583]">Sənəd nömrəsi* </span>
+                                    <input asp-for="DocumentNumber" type="text" class="mt-[12px] max-w-[160px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                                    <span asp-validation-for="DocumentNumber" class="text-red-500"></span>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="">
+                                    <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Sənədi verən ölkənin adı *</span>
+                                    <select name="" id="" class="mt-[8px] outline-none border border-[#DBE0E4] p-[10px]">
+                                        <option value="" class="flex items-center gap-[5px]" style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/1200px-Flag_of_Azerbaijan.svg.png);">
+                                            <span>Azərbaycan</span>
+                                        </option>
+                                        <option value="" class="flex items-center gap-[5px]" style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/1200px-Flag_of_Azerbaijan.svg.png);">
+                                            <span>Digər ölkə vətəndaşı</span>
+                                        </option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-x-[50px] gap-y-[24px] justify-between pb-[40px] border-b-2 border-[#DBE0E4] mt-5">
+
+                        <div>
+                            <label asp-for="Gender" class="flex flex-col justify-center">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Cins </span>
+                                <div class="flex items-center mt-[8px]">
+                                    <div class="mr-4">
+                                        <input asp-for="Gender" type="radio" id="male" name="gender" value="male" class="hidden">
+                                        <label for="male" class="inline-flex items-center justify-center p-[10px] size-[48px] text-[15px] border border-[#DBE0E4] rounded-[8px] cursor-pointer [&.active]:border-[#0077B6] [&.active]:text-[#0077B6] radio-label">
+                                            <span class="block border-2 border-transparent px-2 py-1 rounded-full transition-colors radio-span ">
+                                                K
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="female" name="gender" value="female" class="hidden">
+                                        <label for="female" class="inline-flex items-center justify-center p-[10px] size-[48px] text-[15px] border border-[#DBE0E4] rounded-[8px] cursor-pointer radio-label [&.active]:border-[#0077B6] [&.active]:text-[#0077B6]">
+                                            <span class="block border-2 border-transparent px-2 py-1 rounded-full transition-colors radio-span ">
+                                                Q
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <label asp-for="DocumentExpiryDate" class="flex flex-col justify-center">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Sənədin etibarlılıq müddəti*  </span>
+                                <input asp-for="DocumentExpiryDate" type="date" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                                <span asp-validation-for="DocumentNumber" class="text-red-500"></span>
+                            </label>
+                        </div>
+                    </div>
 
 
 
-    <input type="hidden" name="Flight" value="@ViewBag.FlightId" />
+                    <div class="ticketHead px-[30px] py-[24px] flex w-full bg-[#01357E] gap-[15px] mt-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 18 18" class="text-white"><path d="M9 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 11c-3.004 0-9 1.508-9 4.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1.5c0-2.992-5.996-4.5-9-4.5Z"></path></svg>
+                        <span class="text-white">Əlaqə məlumatları</span>
+                    </div>
+                    <div class="grid grid-cols-4 gap-x-[50px] gap-y-[24px] justify-between pb-[40px] border-b-2 border-[#DBE0E4] mt-5">
+                        <div>
+                            <label asp-for="PhoneNumber" class="flex flex-col justify-center">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Telefon Nömrəsi*</span>
+                                <input asp-for="PhoneNumber" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                                <span asp-validation-for="PhoneNumber" class="text-red-500"></span>
+                            </label>
+                        </div>
+                        <div class="ml-5">
+                            <label asp-for="Email" class="flex flex-col justify-center">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Email*</span>
+                                <input asp-for="Email" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                                <span asp-validation-for="PhoneNumber" class="text-red-500"></span>
+                            </label>
+                        </div>
 
-    <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
-        <input asp-for="Name" class="form-control"  />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Surname" class="control-label"></label>
-        <input asp-for="Surname" class="form-control" />
-        <span asp-validation-for="Surname" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="FatherName" class="control-label"></label>
-        <input asp-for="FatherName" class="form-control" />
-        <span asp-validation-for="FatherName" class="text-danger"></span>
-    </div>
-
-    <div class="form-group mt-5">
-        <label asp-for="Gender" class="control-label mx-3"></label>
-        <input type="radio" asp-for="Gender" value="Male" />
-        Male
-        <input type="radio" asp-for="Gender" value="Female" />
-        Female
-        <span asp-validation-for="Gender" class="text-danger"></span>
-    </div>
-
-    <div class="form-group mt-5">
-        <label asp-for="DateOfBirth" class="control-label"></label>
-        <input type="date" asp-for="DateOfBirth" class="form-control" />
-        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-    </div>
-
-    <div class="form-group mt-5">
-        <label asp-for="DocumentType" class="control-label"></label>
-        <select asp-for="DocumentType" class="form-control" asp-items="@(new SelectList(new List<string> { "-Choose option-", "Passport", "Identity Card" }))"></select>
-        <span asp-validation-for="DocumentType" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="DocumentNumber" class="control-label"></label>
-        <input asp-for="DocumentNumber" class="form-control" />
-        <span asp-validation-for="DocumentNumber" class="text-danger"></span>
-    </div>
-
-    <div class="form-group mt-5">
-        <label asp-for="DocumentExpiryDate" class="control-label"></label>
-        <input type="date" asp-for="DocumentExpiryDate" class="form-control" />
-        <span asp-validation-for="DocumentExpiryDate" class="text-danger"></span>
-    </div>
-
-            <div class="form-group">
-                    <label asp-for="PhoneNumber" class="control-label"></label>
-                    <input asp-for="PhoneNumber" class="form-control" />
-                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                 @*    <button class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" type="submit">
+                        Ödənişə keç
+                    </button> *@
+                </form>
             </div>
+        </div>
+    </div>
 
-            <div class="form-group">
-                    <label asp-for="Email" class="control-label"></label>
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-            </div> 
+
 
 }
 
- <div class="col-md-4 ">
-    <form asp-action="Purchase" method="post">
-        @Html.AntiForgeryToken()
-        <input type="hidden" name="Flight" value="@ViewBag.FlightId" />
-
-        <input type="hidden" name="Flight" value="@ViewBag.FlightId" />
-
-        <div class="form-group">
-            <label asp-for="Name" class="control-label"></label>
-            <input asp-for="Name" class="form-control" />
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Surname" class="control-label"></label>
-            <input asp-for="Surname" class="form-control" />
-            <span asp-validation-for="Surname" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="FatherName" class="control-label"></label>
-            <input asp-for="FatherName" class="form-control" />
-            <span asp-validation-for="FatherName" class="text-danger"></span>
-        </div>
-
-        <div class="form-group mt-5">
-            <label asp-for="Gender" class="control-label mx-3"></label>
-            <input type="radio" asp-for="Gender" value="Male" />
-            Male
-            <input type="radio" asp-for="Gender" value="Female" />
-            Female
-            <span asp-validation-for="Gender" class="text-danger"></span>
-        </div>
-
-        <div class="form-group mt-5">
-            <label asp-for="DateOfBirth" class="control-label"></label>
-            <input type="date" asp-for="DateOfBirth" class="form-control" />
-            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-        </div>
-
-        <div class="form-group mt-5">
-            <label asp-for="DocumentType" class="control-label"></label>
-            <select asp-for="DocumentType" class="form-control" asp-items="@(new SelectList(new List<string> { "-Choose option-", "Passport", "Identity Card" }))"></select>
-            <span asp-validation-for="DocumentType" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="DocumentNumber" class="control-label"></label>
-            <input asp-for="DocumentNumber" class="form-control" />
-            <span asp-validation-for="DocumentNumber" class="text-danger"></span>
-        </div>
-
-        <div class="form-group mt-5">
-            <label asp-for="DocumentExpiryDate" class="control-label"></label>
-            <input type="date" asp-for="DocumentExpiryDate" class="form-control" />
-            <span asp-validation-for="DocumentExpiryDate" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="PhoneNumber" class="control-label"></label>
-            <input asp-for="PhoneNumber" class="form-control" />
-            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Email" class="control-label"></label>
-            <input asp-for="Email" class="form-control" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-
-        <div class="form-group mt-5">
-            <input asp-route-count="@ViewBag.Count" type="submit" value="Create" class="btn btn-primary" />
-        </div>
-    </form>
-</div>
-
-<div>
-    <a asp-controller="home" asp-action="Index">Back to List</a>
-</div> 
-
-
-@* <div class="col-md-4">
-    <form asp-action="Purchase" method="post">
-        @Html.AntiForgeryToken()
-        <input type="hidden" name="Flight" value="@ViewBag.FlightId" />
-
-        @for (int i = 0; i < ViewBag.Count; i++)
-        {
-            <div class="mt-5">
-
-                <input type="hidden" name="[@i].Flight" value="@ViewBag.FlightId" />
-
-                <div class="form-group">
-                  <label  class="control-label">Name</label>
-                  
-                  <input asp-for="[@i].Name" type="text" class="form-control" />
-                    <span asp-validation-for="[@i].Name" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="[@i].Surname" class="control-label"></label>
-                    <input asp-for="[@i].Surname" class="form-control" />
-                    <span asp-validation-for="[@i].Surname" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="[@i].FatherName" class="control-label"></label>
-                    <input asp-for="[@i].FatherName" class="form-control" />
-                    <span asp-validation-for="[@i].FatherName" class="text-danger"></span>
-                </div>
-
-                <div class="form-group mt-5">
-                    <label asp-for="[@i].Gender" class="control-label mx-3"></label>
-                    <input type="radio" name="[@i].Gender" value="Male" /> Male
-                    <input type="radio" name="[@i].Gender" value="Female" /> Female
-                    <span asp-validation-for="[@i].Gender" class="text-danger"></span>
-                </div>
-
-                <div class="form-group mt-5">
-                    <label asp-for="[@i].DateOfBirth" class="control-label"></label>
-                    <input type="date" asp-for="[@i].DateOfBirth" class="form-control" />
-                    <span asp-validation-for="[@i].DateOfBirth" class="text-danger"></span>
-                </div>
-
-                <div class="form-group mt-5">
-                    <label asp-for="[@i].DocumentType" class="control-label"></label>
-                    <select asp-for="[@i].DocumentType" class="form-control" asp-items="@(new SelectList(new List<string> { "-Choose option-", "Passport", "Identity Card" }))"></select>
-                    <span asp-validation-for="[@i].DocumentType" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="[@i].DocumentNumber" class="control-label"></label>
-                    <input asp-for="[@i].DocumentNumber" class="form-control" />
-                    <span asp-validation-for="[@i].DocumentNumber" class="text-danger"></span>
-                </div>
-
-                <div class="form-group mt-5">
-                    <label asp-for="[@i].DocumentExpiryDate" class="control-label"></label>
-                    <input type="date" asp-for="[@i].DocumentExpiryDate" class="form-control" />
-                    <span asp-validation-for="[@i].DocumentExpiryDate" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="[@i].PhoneNumber" class="control-label"></label>
-                    <input asp-for="[@i].PhoneNumber" class="form-control" />
-                    <span asp-validation-for="[@i].PhoneNumber" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="[@i].Email" class="control-label"></label>
-                    <input asp-for="[@i].Email" class="form-control" />
-                    <span asp-validation-for="[@i].Email" class="text-danger"></span>
-                </div>
-            </div>
-        }
-
-        <div class="form-group mt-5">
-            <input type="submit" value="Create" class="btn btn-primary" />
-        </div>
-    </form>
-</div>
  
-<div>
-    <a asp-controller="home" asp-action="Index">Back to List</a>
+ 
+
+
+<div class="container mx-auto w-[1160px] my-[32px]">
+    <h2 class="mb-[24px] text-[24px] leading-[32px] text-[#2E3034]">Sərnişin məlumatlarını doldurun</h2>
+    <div class="flex flex-col gap-y-[16px] ">
+        <div class="rounded-[8px] border border-gray-300 overflow-hidden bg-white">
+            <div class="ticketHead px-[30px] py-[24px] flex w-full bg-[#01357E] gap-[15px]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 18 18" class="text-white"><path d="M9 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 11c-3.004 0-9 1.508-9 4.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1.5c0-2.992-5.996-4.5-9-4.5Z"></path></svg>
+                <span class="text-white">Sərnişin</span>
+            </div>
+
+            <form asp-action="Purchase" class="p-[32px]">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="Flight" value="@ViewBag.FlightId" />
+                <div class="grid grid-cols-4 gap-x-[50px] gap-y-[24px] justify-between pb-[40px] border-b-2 border-[#DBE0E4]">
+                    <div>
+                        <label asp-for="Name" class="flex flex-col justify-center">
+                            <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Ad (Latin hərfləri ilə) *</span>
+                            <input asp-for="Name" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                            <span asp-validation-for="Name" class="text-red-500"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label asp-for="Surname" class="flex flex-col justify-center">
+                            <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Soyad (Latin hərfləri ilə) *</span>
+                            <input asp-for="Surname" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                            <span asp-validation-for="Surname" class="text-red-500"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label asp-for="FatherName" class="flex flex-col justify-center">
+                            <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Ata adı (Latin hərfləri ilə) </span>
+                            <input asp-for="FatherName" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                            <span asp-validation-for="FatherName" class="text-red-500"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label asp-for="DateOfBirth" class="flex flex-col justify-center">
+                            <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Doğulduğu tarix *</span>
+                            <input asp-for="DateOfBirth" type="date" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                            <span asp-validation-for="DateOfBirth" class="text-red-500"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mt-[40px]">
+                    <h2 class="mb-[24px] text-[24px] leading-[32px] text-[#2E3034]">Sənəd barədə məlumatlar</h2>
+                    <div class="grid grid-cols-4 gap-[45px] justify-between">
+                        <div>
+                            <label asp-for="DocumentType" class="flex flex-col justify-center">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Sənəd növü </span>
+                                <select asp-for="DocumentType" id="" class="mt-[8px] outline-none border border-[#DBE0E4] p-[10px]">
+                                    <option value="">seçilməyib</option>
+                                    <option value="">pasport</option>
+                                    <option class="text-ellipsis text-clip-1" value="">şəxsiyyət vəsiqəsi</option>
+                                </select>
+                                <span asp-validation-for="DocumentType" class="text-red-500"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <label asp-for="DocumentNumber" class="flex flex-col justify-center">
+                                <span class=" text-[13px] leading-[20px] text-[#6E7583]">Sənəd nömrəsi* </span>
+                                <input asp-for="DocumentNumber" type="text" class="mt-[12px] max-w-[160px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                                <span asp-validation-for="DocumentNumber" class="text-red-500"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="">
+                                <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Sənədi verən ölkənin adı *</span>
+                                <select name="" id="" class="mt-[8px] outline-none border border-[#DBE0E4] p-[10px]">
+                                    <option value="" class="flex items-center gap-[5px]" style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/1200px-Flag_of_Azerbaijan.svg.png);">
+                                        <span>Azərbaycan</span>
+                                    </option>
+                                    <option value="" class="flex items-center gap-[5px]" style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/1200px-Flag_of_Azerbaijan.svg.png);">
+                                        <span>Digər ölkə vətəndaşı</span>
+                                    </option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 gap-x-[50px] gap-y-[24px] justify-between pb-[40px] border-b-2 border-[#DBE0E4] mt-5">
+                
+                    <div>
+                        <label asp-for="Gender" class="flex flex-col justify-center">
+                            <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Cins </span>
+                            <div class="flex items-center mt-[8px]">
+                                <div class="mr-4">
+                                    <input asp-for="Gender" type="radio" id="male" name="gender" value="male" class="hidden">
+                                    <label for="male" class="inline-flex items-center justify-center p-[10px] size-[48px] text-[15px] border border-[#DBE0E4] rounded-[8px] cursor-pointer [&.active]:border-[#0077B6] [&.active]:text-[#0077B6] radio-label">
+                                        <span class="block border-2 border-transparent px-2 py-1 rounded-full transition-colors radio-span ">
+                                            K
+                                        </span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="female" name="gender" value="female" class="hidden">
+                                    <label for="female" class="inline-flex items-center justify-center p-[10px] size-[48px] text-[15px] border border-[#DBE0E4] rounded-[8px] cursor-pointer radio-label [&.active]:border-[#0077B6] [&.active]:text-[#0077B6]">
+                                        <span class="block border-2 border-transparent px-2 py-1 rounded-full transition-colors radio-span ">
+                                            Q
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <label asp-for="DocumentExpiryDate" class="flex flex-col justify-center">
+                            <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Sənədin etibarlılıq müddəti*  </span>
+                            <input asp-for="DocumentExpiryDate" type="date" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                            <span asp-validation-for="DocumentNumber" class="text-red-500"></span>
+                        </label>
+                    </div>
+                </div>
+
+
+
+                <div class="ticketHead px-[30px] py-[24px] flex w-full bg-[#01357E] gap-[15px] mt-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 18 18" class="text-white"><path d="M9 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 11c-3.004 0-9 1.508-9 4.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1.5c0-2.992-5.996-4.5-9-4.5Z"></path></svg>
+                    <span class="text-white">Əlaqə məlumatları</span>
+                </div>
+                <div class="grid grid-cols-4 gap-x-[50px] gap-y-[24px] justify-between pb-[40px] border-b-2 border-[#DBE0E4] mt-5">
+                    <div>
+                        <label asp-for="PhoneNumber" class="flex flex-col justify-center">
+                            <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Telefon Nömrəsi*</span>
+                            <input asp-for="PhoneNumber" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                            <span asp-validation-for="PhoneNumber" class="text-red-500"></span>
+                        </label>
+                    </div>
+                    <div class="ml-5">
+                        <label asp-for="Email" class="flex flex-col justify-center">
+                            <span class="mb-[8px] text-[13px] leading-[20px] text-[#6E7583]">Email*</span>
+                            <input asp-for="Email" type="text" class="mt-[8px] border border-[#DBE0E4] bg-transparent text-[15px] font-semibold rounded-[8px] outline-none p-[11px_16px] focus:border-[#01357E] focus:transition-all">
+                            <span asp-validation-for="PhoneNumber" class="text-red-500"></span>
+                        </label>
+                    </div>
+                  
+                </div>
+                <button asp-route-count="@ViewBag.Count" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" type="submit">
+                    Ödənişə keç
+                </button>
+            </form>
+        </div>
+    </div>
 </div>
- *@
 
 
+<script>
+    const options = document.querySelectorAll('input[name="gender"]');
+    const spans = document.querySelectorAll('.radio-label');
 
-
-
-
-
-
+    options.forEach((option, index) => {
+        option.addEventListener('change', () => {
+            spans.forEach(s => s.classList.remove('active'));
+            spans[index].classList.add('active');
+        });
+    });
+   
+</script>

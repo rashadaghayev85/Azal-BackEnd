@@ -56,7 +56,7 @@ namespace Azal.Areas.Admin.Controllers
             {
                 return View();
             }
-            await _ticketService.CreateAsync(request);
+            await _ticketService.CreateAsync(request,1);
           
 
 

@@ -14,7 +14,7 @@ namespace Service.Services.Interfaces
     {
         Task<Ticket> GetByIdAsync(int id);
         Task<IEnumerable<TicketVM>> GetAllAsync();
-        Task CreateAsync(TicketCreateVM model);
+        Task CreateAsync(TicketCreateVM model,int count);
        /// Task EditAsync(int id, PlaneEditVM model);
        // Task DeleteAsync(int id);
        // Task EditSaveAsync();

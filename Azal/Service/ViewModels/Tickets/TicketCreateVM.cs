@@ -14,9 +14,9 @@ namespace Service.ViewModels.Tickets
         public string Name { get; set; }
         public string Surname { get; set; }
         public string? FatherName { get; set; }
-        public string Gender { get; set; }
+        public string? Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string DocumentType { get; set; }
+        public string? DocumentType { get; set; }
         public string DocumentNumber { get; set; }
         public string DocumentExpiryDate { get; set; }
         public string PhoneNumber { get; set; }
@@ -25,5 +25,6 @@ namespace Service.ViewModels.Tickets
         public string Email { get; set; }
         [Required(ErrorMessage = "Flight can't be empty")]
         public int Flight { get; set; }
+        public int PassengerCount { get; set; }
     }
 }

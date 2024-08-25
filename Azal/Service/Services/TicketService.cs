@@ -26,7 +26,7 @@ namespace Service.Services
             _flightRepository = flightRepository;
         }
 
-        public async Task CreateAsync(TicketCreateVM model)
+        public async Task CreateAsync(TicketCreateVM model,int count)
         {
             if (model == null) throw new ArgumentNullException();
             var flight =await  _flightRepository.GetByIdAsync(model.Flight);
@@ -38,7 +38,7 @@ namespace Service.Services
                 model.TicketNumber = uniqueCode;
                 model.ReservationNumber = randomWord;
             await _ticketRepo.CreateAsync(_mapper.Map<Ticket>(model));
-            flight.TicketCount--;
+            flight.TicketCount-=count;
             await _flightRepository.EditSaveAsync();
                 return;
             }
