@@ -21,11 +21,15 @@ namespace Service.Helpers.Extensions
         }
         public static void DeleteFileFromLocal(this string path)
         {
-            var file = File.Exists(path);
-            if (!file)
+            if (File.Exists(path))
             {
                 File.Delete(path);
             }
+            //var file = File.Exists(path);
+            //if (!file)
+            //{
+            //    File.Delete(path);
+            //}
         }
         public static string GenerateFilePath(this IWebHostEnvironment _env, string folder, string fileName)
         {

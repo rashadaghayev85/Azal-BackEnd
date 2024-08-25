@@ -37,7 +37,8 @@ builder.Services.Configure<IdentityOptions>(opt =>
 
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-       options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+       
+options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 
 

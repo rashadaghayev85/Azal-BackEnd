@@ -5,14 +5,15 @@
 <main style="margin-top: 70px; margin-left:60px;">
     <div class="container mt-5">
         <h2 class="text-center">Users</h2>
-
+  @if (User.IsInRole("SuperAdmin"))
+                        {
         <a asp-controller="User" asp-action="Addrole" class="btn btn-success">
             Add Role
         </a>
         <a asp-controller="User" asp-action="RemoveRole" class="btn btn-danger">
             Remove Role
         </a>
-
+                        }
         <div class="table-responsive">
             <table class="table">
                 <thead>
