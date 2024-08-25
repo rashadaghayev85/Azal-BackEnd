@@ -15,8 +15,8 @@ namespace Service.ViewModels.PopularDirections
         public string? Image { get; set; }
         public string? City { get; set; }
         public string? Country { get; set; }
-        public int Price_azn { get; set; }
-        public int Price_usd { get; set; }
+        public int PriceEconom { get; set; }
+        public int PriceBiznes { get; set; }
         public string Culture { get; set; }
     }
 }

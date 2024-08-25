@@ -17,8 +17,8 @@
                         <th>Image</th>
                         <th>City</th>
                         <th>Country</th>
-                        <th>Price(AZN)</th>
-                        <th>Price(USD)</th>
+                        <th>Price(Econom)</th>
+                        <th>Price(Biznes)</th>
                         <th>Created Date</th>
                         <th>Language</th>
                         <th>LangCode</th>
@@ -42,10 +42,10 @@
 
                         <td>@Model.PopularDirectionTranslate.Country</td>
                         <td>
-                            @Model.Price_azn
+                            @Model.PriceEconom
                         </td>
                         <td>
-                            @Model.Price_usd
+                            @Model.PriceBiznes
                         </td>
                         <td>
                             @Model.PopularDirectionTranslate.CreatedDate.ToString("dd/mmmm/yyyy")

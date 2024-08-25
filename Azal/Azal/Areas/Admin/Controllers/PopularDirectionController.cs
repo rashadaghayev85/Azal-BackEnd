@@ -171,13 +171,13 @@ namespace Azal.Areas.Admin.Controllers
                 {
                     popularDirection.PopularDirectionTranslates.FirstOrDefault().Country = request.Country;
                 }
-                if (request.Price_azn !=0)
+                if (request.PriceEconom !=0)
                 {
-                    popularDirection.Price_azn = request.Price_azn;
+                    popularDirection.PriceEconom = request.PriceEconom;
                 }
-                if (request.Price_usd != 0)
+                if (request.PriceBiznes != 0)
                 {
-                    popularDirection.Price_usd = request.Price_usd;
+                    popularDirection.PriceBiznes = request.PriceBiznes;
                 }
                 await _popularDirectionService.EditSaveAsync();
 
@@ -214,13 +214,13 @@ namespace Azal.Areas.Admin.Controllers
                 {
                     popularDirection.PopularDirectionTranslates.FirstOrDefault().City = request.City;
                 }
-                if (request.Price_azn != 0)
+                if (request.PriceEconom != 0)
                 {
-                    popularDirection.Price_azn = request.Price_azn;
+                    popularDirection.PriceEconom = request.PriceEconom;
                 }
-                if (request.Price_usd != 0)
+                if (request.PriceBiznes != 0)
                 {
-                    popularDirection.Price_usd = request.Price_usd;
+                    popularDirection.PriceBiznes = request.PriceBiznes;
                 }
                 await _popularDirectionService.EditSaveAsync();
                 return RedirectToAction(nameof(Index));

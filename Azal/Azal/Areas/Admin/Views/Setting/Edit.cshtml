@@ -7,38 +7,9 @@
 
     <h4>Setting</h4>
     <hr />
-      
-    @if (Model.Value.Contains(".svg") || Model.Value.Contains(".png") || Model.Value.Contains(".jpg") || Model.Value.Contains(".jpeg"))
-        {
-           <h3>Old Image</h3>     
-        <div>
-            <img style = "witdh:100px;height:200px;" src = "~/assets/img/@Model.Value" />
-        </div>
-        <div class="row">
-        <div class="col-md-12">
-            <form asp-action="Edit" enctype="multipart/form-data">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="Id" />
-               
-                <div class="form-group">
-                    <label asp-for="Image" class="control-label"></label>
-                    <input type="file" asp-for="Image" class="form-control" />
-                    <span asp-validation-for="Image" class="text-danger"></span>
-                </div>
-              
-                <div class="form-group mt-5">
-                    <input type="submit" value="Save" class="btn btn-primary mx-5" />
-                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-                </div>
-            </form>
-
-        </div>
-        </div>
-
-
-    }
-    else
+    @if (Model == null)
     {
+         
         <div class="row">
             <div class="col-md-12">
                 <form asp-action="Edit" enctype="multipart/form-data">
@@ -47,7 +18,7 @@
 
                     <div class="form-group">
                         <label asp-for="Value" class="control-label"></label>
-                        <input  asp-for="Value" class="form-control" />
+                        <input asp-for="Value" class="form-control" />
                         <span asp-validation-for="Value" class="text-danger"></span>
                     </div>
 
@@ -60,7 +31,64 @@
             </div>
         </div>
     }
+    else
+    {
+        @if (Model.Value.Contains(".svg") || Model.Value.Contains(".png") || Model.Value.Contains(".jpg") || Model.Value.Contains(".jpeg"))
+        {
 
+            <h3>Old Image</h3>
+            <div>
+                <img style="witdh:100px;height:200px;" src="~/assets/img/@Model.Value" />
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-action="Edit" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="form-group">
+                            <label asp-for="Image" class="control-label"></label>
+                            <input type="file" asp-for="Image" class="form-control" />
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-5">
+                            <input type="submit" value="Save" class="btn btn-primary mx-5" />
+                            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-action="Edit" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="form-group">
+                            <label asp-for="Value" class="control-label"></label>
+                            <input asp-for="Value" class="form-control" />
+                            <span asp-validation-for="Value" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-5">
+                            <input type="submit" value="Save" class="btn btn-primary mx-5" />
+                            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        }
+
+    }
+   
 
 
 

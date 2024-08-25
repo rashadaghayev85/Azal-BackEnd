@@ -47,8 +47,8 @@ namespace Service.Services
             };
 
             popularDirection.Image = model.Image.FileName;
-           popularDirection.Price_usd = model.Price_usd;
-            popularDirection.Price_azn=model.Price_azn;
+           popularDirection.PriceBiznes = model.PriceBiznes;
+            popularDirection.PriceEconom=model.PriceEconom;
 
             await _popularDirectionRepo.CreateAsync(_mapper.Map<PopularDirection>(popularDirection));
 
@@ -74,8 +74,8 @@ namespace Service.Services
                 popularDirectionTranslation.City = model.City;
                 popularDirectionTranslation.Country = model.Country;
                
-            popularDirection.Price_azn = model.Price_azn;
-            popularDirection.Price_usd = model.Price_usd;
+            popularDirection.PriceEconom = model.PriceEconom;
+            popularDirection.PriceBiznes = model.PriceBiznes;
                 await _popularDirectionRepo.EditAsync(popularDirection);
             }
 

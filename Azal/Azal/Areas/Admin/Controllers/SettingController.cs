@@ -52,7 +52,14 @@ namespace Azal.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, SettingEditVM updatedSetting)
         {
+            if (updatedSetting.Id!=1)
+            {
 
+            if (updatedSetting.Value is null)
+            {
+                return View();
+            }
+            }
             if (id == null) return BadRequest();
             Setting dbSetting = await _settingService.GetByIdAsync((int)id);
             if (dbSetting is null) return NotFound();

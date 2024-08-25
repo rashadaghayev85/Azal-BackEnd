@@ -17,17 +17,17 @@
             <form asp-controller="account" asp-action="Logout">
 
             <button  class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px]inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
-                <span class="text-[14px]">Valyuta</span>
+                <span class="text-[14px]">LogOut</span>
             <i class="fa-solid fa-angle-down"></i>
         </button>
             </form>
         }
         else
         {
-            <button class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px]inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
+        @*     <button class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px]inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
                 <span class="text-[14px]">Valyuta</span>
                 <i class="fa-solid fa-angle-down"></i>
-            </button>
+            </button> *@
         }
         <button class=" text-white p-[12px] rounded-[12px] bg-[#ffffff1a] h-[48px] inline-flex items-center gap-[8px] transition-all duration-200 hover:bg-[#40b7de] ">
             <img src="~/assets/img/globe.svg" class="size-[20px]" alt="">
@@ -49,12 +49,14 @@
             </button>
 
         }
-       
-        <button class="p-[12px] rounded-[12px] bg-[#ffffff1a] size-[48px] flex flex-col justify-between transition-all duration-200 hover:bg-[#40b7de] ">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a asp-area="admin" asp-controller="banner" asp-action="index" class="p-[12px] rounded-[12px] bg-[#ffffff1a] size-[48px] flex flex-col justify-between transition-all duration-200 hover:bg-[#40b7de] ">
+                <div class="w-[24px] h-[2px] bg-white"></div>
             <div class="w-[24px] h-[2px] bg-white"></div>
             <div class="w-[24px] h-[2px] bg-white"></div>
-            <div class="w-[24px] h-[2px] bg-white"></div>
-        </button>
+        </a>
+        }
     </div>
 </header>
 

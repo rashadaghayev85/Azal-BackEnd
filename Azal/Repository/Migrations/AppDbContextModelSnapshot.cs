@@ -423,10 +423,10 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Price_azn")
+                    b.Property<int>("PriceBiznes")
                         .HasColumnType("int");
 
-                    b.Property<int>("Price_usd")
+                    b.Property<int>("PriceEconom")
                         .HasColumnType("int");
 
                     b.Property<bool>("SoftDelete")

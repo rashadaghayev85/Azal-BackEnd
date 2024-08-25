@@ -1,7 +1,9 @@
-﻿using Domain.Models;
+﻿using AutoMapper;
+using Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services.Interfaces;
+using Service.ViewModels.Flights;
 using Service.ViewModels.Languages;
 
 namespace Azal.Areas.Admin.Controllers
@@ -11,10 +13,13 @@ namespace Azal.Areas.Admin.Controllers
     public class LanguageController : Controller
     {
         private readonly ILanguageService _languageService;
+        private readonly IMapper _mapper;
 
-        public LanguageController(ILanguageService languageService)
+        public LanguageController(ILanguageService languageService,
+                                  IMapper mapper)
         {
             _languageService = languageService;
+            _mapper = mapper;
         }
 
         public async Task<IActionResult> Index()
@@ -47,7 +52,8 @@ namespace Azal.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            return View(language);
+            var data = _mapper.Map<LanguageEditVM>(language);
+            return View(data);
         }
 
         [HttpPost]

@@ -8,6 +8,7 @@ namespace Service.ViewModels.Languages
 {
     public class LanguageEditVM
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Culture { get; set; }
     }

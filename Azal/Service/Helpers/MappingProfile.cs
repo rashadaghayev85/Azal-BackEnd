@@ -34,11 +34,13 @@ namespace Service.Helpers
             CreateMap<Language, LanguageVM>();
             CreateMap<LanguageCreateVM, Language>();
             CreateMap<LanguageEditVM, Language>();
+            CreateMap<LanguageVM,LanguageEditVM>();
 
             CreateMap<Blog, BlogVM>().ForMember(dest => dest.BlogTranslate, opt => opt.MapFrom(src => src.BlogTranslates));
             CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.BlogTranslate, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault()));
             CreateMap<BlogCreateVM, Blog>() ;
             CreateMap<Blog, BlogEditVM>().ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault().Name))
+                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault().Title))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.BlogTranslates.FirstOrDefault().Description))
                 .ForMember(dest=>dest.Culture,opt=>opt.MapFrom(src=>src.BlogTranslates.FirstOrDefault().Language.Culture));
             CreateMap<BlogTranslate, BlogTranslateVM>();

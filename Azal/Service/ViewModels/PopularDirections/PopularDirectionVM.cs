@@ -11,8 +11,8 @@ namespace Service.ViewModels.PopularDirections
     {
         public int Id { get; set; }
         public string Image { get; set; }
-        public int Price_azn { get; set; }
-        public int Price_usd { get; set; }
+        public int PriceEconom { get; set; }
+        public int PriceBiznes { get; set; }
         public List<PopularDirectionTranslate> PopularDirectionTranslates { get; set; }
     }
 }
