@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\views\\account\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\azal\\views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\azal\\views\\account\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\views\\account\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|c:\\users\\rashad\\onedrive\\desktop\\azal-backend\\azal\\azal\\wwwroot\\assets\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\azal\\wwwroot\\assets\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{75075A03-D86D-4D7F-872C-C02775911EB6}|Azal\\Azal.csproj|solutionrelative:azal\\wwwroot\\assets\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -18,33 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Azal\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAABkAAAAAAAAAAAAqwD8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-25T20:46:00.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SignUp.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Account\\SignUp.cshtml",
+              "RelativeDocumentMoniker": "Azal\\Views\\Account\\SignUp.cshtml",
+              "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Account\\SignUp.cshtml",
+              "RelativeToolTip": "Azal\\Views\\Account\\SignUp.cshtml",
+              "ViewState": "AQIAAEMBAAAAAAAAAAAAAFABAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-25T20:17:42.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "login.css",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\login.css",
               "RelativeDocumentMoniker": "Azal\\wwwroot\\assets\\css\\login.css",
               "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\wwwroot\\assets\\css\\login.css",
               "RelativeToolTip": "Azal\\wwwroot\\assets\\css\\login.css",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAFsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-25T19:41:26.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T19:41:26.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SignIn.cshtml",
               "DocumentMoniker": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Account\\SignIn.cshtml",
               "RelativeDocumentMoniker": "Azal\\Views\\Account\\SignIn.cshtml",
               "ToolTip": "C:\\Users\\Rashad\\OneDrive\\Desktop\\Azal-BackEnd\\Azal\\Azal\\Views\\Account\\SignIn.cshtml",
               "RelativeToolTip": "Azal\\Views\\Account\\SignIn.cshtml",
-              "ViewState": "AQIAAKwAAAAAAAAAAAAAAMAAAABeAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T19:40:16.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T19:40:16.116Z"
             }
           ]
         }

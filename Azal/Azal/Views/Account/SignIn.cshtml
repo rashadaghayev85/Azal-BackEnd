@@ -16,6 +16,7 @@
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     @* <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" /> *@
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -191,8 +192,15 @@
             <h2>Şəxsi kabinet</h2>
             <input asp-for="Email" type="text" placeholder="Email">
                 <span style="color:red" class="text-danger" asp-validation-for="Email"></span>
-                <input asp-for="Password" type="password" placeholder="Şifrə" class="psw">
-                <span style="color:red" class="text-danger" asp-validation-for="Password"></span>
+                <div class="flex w-full flex-col">
+                    <div class="flex items-center w-full relative">
+                        <input asp-for="Password" type="password" placeholder="Şifrə" id="eye" class="flex-1 w-full">
+                        <span class="absolute right-[20px] top-[16px] bottom-0 ">
+                            <i id="psw" class="fa-regular fa-eye-slash cursor-pointer"></i>
+                        </span>
+                    </div>
+                    <span style="color:red" class="text-danger" asp-validation-for="Password"></span>
+                </div>
             <a asp-action="forgotpassword" class="forgot-pass">Şifrənizi unutmusunuz?</a>
             <button >Daxil ol</button>
             <div class="line">
@@ -202,6 +210,21 @@
             <a class="signUp"  asp-action="signup">Qeydiyyatdan keçin</a>
 
         </div>
+
+        <script>
+            const psw = document.querySelector('#psw')
+            const eye = document.querySelector('#eye')
+            psw.addEventListener('click', () => { 
+                
+            if (psw.classList.contains('fa-eye')) {
+                psw.classList.replace('fa-eye', 'fa-eye-slash');
+                eye.type = "password";
+            } else {
+                psw.classList.replace('fa-eye-slash', 'fa-eye');
+                eye.type = "text";
+            }
+            })
+        </script>
         <script src="~/assets/js/script.js"></script>
         <script src="https://kit.fontawesome.com/9cd2072b0c.js" crossorigin="anonymous"></script>
 </body>

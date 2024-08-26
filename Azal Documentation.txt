@@ -1,0 +1,8 @@
+SuperAdmin
+Email:resadaqayev0012@gmail.com
+Parol:Resad123_
+
+Admin:Istədiyiniz userə admin verə bilərsiniz,mən heç birinə verməmişəm hələki
+
+Connection string:"Data Source=SQL8020.site4now.net;Initial Catalog=db_aac5a8_azaldb;User Id=db_aac5a8_azaldb_admin;Password=Azal0102" 
+Databaza deployda olan databazadir.

@@ -13,6 +13,7 @@
     <title>Qeydiyyat | Azərbaycan Hava Yolları</title>
     <link rel="stylesheet" href="~/assets/css/components.css">
     <link rel="stylesheet" href="~/assets/css/register.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -281,13 +282,27 @@
             <div class="parts">
                 <div class="part-input">
                     <label for="password">Şifrə *</label>
-                    <input asp-for="Password" id="password" type="password">
-                        <span class="text-danger" asp-validation-for="Password"></span>
+                        <div class="flex w-full flex-col">
+                            <div class="flex items-center w-full relative">
+                                <input asp-for="Password" type="password" placeholder="Şifrə" id="eye-e" class="flex-1 w-full">
+                                <span class="absolute right-[20px] top-[16px] bottom-0 ">
+                                    <i id="psw-e" class="fa-regular fa-eye-slash cursor-pointer"></i>
+                                </span>
+                            </div>
+                            <span style="color:red" class="text-danger" asp-validation-for="Password"></span>
+                        </div>
                 </div>
                 <div class="part-input">
                     <label for="password-c">Şifrəni təsdiqləyin *</label>
-                    <input asp-for="ConfirmPassword" id="password-c" type="password">
-                        <span class="text-danger" asp-validation-for="Password"></span>
+                        <div class="flex w-full flex-col">
+                            <div class="flex items-center w-full relative">
+                                <input asp-for="ConfirmPassword" type="password" placeholder="Şifrə" id="password-c" class="flex-1 w-full">
+                                <span class="absolute right-[20px] top-[16px] bottom-0 ">
+                                    <i id="psw-c" class="fa-regular fa-eye-slash cursor-pointer"></i>
+                                </span>
+                            </div>
+                            <span style="color:red" class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                        </div>
                 </div>
             </div>
             <div class="info">
@@ -306,7 +321,36 @@
 
         </div>
     </form>
+
+
+    <script>
+        const eyeC = document.querySelector('#password-c')
+        const pswC = document.querySelector('#psw-c')
+        const pswE = document.querySelector('#psw-e')
+        const eyeE = document.querySelector('#eye-e')
+        pswE.addEventListener('click', () => {
+
+            if (pswE.classList.contains('fa-eye')) {
+                pswE.classList.replace('fa-eye', 'fa-eye-slash');
+                eyeE.type = "password";
+            } else {
+                pswE.classList.replace('fa-eye-slash', 'fa-eye');
+                eyeE.type = "text";
+            }
+        })
+         pswC.addEventListener('click', () => {
+
+             if (pswC.classList.contains('fa-eye')) {
+                 pswC.classList.replace('fa-eye', 'fa-eye-slash');
+                 eyeC.type = "password";
+             } else {
+                 pswC.classList.replace('fa-eye-slash', 'fa-eye');
+                 eyeC.type = "text";
+             }
+         })
+    </script>
         <script src="../script.js"></script>
+    <script src="https://kit.fontawesome.com/9cd2072b0c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
